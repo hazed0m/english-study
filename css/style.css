@@ -1,0 +1,868 @@
+*
+{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+img
+{
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    user-select: none; 
+}
+#main .container
+{
+    width:100%;
+    height:100vh;
+    background:url(../img/back1.png) no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#main .arrow
+{
+    content:'';
+    position: absolute;
+    bottom:-60px;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    background:#fff;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    padding:15px 0 0 0;
+}
+#main .arrow svg
+{
+    width:16px;
+    height:9px;
+    fill:#D0BF93;
+}
+#main .container .wrapper
+{
+    width:100%;
+    height:100%;
+    background:rgba(30,28,25,0.5);
+    position: relative;
+}
+#main header
+{
+    position: absolute;
+    top:5%;
+    width:100%;
+    height:auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#main .logo-wrapper
+{
+    width: 120px;
+    height: 60px;
+}
+#main .logo-wrapper img
+{
+    width:100%;
+    height:100%;
+}
+#main .menu-wrapper
+{
+    display: flex;
+    color:#fff;
+    font-family: 'Hind Guntur', sans-serif;
+}
+#main .menu-wrapper ul
+{
+    margin-top:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main .menu-wrapper ul li
+{
+    list-style: none;
+    margin:0 10px 0 5px;
+    position: relative;
+    cursor: pointer;    
+    font-size: 17px;
+    transition:0.2s;
+}
+#main .menu-wrapper ul li::after
+{
+    content:'|';
+    padding-left:15px;
+}
+#main .menu-wrapper ul li:last-child::after
+{
+    display: none;
+}
+#main .menu-wrapper .button
+{
+    margin-left:60px;
+    padding:15px 45px 10px 45px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:14px;
+    background: #CF313B;
+    cursor: pointer;
+    transition:0.3s;
+}
+#main .menu-wrapper ul li:hover
+{
+    color:#CF313B;
+}
+#main .menu-wrapper ul li:hover:after
+{
+    color:#fff;
+}
+#skype-consult .skype-form .button:hover, #results .text-wrapper .button:hover, #main .menu-wrapper .button:hover, #main .main-form-wrapper .button:hover, #about .students-wrapper .button:hover
+{
+    color:#CF313B;
+    background:#fff;
+}
+#main .main-form-wrapper
+{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 902px;
+    height: 454px;
+    background: rgba(208, 191, 147, 0.7);
+    border: 3px solid #D0BF93;
+    border-radius: 30px 0px;
+    font-family: 'Playfair Display', serif;
+    padding:40px 55px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    color:#fff;
+}
+#main .main-form-wrapper .main-title
+{
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+}
+#main .main-form-wrapper .main-form
+{
+    margin-top:40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#main .main-form-wrapper .main-form .main-form-title
+{
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+#main .main-form-wrapper .main-form  .input-wrapper
+{
+    margin-top:35px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main .main-form-wrapper .main-form input
+{    
+    font-family: 'Hind Guntur', sans-serif;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid #fff;
+    padding-left:10px;
+    padding-bottom:3px;
+    font-size:12px;
+    color: #fff;
+    caret-color:rgba(255,255,255,0.6);
+    outline:none;
+    min-width:200px;
+}
+#main .main-form-wrapper .main-form input[type="tel"]
+{
+    padding-left:90px;
+    letter-spacing: 0.1em;
+}
+#main .main-form-wrapper .main-form .tel-wrapper
+{
+    position: relative;
+    cursor: pointer;
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
+}
+#main .main-form-wrapper .main-form .tel-code-wrapper
+{
+    position: absolute;
+    top:0;
+    left:10px;
+}
+#main .main-form-wrapper .main-form .current-code svg
+{
+    margin-top:-3px;
+    margin-left:5px;
+}
+#main .main-form-wrapper .main-form input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#main .main-form-wrapper .main-form input::-moz-placeholder { 
+    color: rgba(255,255,255,0.6);
+}
+#main .main-form-wrapper .main-form input:-ms-input-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#main .main-form-wrapper .main-form input:-moz-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#main .main-form-wrapper .button
+{
+    margin-top:45px;
+    width: 195px;
+    height: 55px;
+    background: #CF313B;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+#main .main-form-wrapper .button svg
+{
+    margin-top:1px;
+    margin-left:8px;
+    width:13px;
+    height:12px;
+}
+#main .main-form-wrapper .button:hover svg path
+{
+    fill: #CF313B!important;
+}
+.code-list
+{
+    display: none;
+    width:fit-content;
+    margin:0 6px 0 auto;
+    background: rgba(208, 191, 147, 0.8);
+    border: 2px solid #D0BF93;
+    position: absolute;
+    top:-132px;
+    right:0;
+}
+.code-list .code-item
+{
+    margin:-3px 0;
+    transition:0.2s;
+}
+.code-list .code-item:hover
+{
+    color:rgb(221, 212, 188);
+}
+#about
+{
+    padding-top:200px;
+    width:100%;
+}
+#about .about-title
+{
+    font-family: 'Playfair Display';
+    color: #CF313B;
+    font-size: 38px;
+    line-height: 51px;
+    text-align: center;
+}
+#about .about-pretitle
+{
+    margin-top:30px;
+    font-family: 'Hind Guntur';
+    color: #000;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+}
+#about .about-advantages
+{
+    margin-top:100px;
+    display: flex;
+    justify-content: space-around;
+}
+#about .about-advantages .advantage-item
+{
+    text-align: center;
+}
+#about .about-advantages .advantage-item .advantage-text
+{
+    margin-top:20px;
+    font-family: 'Hind Guntur';
+    font-size: 16px;
+    line-height: 30px;
+}
+#about .about-title.second
+{
+    margin-top:200px;
+}
+#about .students-wrapper 
+{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    margin-top:97px;
+    padding:0 22%;
+}
+#about .students-wrapper .student-item
+{
+    width:100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin-bottom:30px;
+}
+#about .students-wrapper .student-item .text-wrapper
+{
+    font-family:'Hind Guntur';
+    font-size: 21px;
+    line-height: 36px;
+}
+#about .students-wrapper .student-item:nth-child(1) .photo-wrapper:before
+{
+    content:'I';
+    position: absolute;
+    top:-300px;
+    left:-120px;
+    font-size:600px;
+    font-family: 'Playfair Display';
+    color: rgba(208, 191, 147,0.2)
+}
+#about .students-wrapper .student-item:nth-child(2) .photo-wrapper:before
+{
+    content:'S';
+    position: absolute;
+    top:-300px;
+    right:-230px;
+    font-size:600px;
+    font-family: 'Playfair Display';
+    color: rgba(208, 191, 147,0.2)
+}
+#about .students-wrapper .student-item:nth-child(3) .photo-wrapper:before
+{
+    content:'C';
+    position: absolute;
+    top:-270px;
+    left:-190px;
+    font-size:600px;
+    font-family: 'Playfair Display';
+    color: rgba(208, 191, 147,0.2)
+}
+#about .students-wrapper .student-item:nth-child(2)
+{
+    flex-direction: row-reverse;
+}
+#about .students-wrapper .button
+{
+    margin:90px auto 190px auto;
+    padding:18px 67px 14px 67px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:14px;
+    background: #CF313B;
+    cursor: pointer;
+    transition:0.3s;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+}
+#about .students-wrapper .button:hover
+{
+    color:#fff;
+    background: rgba(0, 0, 0, 0.80);
+    text-shadow: 0 0 10px #CF313B;
+}
+#about .students-wrapper .student-item .photo-wrapper, #about .students-wrapper .student-item .text-wrapper
+{
+    margin:0 25px;
+    position: relative;
+}
+#about .students-wrapper .student-item .photo-wrapper .back
+{
+    position: relative;
+}
+#about .students-wrapper .student-item:nth-child(1) .photo-wrapper .back::after
+{
+    content:'';
+    width: 380px;
+    height: 300px;
+    position: absolute;
+    top:-20px;
+    left:-20px;
+    background: #D0BF93;
+    z-index: -1;
+}
+#about .students-wrapper .student-item:nth-child(2) .photo-wrapper .back::after
+{
+    content:'';
+    width: 380px;
+    height: 300px;
+    position: absolute;
+    top:-20px;
+    right:-20px;
+    background: #D0BF93;
+    z-index: -1;
+}
+#about .students-wrapper .student-item:nth-child(3) .photo-wrapper .back::after
+{
+    content:'';
+    width: 380px;
+    height: 300px;
+    position: absolute;
+    bottom:-20px;
+    left:-20px;
+    background: #D0BF93;
+    z-index: -1;
+}
+#about .students-wrapper .student-item .photo-wrapper img
+{
+    width:450px;
+    height:300px;
+}
+#results
+{
+    width:100%;
+    height: 615px;
+    background: #1E2433;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#results .photo-wrapper
+{
+    position: relative;
+    top:-134px;
+    width: 450px;
+    height: 747px;
+    margin-right:100px;
+}
+#results .photo-wrapper img
+{
+    width:100%;
+    height:100%;
+}
+#results .text-wrapper
+{
+    width: fit-content;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#results .text-wrapper .text-title
+{
+    margin-top:65px;
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    color: #F0DFB4;
+}
+#results .text-wrapper .text-pretitle
+{
+    margin-top:30px;
+    font-family: 'Hind Guntur';
+    font-size: 16px;
+    line-height: 30px;
+    color:#fff;
+}
+#results .text-wrapper .text-lead-title
+{
+    margin-top:50px;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFF;
+}
+#results .text-wrapper .text-lead-inner
+{
+    margin-top:15px;
+    font-family: 'Hind Guntur';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFF;
+}
+#results .text-wrapper .button
+{
+    margin-top:50px;
+    padding:18px 42px 14px 42px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:13px;
+    background: #CF313B;
+    cursor: pointer;
+    transition:0.3s;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+}
+#curator
+{
+    padding:250px 200px 200px 200px;
+}
+#curator .wrapper 
+{    
+    display: flex;
+    position: relative;
+}
+#curator .wrapper .left-wrapper
+{
+    width: 600px;
+    height: 550px;
+    background: #D0BF93;
+    position: relative;
+}
+#curator .text-wrapper
+{
+    position: relative;
+    top:-50px;
+    left:-50px;
+    width: 600px;
+    height: 550px;
+    background: #D0BF93;
+    padding:111px 0 0 120px;
+}
+#curator .text-title
+{
+    font-family: 'Playfair Display';
+    font-size: 36px;
+    line-height: 48px;
+    color: #FFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#curator .text-quote
+{
+    margin-top:34px;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding-left:10px;
+    display: flex;
+    flex-direction: column;
+}
+#curator .text-quote span:nth-child(1)
+{
+    margin-bottom:20px;
+}
+#curator .text-quote::before
+{
+    content:'';
+    width:1px;
+    height:180px;
+    background-color:#fff;
+    position: absolute;
+    top:-13px;
+    left:2px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#curator .text-sign
+{
+    margin-top:37px;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 13px;
+    line-height: 17px;
+    color: #FFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    text-align: right;
+    padding-right:40px;
+}
+#curator .play-button
+{
+    width: 100px;
+    height: 100px;
+    background: #D0BF93;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left:45%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#curator .play-button .inner
+{
+    width:84px;
+    height:84px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#curator .play-button .inner svg
+{
+    margin-right:-6px;
+    width:14px;
+    height:24px;
+}
+#curator .play-button:hover .inner
+{
+    background:rgba(0, 0, 0, 0.6);
+}
+#curator .play-button:hover svg path
+{
+    fill:rgba(255,255,255,0.9);
+}
+#skype-consult
+{
+    background:url(../img/skype-back.png) no-repeat;
+    background-size:cover;
+    width:100%;
+    height:100%;
+}
+#skype-consult .wrapper
+{
+    width:100%;
+    height:100%;    
+    padding:100px 15%;
+    background: rgba(30, 36, 51,0.9);
+}
+#skype-consult .text-title
+{
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    line-height: 51px;
+    color: #F0DFB4;
+    text-align: center;
+}
+#skype-consult .text-pretitle
+{
+    margin-top:30px;
+    font-family: 'Hind Guntur';
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.results-wrapper
+{
+    width:100%;
+    margin-top:100px;
+    display: flex;
+    justify-content: space-between;
+}
+.results-wrapper .result-item
+{
+    width: 360px;
+    height: 220px;
+    background: #D0BF93;
+    border-radius: 20px 0px;
+    color:#fff;
+    font-family: 'Hind Guntur';
+    font-size: 16px;
+    line-height: 25px;    
+    padding:44px 30px;
+    position: relative;
+}
+.results-wrapper .result-item:nth-child(2) .count
+{
+    color: #D0BF93;
+}
+.results-wrapper .result-item .count
+{
+    position: absolute;
+    top:10px;
+    right:17px;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
+.results-wrapper .result-item .text-inner
+{
+    display: flex;
+    flex-direction: column;
+}
+.results-wrapper .result-item .text-inner span:nth-child(1)
+{
+    font-weight: 600;
+    margin-bottom:15px;
+}
+.results-wrapper .result-item:nth-child(2)
+{
+    background: #FFFFFF;
+    color:#333;
+}
+#skype-consult .skype-form
+{
+    width:100%;
+    height:100%;
+    padding:0 10%;
+    color:#fff;
+}
+#skype-consult .skype-form  .input-wrapper
+{
+    margin-top:55px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#skype-consult .skype-form input
+{    
+    font-family: 'Hind Guntur', sans-serif;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid #fff;
+    padding-left:10px;
+    padding-bottom:3px;
+    font-size:12px;
+    color: #fff;
+    caret-color:rgba(255,255,255,0.6);
+    outline:none;
+    min-width:200px;
+}
+#skype-consult .skype-form input[type="tel"]
+{
+    padding-left:90px;
+    letter-spacing: 0.1em;
+}
+#skype-consult .skype-form .tel-wrapper
+{
+    position: relative;
+    cursor: pointer;
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
+}
+#skype-consult .skype-form .tel-wrapper:after
+{
+    content:'*в случае если скайп будет недоступен мы позвоним вам на мобильный';
+    position: absolute;
+    bottom:-36px;
+    font-family: 'Hind Guntur';
+    font-size: 12px;
+    line-height: 16px;
+    color: #8E8E8E;
+    min-width:200px;
+    letter-spacing: 0;
+}
+#skype-consult .skype-form .tel-code-wrapper
+{
+    position: absolute;
+    top:0;
+    left:10px;
+}
+#skype-consult .skype-form .code-list
+{
+    top:-137px;
+    background: rgba(70, 70, 70, 0.9);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+}
+#skype-consult .skype-form .current-code svg
+{
+    margin-top:-3px;
+    margin-left:5px;
+}
+#skype-consult .skype-form input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#skype-consult .skype-form input::-moz-placeholder { 
+    color: rgba(255,255,255,0.6);
+}
+#skype-consult .skype-form input:-ms-input-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#skype-consult .skype-form input:-moz-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#skype-consult .skype-form .form-title
+{
+    margin-top:80px;
+    font-family: 'Playfair Display';
+    font-size: 28px;
+    line-height: 37px;
+    text-align: center;
+
+}
+#skype-consult .skype-form .form-pretitle
+{
+    margin-top:30px;
+    font-family: 'Hind Guntur';
+    font-size: 20px;
+    line-height: 38px;
+    text-align: center;
+}
+#skype-consult .skype-form .checkbox-wrapper
+{
+    margin-top:58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19px;
+}
+#skype-consult .skype-form .checkbox-wrapper input
+{
+    min-width:fit-content;
+    margin-right: 8px;
+    background:transparent;
+}
+#skype-consult .skype-form .checkbox-wrapper input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+}
+#skype-consult .skype-form .checkbox-wrapper input[type="checkbox"] + label {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border:1px solid #fff;
+    border-radius:2px;
+    margin-right:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#skype-consult .skype-form .checkbox-wrapper input[type="checkbox"] + label svg
+{
+    display: none;
+    padding-left:1px;
+}
+#skype-consult .skype-form .checkbox-wrapper input[type="checkbox"]:checked + label svg {
+    display: block;
+}
+#skype-consult .skype-form .checkbox-wrapper span
+{
+    margin-top:4px;
+}
+#skype-consult .skype-form .button
+{
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding:18px 28px;
+    background: #CF313B;
+    width:fit-content;
+    margin:0 auto;    
+    margin-top:16px;
+}
