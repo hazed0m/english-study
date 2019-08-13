@@ -36,3 +36,16 @@ $('.code-list .code-item').on('click',function(){
     $('.tel-code-wrapper .current-code #code').text($(this).text());
     $('.tel-code-wrapper').find('.code-list').fadeOut();    
 });
+$('#advantages .toogle-wrapper .toogle-item').on('click',function(){
+    if($(this).find('.toogle-text').is(':visible'))
+    {
+        $(this).find('.toogle-text').slideUp();
+        setTimeout(() => {
+            $(this).removeClass('active');
+        },300);
+    }
+    else
+    {
+        $(this).addClass('active').find('.toogle-text').slideDown();
+    }
+});

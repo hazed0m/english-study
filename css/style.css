@@ -119,7 +119,7 @@ img
 {
     color:#fff;
 }
-#skype-consult .skype-form .button:hover, #results .text-wrapper .button:hover, #main .menu-wrapper .button:hover, #main .main-form-wrapper .button:hover, #about .students-wrapper .button:hover
+#isc-program .text-wrapper .button:hover, #skype-consult .skype-form .button:hover, #results .text-wrapper .button:hover, #main .menu-wrapper .button:hover, #main .main-form-wrapper .button:hover, #about .students-wrapper .button:hover
 {
     color:#CF313B;
     background:#fff;
@@ -243,7 +243,7 @@ img
     width:13px;
     height:12px;
 }
-#main .main-form-wrapper .button:hover svg path
+#main .main-form-wrapper .button:hover svg path, #isc-program .text-wrapper .button:hover svg path
 {
     fill: #CF313B!important;
 }
@@ -380,11 +380,11 @@ img
     font-family: 'Hind Guntur';
     font-weight: 500;
 }
-#about .students-wrapper .button:hover
+#about .students-wrapper .button:hover, #advantages .button:hover
 {
     color:#fff;
-    background: rgba(0, 0, 0, 0.80);
-    text-shadow: 0 0 10px #CF313B;
+    background: rgba(0, 0, 0, 0.90);
+    /* text-shadow: 0 0 10px #CF313B; */
 }
 #about .students-wrapper .student-item .photo-wrapper, #about .students-wrapper .student-item .text-wrapper
 {
@@ -865,4 +865,228 @@ img
     width:fit-content;
     margin:0 auto;    
     margin-top:16px;
+}
+#advantages
+{
+    width:100%;
+    padding:200px 12% 270px 12%;
+    position: relative;
+    text-align: center;
+}
+#advantages:before
+{
+    content:'I';
+    font-family:'Playfair Display';
+    font-size: 800px;
+    position: absolute;
+    z-index: -1;
+    color: rgba(208, 191, 147,0.2);
+    top:-260px;
+    left:-10px;
+}
+#advantages:after
+{
+    content:'S';
+    font-family:'Playfair Display';
+    font-weight: bold;
+    font-size: 800px;
+    position: absolute;
+    z-index: -1;
+    color: rgba(208, 191, 147,0.2);
+    bottom:-150px;
+    right:0;
+}
+#advantages .program-title
+{
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    color: #CF313B;
+    text-align: center;
+}
+#advantages .toogle-wrapper
+{
+    width:100%;
+    height:100%;
+    margin-top:73px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+#advantages .toogle-wrapper .toogle-item
+{
+    width: 266px;
+    height: 162px;    
+    background: url(../img/toogleactive.png) no-repeat;
+    background-position:right;
+    background-size:cover;
+    color:#fff;
+    border-radius: 20px 0px;
+    position: relative;
+    cursor: pointer;
+    margin-top:22px;
+}
+#advantages .toogle-wrapper .toogle-item .wrapper
+{    
+    width:100%;
+    height:100%;
+    border-radius: 20px 0px;
+    padding:37px 17px 56px 22px;
+    position: relative;    
+    background: rgba(0,0,0,0.9);
+    transition:background 0.3s;
+}
+#advantages .toogle-wrapper .toogle-item .toogle-title
+{
+    font-family: 'Hind Guntur';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-align: left;
+    position: relative;
+}
+#advantages .toogle-wrapper .toogle-item .toogle-title::after
+{
+    content:'';
+    position: absolute;
+    top:-15px;
+    right:0;
+    width:25px;
+    height:25px;
+    background:url(../img/quote.svg) no-repeat;
+    background-size:contain;
+}
+#advantages .toogle-wrapper .toogle-item .toogle-text
+{
+    margin-top:10px;
+    display: none;
+    font-family: 'Hind Guntur';
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFFFFF;
+    position: relative;
+    text-align: left;
+}
+#advantages .toogle-wrapper .toogle-item .arrow
+{
+    width:13.33px;
+    height:22.22px;
+    position: absolute;
+    bottom:19px;
+    right:30px;
+}
+#advantages .toogle-wrapper .toogle-item .arrow img
+{
+    width:100%;
+    height:100%;
+}
+#advantages .toogle-wrapper .toogle-item.active
+{
+    height:auto;
+}
+#advantages .toogle-wrapper .toogle-item.active .wrapper
+{
+    width:100%;
+    height:100%;
+    background:rgba(208,191,147,0.95);
+}
+#advantages .button
+{
+    width: fit-content;
+    margin:70px auto 0 auto;
+    background: #CF313B;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s;
+    padding:18px 27px 15px 27px;
+}
+#isc-program
+{
+    width:100%;
+    height: 573px;
+    background: #1E2433;
+    display: flex;
+    justify-content: center;
+    position: relative;    
+    padding-left:20%;
+}
+#isc-program .photo-wrapper
+{
+    position: relative;
+    top:-60px;
+    min-width: 786px;
+    min-height: 708px;
+    margin-left:auto;
+}
+#isc-program .photo-wrapper img
+{
+    width:100%;
+    height:100%;
+}
+#isc-program .text-wrapper
+{
+    width: fit-content;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#isc-program .text-wrapper .text-title
+{
+    margin-top:60px;
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    color: #F0DFB4;
+}
+#isc-program .text-wrapper .text-pretitle
+{
+    margin-top:27px;
+    font-family: 'Playfair Display';
+    font-size: 18px;
+    line-height: 24px;
+    color:#fff;
+}
+#isc-program .text-wrapper .text-pretitleadd
+{
+    margin-top:20px;
+    font-family:'Hind Guntur';
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 19px;
+    color: #A8A8A8;
+}
+#isc-program .text-wrapper .text-lead
+{
+    margin-top:40px;
+    font-family: 'Hind Guntur';
+    font-size: 17px;
+    line-height: 30px;
+    color: #FFF;
+}
+#isc-program .text-wrapper .button
+{
+    margin-top:40px;
+    padding:15px 38px 13px 38px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:13px;
+    background: #CF313B;
+    cursor: pointer;
+    transition:0.3s;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    max-width:278px;
+    text-align:center;
+    display: flex;
+    align-items: flex-end;
+}
+#isc-program .text-wrapper .button svg
+{
+    margin-left:5px;
+    margin-bottom:9px;
 }
