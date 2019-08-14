@@ -203,7 +203,6 @@ img
 }
 #main .main-form-wrapper .main-form input[type="tel"]
 {
-    padding-left:90px;
     letter-spacing: 0.1em;
 }
 #main .main-form-wrapper .main-form .tel-wrapper
@@ -227,15 +226,27 @@ img
 }
 #main .main-form-wrapper .main-form input::-webkit-input-placeholder {
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #main .main-form-wrapper .main-form input::-moz-placeholder { 
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #main .main-form-wrapper .main-form input:-ms-input-placeholder {
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #main .main-form-wrapper .main-form input:-moz-placeholder {
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #main .main-form-wrapper .button
 {
@@ -763,7 +774,6 @@ img
 }
 #skype-consult .skype-form input[type="tel"]
 {
-    padding-left:90px;
     letter-spacing: 0.1em;
 }
 #skype-consult .skype-form .tel-wrapper
@@ -805,15 +815,27 @@ img
 }
 #skype-consult .skype-form input::-webkit-input-placeholder {
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #skype-consult .skype-form input::-moz-placeholder { 
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #skype-consult .skype-form input:-ms-input-placeholder {
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #skype-consult .skype-form input:-moz-placeholder {
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #skype-consult .skype-form .form-title
 {
@@ -897,6 +919,7 @@ img
     padding:200px 16% 270px 16%;
     position: relative;
     text-align: center;
+    max-height:1080px;
 }
 #advantages:before
 {
@@ -932,10 +955,12 @@ img
 {
     width:100%;
     height:100%;
-    margin-top:73px;
     display: flex;
     justify-content: space-around;
     flex-wrap:wrap;
+    max-width:1300px;
+    margin:0 auto;    
+    margin-top:73px;
 }
 #advantages .toogle-wrapper .toogle-item
 {
@@ -1009,7 +1034,7 @@ img
 {
     height:auto;
 }
-#advantages .toogle-wrapper .toogle-item.active .wrapper
+#advantages .toogle-wrapper .toogle-item.active .wrapper, #advantages .toogle-wrapper .toogle-item:hover .wrapper
 {
     width:100%;
     height:100%;
@@ -1676,7 +1701,6 @@ img
 }
 #free-consult .free-consult-form input[type="tel"]
 {
-    padding-left:90px;
     letter-spacing: 0.1em;
 }
 #free-consult .free-consult-form .tel-wrapper
@@ -1701,15 +1725,27 @@ img
 }
 #free-consult .free-consult-form input::-webkit-input-placeholder {
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #free-consult .free-consult-form input::-moz-placeholder { 
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #free-consult .free-consult-form input:-ms-input-placeholder {
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #free-consult .free-consult-form input:-moz-placeholder {
     color: rgba(255,255,255,0.6);
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
 }
 #free-consult .button
 {
@@ -2181,6 +2217,7 @@ footer .copyright
 .up-handler:hover
 {
     opacity:0.99;
-    color:rgba(255,255,255,0.8);
     transform:scale(0.95);
+    box-shadow: inset 0 0 3px rgba(208, 191, 147, 0.8);
+    font-size:18px;
 }

@@ -1,5 +1,8 @@
 $(document).ready(function() {
-    $("#main .main-form input[type='tel'] , #skype-consult .skype-form input[type='tel'], #free-consult .free-consult-form input[type='tel']").mask("999-99-99");
+    $(`#main .main-form input[type='tel'], 
+        #skype-consult .skype-form input[type='tel'], 
+        #free-consult .free-consult-form input[type='tel']`)
+    .mask("+380 99-99-99-999");
     $('img[src$=".svg"]').each(function() {
         var $img = jQuery(this);
         var imgURL = $img.attr('src');
@@ -56,12 +59,19 @@ $(document).ready(function() {
             },300);
         }
         else
-        {            
-            $('#advantages .toogle-wrapper .toogle-item.active .toogle-text').slideUp();
-            setTimeout(() => {
-                $('#advantages .toogle-wrapper .toogle-item.active').removeClass('active');
+        {         
+            if($('#advantages .toogle-wrapper .toogle-item.active').length != 0)  
+            {
+                $('#advantages .toogle-wrapper .toogle-item.active .toogle-text').slideUp();
+                setTimeout(() => {
+                    $('#advantages .toogle-wrapper .toogle-item.active').removeClass('active');
+                    $(this).addClass('active').find('.toogle-text').slideDown();
+                },300);
+            }
+            else
+            {
                 $(this).addClass('active').find('.toogle-text').slideDown();
-            },300);
+            }
         }
     });
     $('#stages .toogle-but').on('click',function(){
