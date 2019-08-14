@@ -552,6 +552,7 @@ img
     justify-content: center;
     position: relative;
     margin:0 auto;
+    margin-left:50px;
 }
 #curator .wrapper .left-wrapper
 {
@@ -618,6 +619,16 @@ img
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     text-align: right;
     padding-right:40px;
+}
+#curator .wrapper .photo-wrapper
+{
+    min-width: 600px;
+    min-height: 550px;
+}
+#curator .wrapper .photo-wrapper img
+{
+    width:100%;
+    height:100%;
 }
 #curator .play-button
 {
@@ -1427,6 +1438,7 @@ img
 #teachers .slider-item 
 {
     max-width:360px;
+    margin:0 auto;
 }
 #teachers .slider-item .slider-title
 {
@@ -1631,7 +1643,7 @@ img
 #free-consult .wrapper .left-wrapper
 {
     width: 600px;
-    height: 550px;
+    height: 600px;
     background: #D0BF93;
     position: relative;
 }
@@ -1641,7 +1653,7 @@ img
     top:-50px;
     left:-50px;
     width: 600px;
-    height: 550px;
+    height: 600px;
     background: #D0BF93;
     padding:51px 0 0 120px;
 }
@@ -1809,6 +1821,16 @@ img
 {
     margin-top:4px;
 }
+#free-consult .photo-wrapper
+{
+    max-width: 600px;
+    max-height: 600px;
+}
+#free-consult .photo-wrapper img
+{
+    width:100%;
+    height:100%;
+}
 #results2
 {
     padding-top: 85px;
@@ -1844,6 +1866,7 @@ img
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    z-index:999;
 }
 #results2 .text-wrapper .text-title
 {
@@ -2220,4 +2243,185 @@ footer .copyright
     transform:scale(0.95);
     box-shadow: inset 0 0 3px rgba(208, 191, 147, 0.8);
     font-size:18px;
+}
+@media (max-width:1680px)
+{
+    #skype-consult .wrapper
+    {
+        padding: 100px 13%;
+    }
+    #advantages
+    {
+        padding: 200px 13% 270px 13%;
+    }
+    #why-study {
+        width: 100%;
+        padding: 262px 0 200px 16%;
+    }
+    #pdf-share
+    {
+        padding: 70px 0 70px 10%;
+    }
+    #pdf-share .img-wrap {
+        right: 20px;
+    }    
+    #skype-consult .skype-form
+    {
+        padding:0 14%;
+    }
+    #isc-program
+    {
+        padding-left: 15%;
+    }
+}
+@media (max-width:1500px)
+{
+    #about .students-wrapper {
+        padding: 0 13%;
+        height:auto;
+    }
+    #skype-consult .wrapper {
+        padding: 100px 10%;
+    }
+    #advantages {
+        padding: 200px 8% 270px 8%;
+    }
+    #teachers .slider-items-wrapper {
+        padding: 200px 0 100px 0;
+    }
+    #why-study {
+        padding: 262px 0 200px 8%;
+    }
+    #pdf-share {
+        padding: 70px 0 70px 5%;
+    }
+    #pdf-share .img-wrap {
+        right: -50px;
+    }
+    #stages .info-wrapper .photo-block {
+        min-width: 550px;
+    }
+    #isc-program .photo-wrapper {
+        top: -20px;
+        min-width: 600px;
+        width:650px;
+        min-height: 632px;
+        height: 572px;
+    }    
+    #free-consult .wrapper
+    {
+        margin-left:50px;
+    }
+}
+@media (max-width:1366px)
+{
+    #skype-consult .wrapper {
+        padding: 100px 5%;
+    }
+    #skype-consult .skype-form {
+        padding: 0 18%;
+    }
+    #advantages {
+        padding: 200px 6% 270px 6%;
+    }    
+    #why-study .right-block .img-wrapper {
+        min-width: 652px;
+        min-height: 502px;
+        width: 652px;
+        height: 502px;
+    }
+    #isc-program .text-wrapper .text-title {
+        margin-top: 40px;
+    }
+    #advantages {
+        padding: 100px 6% 170px 6%;
+    }
+}
+@media (max-width:1280px)
+{
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 50px 0;
+    }
+    #about .students-wrapper {
+        padding: 0px 10%;
+    }
+    #isc-program .photo-wrapper {
+        top: -10px;
+        min-width: 600px;
+        width: 600px;
+        min-height: 592px;
+        height: 545px;
+    }
+    #stages .info-wrapper
+    {
+        align-items:flex-start;
+    }
+    #stages .info-wrapper .photo-block {
+        min-width: 480px;
+    }
+    #stages {
+        margin-top: 100px;
+        padding: 150px 0 50px 0;
+    }
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 0;
+    }
+    #free-consult {
+        padding: 150px 100px 120px 100px;
+    }
+    #free-consult .photo-wrapper, 
+    #free-consult .wrapper .left-wrapper, 
+    #free-consult .text-wrapper
+    {    
+        width: 500px;
+        height: 500px;
+        min-width: 500px;
+        min-height: 500px;
+    }
+    #curator .text-wrapper,
+    #curator .wrapper .left-wrapper,
+    #curator .wrapper .photo-wrapper
+    {    
+        width: 550px;
+        height: 500px;
+        min-width: 550px;
+        min-height: 500px;
+    }
+    #free-consult .photo-wrapper img
+    {
+        width:100%;
+        height:100%;
+    }
+    #free-consult .slider-text-wrapper
+    {
+        top: -50px;
+        left: -50px;
+        padding: 40px 0 0 100px;
+    }
+    #curator .text-wrapper 
+    {
+        top: -50px;
+        left: -50px;
+        padding: 70px 0 0 100px;
+    }
+    #free-consult .button {
+        margin-top: 35px;
+    }
+    #free-consult .free-consult-form input {
+        margin-top: 25px;
+    }
+    #results2 .photo-wrapper {
+        position: relative;
+        left:-60px;
+        top: -68px;
+        width: 800px;
+        height: 747px;
+    }
+    #pdf-share .img-wrap img {
+        transform: scale(0.9);
+    }
+    #pdf-share .img-wrap {
+        right: -70px;
+        top: -233px;
+    }
 }

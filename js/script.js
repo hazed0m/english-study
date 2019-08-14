@@ -2,7 +2,7 @@ $(document).ready(function() {
     $(`#main .main-form input[type='tel'], 
         #skype-consult .skype-form input[type='tel'], 
         #free-consult .free-consult-form input[type='tel']`)
-    .mask("+380 99-99-99-999");
+    .mask("+380 99 - 99 - 99 - 999");
     $('img[src$=".svg"]').each(function() {
         var $img = jQuery(this);
         var imgURL = $img.attr('src');
@@ -84,32 +84,46 @@ $(document).ready(function() {
             $(`.info-wrapper#${currentId}`).css('display','flex');
         },400);
     });
-    $("#teachers .owl-carousel").owlCarousel({
-        center: true,
-        items:5,
-        loop:true,
-        nav: true,
-        navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`],
-        navSpeed:800,
-        responsive:{
-            600:{
-                items:4
+    $(window).on('load',function() {
+        $("#teachers .owl-carousel").owlCarousel({
+            center: true,
+            items:5,
+            loop:true,
+            nav: true,
+            navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`],
+            navSpeed:800,
+            responsive: {
+                678:{
+                    items:1
+                },                
+                960:{
+                    items:2             
+                },                
+                1165:{
+                    items:3
+                },  
+                1600:{
+                    items:4
+                },              
+                1900:{
+                    items:5
+                }
+              }
+        });
+        $('#reviews .owl-carousel').owlCarousel({
+            items:3,
+            autoWidth:true,
+            nav: true,
+            navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`],
+            navSpeed:800,
+            margin:50,
+            animateIn:'ease-in-out',
+            animateOut:'ease-in-out',
+            responsive:{
+                1500:{
+                    items:4
+                }
             }
-        }
-    });
-    $('#reviews .owl-carousel').owlCarousel({
-        items:3,
-        autoWidth:true,
-        nav: true,
-        navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`],
-        navSpeed:800,
-        margin:50,
-        animateIn:'ease-in-out',
-        animateOut:'ease-in-out',
-        responsive:{
-            600:{
-                items:4
-            }
-        }
+        });
     });
 });
