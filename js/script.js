@@ -21,23 +21,14 @@ $(document).ready(function() {
             $img.replaceWith($svg);
         }, 'xml');
     });
-    $(".menu-wrapper").on("click","a", function (event) {
+    $(".menu-wrapper").on("click", 'a', function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 			top = $(id).offset().top;
 		$('body,html').animate({scrollTop: top}, 1500);
     });
-    let position = $(window).scrollTop(); 
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if(scroll > position) {            
-            if(position == 0)
-            {
-                let top = $('#about').offset().top;
-                $('body,html').animate({scrollTop: top}, 1500);
-            }
-        }
-        position = scroll;
+    $('#main .arrow').on('click',function(){
+        $('body,html').animate({scrollTop: $('#about').offset().top}, 1500);
     });
     $('.up-handler').on('click',function(){
         $('body,html').animate({scrollTop: 0}, 1500);
@@ -65,8 +56,12 @@ $(document).ready(function() {
             },300);
         }
         else
-        {
-            $(this).addClass('active').find('.toogle-text').slideDown();
+        {            
+            $('#advantages .toogle-wrapper .toogle-item.active .toogle-text').slideUp();
+            setTimeout(() => {
+                $('#advantages .toogle-wrapper .toogle-item.active').removeClass('active');
+                $(this).addClass('active').find('.toogle-text').slideDown();
+            },300);
         }
     });
     $('#stages .toogle-but').on('click',function(){
