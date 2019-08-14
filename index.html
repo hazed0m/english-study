@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Hind+Guntur:400,500,600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Guntur:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Study Academy</title>
 </head>
@@ -20,12 +23,12 @@
                     </div>
                     <div class="menu-wrapper">
                         <ul>
-                            <li>О программе</li>
-                            <li>Этапы</li>
-                            <li>Преподаватели</li>
-                            <li>Результаты</li>
-                            <li>Отзывы</li>
-                            <li style="font-weight:600;">English Test</li>
+                            <li><a href="#about">О программе</a></li>
+                            <li><a href="#stages">Этапы</a></li>
+                            <li><a href="#teachers">Преподаватели</a></li>
+                            <li><a href="#results2">Результаты</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                            <li style="font-weight:600;"><a href="#">English Test</a></li>
                         </ul>
                         <div class="button" id="call">Связаться</div>
                     </div>
@@ -281,7 +284,7 @@
             </div>            
             <div class="play-button">
                 <div class="inner">
-                    <img src="img/play.svg" alt="">
+                    <i class="fas fa-play"></i>
                 </div>                 
             </div>
             <div class="photo-wrapper">
@@ -490,7 +493,402 @@
             <img src="img/back-note.png" alt="Видеоконференция">
         </div>
     </section>
+    <section id="stages">
+        <div class="background">            
+        </div>
+        <div class="wrapper">
+            <div class="stages-title">Как проходит учеба? Этапы программы</div>
+            <div class="toogle-wrapper">
+                <div class="toogle-but active" id="f-year">1-й учебный год</div>
+                <div class="toogle-but" id="s-year">2-й учебный год</div>
+            </div>
+            <div class="info-wrapper active" id="f-year">
+                <div class="info-block">
+                    <div class="info-inner">
+                        <div class="info-title">
+                            <img src="img/stages/target.svg" alt="">
+                            Цели:
+                        </div>
+                        <ul>
+                            <li>Адаптация к стандартам зарубежного образования</li>
+                            <li>Улучшение уровня английского языка</li>
+                            <li>Профессиональная ориентация</li>
+                        </ul>
+                    </div>
+                    <div class="info-inner">
+                        <div class="info-title">
+                            <img src="img/stages/lesson.svg" alt="">
+                            Школьники учат предметы по 4-м основным направлениям 
+                                средних школ Канады и США:
+                        </div>
+                        <div class="lessons-wrapper">
+                            <div class="lesson-block">
+                                <div class="lesson"><img src="img/stages/arts.svg" alt=""> Language Arts</div>  
+                                <div class="lesson"><img src="img/stages/math.svg" alt=""> Math</div>
+                            </div>                            
+                            <div class="lesson-block">
+                                <div class="lesson"><img src="img/stages/business.svg" alt=""> Business</div>
+                                <div class="lesson"><img src="img/stages/science2.svg" alt=""> Science</div>  
+                            </div>                            
+                        </div>
+                        <div class="outer-info">*Каждое 3-е занятие блока нацелено на развитие навыков Life Skills, среди которых креативность, критическое мышление, лидерство и ораторские способности</div>                                
+                    </div>
+                    <div class="info-inner">
+                        <div class="info-title">
+                            <img src="img/stages/count.svg" alt="">
+                            Количество уроков: <span class="lessonCount">96</span>
+                        </div>
+                    </div>
+                    <div class="info-inner">
+                        <div class="info-title">
+                            <img src="img/stages/science.svg" alt="">
+                            Интенсивность учебы: <span class="lessonCount">3 раза в неделю</span>
+                        </div>
+                    <ul>
+                            <li>
+                                <span class="bold">2 урока в неделю</span> —  с преподавателем по видеосвязи, в группе 
+                                до 4 человек. На уроках школьники вместе с преподавателями
+                                разбирают учебный материал и осваивают новые темы
+                            </li>
+                            <li>
+                                <span class="bold">1 урок в неделю</span> — самостоятельная учеба на интерактивной онлайн-платформе
+                            </li>
+                        </ul>  
+                    </div> 
+                    <div class="button" id="demo">Демо-урок программы ISC</div>
+                </div>
+                <div class="photo-block">
+                    <img src="img/stages/photo1.png" alt="Фото">
+                </div>
+            </div>
+            <div class="info-wrapper" id="s-year">
+                <div class="info-block">
+                    <div class="info-inner">
+                        <div class="info-title">
+                            <img src="img/stages/target.svg" alt="">
+                            Цели:
+                        </div>
+                        <ul>
+                            <li>Фундаментальное изучение профильного школьного предмета</li>
+                            <li>Подтверждение знаний сертификатом от канадской или американской школы</li>
+                        </ul>
+                    </div>
+                    <div class="info-inner">
+                        <div class="info-title">
+                            <img src="img/stages/lesson.svg" alt="">
+                            <div>
+                                <div class="inlineNormal">Программа 2-го учебного года разрабатывается индивидуально 
+                                для каждого школьника. Ученик выбирает <div class="inlineBold">1 профильный предмет</div>
+                                из школьной программы Канады и США</div>
+                            </div>
+                        </div>
+                        <div class="outer-info">*За каждым учеником закрепляется координатор, который организовывает учебу, сдачу экзаменов и аттестаций, а также помогает школьнику по всем учебным вопросам</div>                                
+                    </div>
+                    <div class="info-inner">
+                        <div class="info-title">
+                            <img src="img/stages/count.svg" alt="">
+                            Количество уроков: <span class="lessonCount">96</span>
+                        </div>
+                    </div>
+                    <div class="info-inner">
+                        <div class="info-title">
+                            <img src="img/stages/science.svg" alt="">
+                            Интенсивность учебы: <span class="lessonCount">3 раза в неделю</span>
+                        </div>
+                    <ul>
+                            <li>
+                                <span class="bold">2 урока в неделю</span> —  самостоятельное изучение профильного предмета в онлайн-системе средних школ Канады или США; помощь американского или канадского куратора программы
+                            </li>
+                            <li>
+                                <span class="bold">1 урок в неделю</span> — с преподавателем по видеосвязи, в группе до 4 человек
+                            </li> 
+                        </ul>  
+                    </div> 
+                    <div class="button" id="demo">Демо-урок программы ISC</div>
+                </div>
+                <div class="photo-block">
+                    <img src="img/stages/photo2.png" alt="Фото">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="teachers">
+        <div class="teachers-title">
+            Преподаватели
+        </div>
+        <div class="slider-wrapper">
+            <!-- <div class="slider-buttons-wrapper">
+                <div class="slider-button prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="slider-button next"><i class="fas fa-chevron-left"></i></div>
+            </div> -->
+            <div class="slider-items-wrapper owl-carousel">
+                <div class="slider-item">
+                    <div class="img-wrapper">
+                        <img src="img/teacher.png" alt="Учитель">
+                        <div class="img-mask"></div>
+                    </div>  
+                    <div class="slider-text-wrapper">
+                        <div class="slider-title">
+                            Эрик Гилльятт
+                        </div>
+                        <div class="slider-pretitle">
+                            Преподаватель английского языка
+                        </div>
+                        <div class="slider-text">
+                            Преподаватель с многолетним опытом работы, который на 100% предан своему делу, поэтому его занятия всегда проходят интересно и динамично
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="img-wrapper">
+                        <img src="img/teacher.png" alt="Учитель">
+                        <div class="img-mask"></div>
+                    </div>  
+                    <div class="slider-text-wrapper">
+                        <div class="slider-title">
+                            Эрик Гилльятт
+                        </div>
+                        <div class="slider-pretitle">
+                            Преподаватель английского языка
+                        </div>
+                        <div class="slider-text">
+                            Преподаватель с многолетним опытом работы, который на 100% предан своему делу, поэтому его занятия всегда проходят интересно и динамично
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="img-wrapper">
+                        <img src="img/teacher.png" alt="Учитель">
+                        <div class="img-mask"></div>
+                    </div>  
+                    <div class="slider-text-wrapper">
+                        <div class="slider-title">
+                            Эрик Гилльятт
+                        </div>
+                        <div class="slider-pretitle">
+                            Преподаватель английского языка
+                        </div>
+                        <div class="slider-text">
+                            Преподаватель с многолетним опытом работы, который на 100% предан своему делу, поэтому его занятия всегда проходят интересно и динамично
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="img-wrapper">
+                        <img src="img/teacher.png" alt="Учитель">
+                        <div class="img-mask"></div>
+                    </div>  
+                    <div class="slider-text-wrapper">
+                        <div class="slider-title">
+                            Эрик Гилльятт
+                        </div>
+                        <div class="slider-pretitle">
+                            Преподаватель английского языка
+                        </div>
+                        <div class="slider-text">
+                            Преподаватель с многолетним опытом работы, который на 100% предан своему делу, поэтому его занятия всегда проходят интересно и динамично
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reviews">
+        <div class="reviews-title">Отзывы наших студентов</div>
+        <div class="reviews-pretitle">Более 5000 учеников за 20 лет прошли обучение <br>
+            по образовательным программам STUDY.UA
+        </div>
+        <div class="reviews-wrapper owl-carousel">
+            <div class="review-item">
+                <div class="item-title">Наталья Вознюк</div>
+                <div class="item-pretitle">15 лет</div>
+                <div class="play-wrapper">
+                    <div class="play-text">Смотреть видео</div>
+                    <div class="play-button"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+            <div class="review-item">
+                <div class="item-title">Наталья Вознюк</div>
+                <div class="item-pretitle">15 лет</div>
+                <div class="play-wrapper">
+                    <div class="play-text">Смотреть видео</div>
+                    <div class="play-button"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+            <div class="review-item">
+                <div class="item-title">Наталья Вознюк</div>
+                <div class="item-pretitle">15 лет</div>
+                <div class="play-wrapper">
+                    <div class="play-text">Смотреть видео</div>
+                    <div class="play-button"><i class="fas fa-play"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="free-consult">
+        <div class="wrapper">
+            <div class="left-wrapper">
+                <div class="text-wrapper">
+                    <div class="text-title">
+                        Оставьте заявку 
+                    </div>
+                    <div class="text-pretitle">
+                        И получите бесплатную консультацию<br> специалиста по академическим программам
+                    </div>
+                    <div class="free-consult-form">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Введите ваше имя">
+                            <input type="email" placeholder="Введите ваш E-mail">
+                            <div class="tel-wrapper">
+                                <input type="tel" placeholder="___ - __ -__">
+                                <div class="tel-code-wrapper">
+                                    <div class="current-code">+380 <span id="code">(99)</span><img src="img/down.svg" alt="Код телефона"></div>
+                                    <div class="code-list">
+                                        <div class="code-item">(39)</div>
+                                        <div class="code-item">(50)</div>
+                                        <div class="code-item">(63)</div>
+                                        <div class="code-item">(66)</div>
+                                        <div class="code-item">(67)</div>
+                                        <div class="code-item">(68)</div>
+                                        <div class="code-item">(91)</div>
+                                        <div class="code-item">(92)</div>
+                                        <div class="code-item">(93)</div>
+                                        <div class="code-item">(94)</div>
+                                        <div class="code-item">(95)</div>
+                                        <div class="code-item">(96)</div>
+                                        <div class="code-item">(97)</div>
+                                        <div class="code-item">(98)</div>
+                                        <div class="code-item">(99)</div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>                        
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="checkbox-free-consult" checked>
+                            <label for="checkbox-free-consult"><img src="img/check.svg" alt="check"></label>
+                            <span>Даю согласие на обработку персональных данных</span>
+                        </div>
+                        <div class="button" id="freeConsult">
+                            Получить консультацию
+                        </div>                         
+                    </div>
+                </div>
+            </div> 
+            <div class="photo-wrapper">
+                <img src="img/students.png" alt="Студенты">
+            </div>
+        </div>
+    </section>
+    <section id="results2">
+        <div class="wrapper">
+            <div class="photo-wrapper">
+                <img src="img/results.png" alt="Студенты">
+            </div>
+            <div class="text-wrapper">
+                <div class="text-title">
+                    Результаты, которые <br>
+                    вы получите
+                </div>
+                <div class="text-lead-inner">
+                    <div class="inlineNormal">• <span class="inlineBold">Сертификат</span> от школы США или Канады об изучении <br> профильного предмета на английском языке</div>
+                </div>
+                <div class="text-lead-inner">
+                    <div class="inlineNormal">• <div class="inlineBold">Выбор</div> специальности для учебы в университете, <br> профориентация</div>
+                </div>
+                <div class="text-lead-inner">
+                    <div class="inlineNormal">• <div class="inlineBold">Гарантированное зачисление</div> в один из 275 <br> университетов -партнеров компании STUDY.UA 
+                    за границей</div>
+                </div>
+                <div class="text-lead-inner">
+                    <div class="inlineNormal">• <div class="inlineBold">Знание английского</div> на уровне носителя языка</div>
+                </div>
+                <div class="text-lead-inner">
+                    <div class="inlineNormal">• <div class="inlineBold">Развитые навыки Life Skills:</div> критическое мышление, <br> креативность, ораторское искусство</div>
+                </div>
+                <div class="button" id="request">
+                    Подать заявку
+                </div>
+            </div>            
+        </div>
+    </section>
+    <section id="why-study">
+        <div class="wrapper">
+            <div class="left-block">
+                <div class="why-title">Почему STUDY.UA?</div>
+                <div class="text-lead-inner">
+                    <div class="inlineNormal">• <div class="inlineBold">20 лет опыта,</div> лидер рынка международного образования в Украине</div>
+                </div>
+                 <div class="text-lead-inner">  
+                    <div class="inlineNormal">• <div class="inlineBold">Партнерства с 275 ВУЗами</div> в Великобритании, <br>Северной Америке, США, Австралии и Европе</div>
+                </div>
+                <div class="text-lead-inner">   
+                    <div class="inlineNormal">• <div class="inlineBold">Государственная аккредитация</div> Министерства образования <br>провинции Онтарио (Канада) и штата Пенсильвания (США)</div>
+                </div>
+                <div class="text-lead-inner"> 
+                    <div class="inlineNormal">• <div class="inlineBold">Преподаватели из Канады, США, Великобритании,</div> а <br>также сертифицированные преподаватели из Украины</div>
+                </div>
+                <div class="text-lead-inner">
+                    <div class="inlineNormal">• <div class="inlineBold">Полное сопровождение школьников и студентов</div> на всех <br>этапах учебы: от подготовительных программ до зачисления <br>в университет за границей и получения студенческой визы</div>
+                </div>
+                <div class="button" id="whyStudy">Подать заявку</div> 
+            </div>
+            <div class="right-block">
+                <div class="img-wrapper">
+                    <img src="img/study.png" alt="Study">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pdf-share">
+        <div class="left-wrap">
+            <div class="pdf-title">Получите PDF-файл с перечнем<br> ВУЗов-партнеров программы ISC</div>
+            <div class="pdf-pretitle">Присоединяйтесь к 26,000 наших подписчиков!</div>
+            <div class="pdf-text">Подпишитесь на рассылку и получайте полезные материалы <br>
+                о подготовке к поступлению, образованию за границей <br>
+                и специальные бонусы для подписчиков STUDY.UA
+            </div>
+        </div>
+        <div class="right-wrap">
+            <input type="email" placeholder="Введите ваш E-mail">
+            <div class="button" id="sign">Подписаться</div>
+        </div>
+        <div class="img-wrap">
+            <img src="img/magazine.png" alt="">
+        </div>
+    </section>
+    <footer>
+        <div class="logo-wrap">
+            <img src="img/logo.svg" alt="">
+        </div>
+        <div class="adress-wrapper">
+            <div class="adress-title">
+                    АДРЕС ГЛАВНОГО ОФИСА:
+            </div>
+            <div class="adress-geo">
+                <i class="fas fa-map-marker-alt"></i>г. Киев, ул. Драгомирова, 16  ЖК "Новопечерские Липки"
+            </div>
+            <div class="adress-phone">
+                <i class="fas fa-mobile-alt"></i>(044) 500-03-20
+            </div>
+        </div>
+        <div class="menu-wrapper">
+            <ul>
+                <li><a href="#about">О программе</a></li>
+                <li><a href="#stages">Этапы</a></li>
+                <li><a href="#teachers">Преподаватели</a></li>
+                <li><a href="#results2">Результаты</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li style="font-weight:600;"><a href="#">English Test</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            © Все права защищены 2018. STUDY.UA
+        </div>
+    </footer>
+    <div class="up-handler"><i class="fas fa-chevron-up"></i></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/all.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 </body>

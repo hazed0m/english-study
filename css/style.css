@@ -4,6 +4,16 @@
     margin:0;
     box-sizing: border-box;
 }
+body
+{
+    overflow-x: hidden;
+}
+section
+{
+    box-sizing: border-box;
+    min-width: 1920px;
+    margin:0 auto;
+}
 img
 {
     -ms-user-select: none; 
@@ -19,7 +29,6 @@ img
     background-position: center bottom;
     background-size: cover;
     position: relative;
-    overflow: hidden;
 }
 #main .arrow
 {
@@ -95,6 +104,11 @@ img
 {
     content:'|';
     padding-left:15px;
+    color:#fff;
+}
+.menu-wrapper ul li:hover
+{
+    opacity:0.8;
 }
 #main .menu-wrapper ul li:last-child::after
 {
@@ -119,7 +133,7 @@ img
 {
     color:#fff;
 }
-#isc-program .text-wrapper .button:hover, #skype-consult .skype-form .button:hover, #results .text-wrapper .button:hover, #main .menu-wrapper .button:hover, #main .main-form-wrapper .button:hover, #about .students-wrapper .button:hover
+#results2 .button:hover, #isc-program .text-wrapper .button:hover, #skype-consult .skype-form .button:hover, #results .text-wrapper .button:hover, #main .menu-wrapper .button:hover, #main .main-form-wrapper .button:hover, #about .students-wrapper .button:hover
 {
     color:#CF313B;
     background:#fff;
@@ -253,9 +267,10 @@ img
     width:fit-content;
     margin:0 6px 0 auto;
     background: rgba(208, 191, 147, 0.8);
-    border: 2px solid #D0BF93;
+    border: 2px solid rgba(255,255,255,0.3);
+    padding:2px 1px;
     position: absolute;
-    top:-132px;
+    top:-134px;
     right:0;
 }
 .code-list .code-item
@@ -269,7 +284,7 @@ img
 }
 #about
 {
-    padding-top:200px;
+    padding-top:150px;
     width:100%;
 }
 #about .about-title
@@ -380,7 +395,7 @@ img
     font-family: 'Hind Guntur';
     font-weight: 500;
 }
-#about .students-wrapper .button:hover, #advantages .button:hover
+#why-study .button:hover, #pdf-share .right-wrap .button:hover, #free-consult .button:hover, #about .students-wrapper .button:hover, #advantages .button:hover, #stages .button:hover 
 {
     color:#fff;
     background: rgba(0, 0, 0, 0.90);
@@ -511,12 +526,16 @@ img
 }
 #curator
 {
+    width:100%;
     padding:250px 200px 200px 200px;
+    position: relative;
 }
 #curator .wrapper 
 {    
     display: flex;
+    justify-content: center;
     position: relative;
+    margin:0 auto;
 }
 #curator .wrapper .left-wrapper
 {
@@ -592,7 +611,7 @@ img
     border-radius: 50%;
     position: absolute;
     top:50%;
-    left:45%;
+    left:50%;
     transform: translate(-50%,-50%);
     display: flex;
     justify-content: center;
@@ -609,12 +628,11 @@ img
     align-items: center;
     cursor: pointer;
     transition: 0.2s;
+    font-size:20px;
 }
 #curator .play-button .inner svg
 {
     margin-right:-6px;
-    width:14px;
-    height:24px;
 }
 #curator .play-button:hover .inner
 {
@@ -768,7 +786,7 @@ img
 }
 #skype-consult .skype-form .code-list
 {
-    top:-137px;
+    top:-134px;
     background: rgba(70, 70, 70, 0.9);
     border: 2px solid rgba(0, 0, 0, 0.4);
 }
@@ -842,7 +860,6 @@ img
 #skype-consult .skype-form .checkbox-wrapper input[type="checkbox"] + label svg
 {
     display: none;
-    padding-left:1px;
 }
 #skype-consult .skype-form .checkbox-wrapper input[type="checkbox"]:checked + label svg {
     display: block;
@@ -860,7 +877,7 @@ img
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding:18px 28px;
+    padding:18px 28px 15px 28px;
     background: #CF313B;
     width:fit-content;
     margin:0 auto;    
@@ -869,7 +886,7 @@ img
 #advantages
 {
     width:100%;
-    padding:200px 12% 270px 12%;
+    padding:200px 16% 270px 16%;
     position: relative;
     text-align: center;
 }
@@ -1089,4 +1106,1073 @@ img
 {
     margin-left:5px;
     margin-bottom:9px;
+}
+#stages
+{
+    margin-top:200px;
+    padding:274px 0 150px 0;
+    width:100%;
+    position: relative;
+    display: flex;
+}
+#stages .background 
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:800px;
+    z-index: -1;
+    background:url(../img/stages-back.png) no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+#stages .wrapper
+{    
+    padding:100px 50px 0 50px;
+    width:80%;
+    margin:0 auto;
+    background:#fff;
+    z-index: 99;
+    border-radius: 30px 0px 0px 0px;
+}
+#stages .wrapper .stages-title
+{
+
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    line-height: 51px;
+    color: #CF313B;
+    text-align: center;
+}
+#stages .wrapper .toogle-wrapper
+{
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#stages .wrapper .toogle-wrapper .toogle-but
+{    
+    width: 260px;
+    height: 75px;
+    border: 1px solid #D0BF93;
+    color:#D0BF93;
+    font-family: 'Hind Guntur';
+    font-weight: bold;
+    padding-top:10px;
+    font-size: 24px;
+    line-height: 45px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#stages .wrapper .toogle-wrapper .toogle-but.active
+{
+    color: #FFFFFF;
+    background: #D0BF93;
+    border:none;
+}
+#stages .wrapper .toogle-wrapper .toogle-but.active:hover
+{
+    box-shadow:inset 0 0 7px #fff;
+}
+#stages .wrapper .toogle-wrapper .toogle-but:hover
+{
+    box-shadow:inset 0 0 7px #D0BF93;
+}
+#stages .info-wrapper
+{
+    margin-top:77px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#stages .info-wrapper .photo-block
+{
+    min-width: 600px;
+    min-height: 700px;
+    margin-left:50px;
+}
+#stages .info-wrapper .photo-block img
+{
+    width:100%;
+    height:100%;
+}
+#stages .info-wrapper .info-inner ul
+{
+    padding-left:40px;
+}
+#stages .info-wrapper .info-inner, #stages .info-wrapper .info-inner ul li
+{
+    font-family: 'Hind Guntur';
+    font-size: 16px;
+    line-height: 28px;
+    color: #000000;
+    list-style: none;
+    position: relative;
+}
+#stages li:before {
+    content:"·";
+    font-size:35px;
+    position: absolute;
+    top:2.5px;
+    left:-10px;
+}
+#stages .info-wrapper .info-inner
+{
+    padding:15px 0;
+}
+#stages .info-wrapper .info-inner .lessonCount
+{
+    font-weight: normal;
+    margin-left:5px;
+}
+#stages .info-wrapper .info-inner .bold
+{
+    font-weight: 600;
+}
+#stages .info-wrapper .info-inner .info-title svg
+{
+    min-width:16px;
+    margin-top:2px;
+    margin-right:7px;
+}
+#stages .info-wrapper .info-inner:nth-child(4) .info-title svg
+{
+    margin-left:-4px;
+}
+#stages .info-wrapper .info-inner .info-title
+{
+    font-family: 'Hind Guntur';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+    display: flex;
+    align-items: flex-start;
+}
+#stages .info-wrapper .info-inner:nth-child(2)
+{
+    border-top:1px solid rgba(208, 191, 147, 0.5);
+    border-bottom:1px solid rgba(208, 191, 147, 0.5);
+}
+#stages .info-wrapper .info-inner:nth-child(3)
+{
+    border-bottom:1px solid rgba(208, 191, 147, 0.5);
+}
+#stages .info-wrapper .lessons-wrapper
+{
+    margin:10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap:wrap;
+}
+#stages .info-wrapper .outer-info
+{
+    margin-top:20px;
+    padding-left:20px;
+    font-family: 'Hind Guntur';
+    font-size: 12px;
+    line-height: 23px;
+    color: #6C6C6C;
+}
+#stages .info-wrapper .lessons-wrapper .lesson-block:nth-child(1)
+{
+    padding-left:30px;
+}
+#stages .info-wrapper .lessons-wrapper .lesson-block:nth-child(2)
+{
+    margin-left:50px;
+}
+#stages .button
+{
+    margin:40px 0 0 0;
+    padding:20px 27px 16px 27px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:14px;
+    background: #CF313B;
+    cursor: pointer;
+    transition:0.3s;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    width:fit-content;
+}
+#stages .info-wrapper#s-year
+{
+    display: none;
+}
+#stages .info-title .inlineNormal
+{
+    display: inline-block;
+    font-weight: normal;
+}
+#stages .info-title .inlineBold
+{
+    display: inline-block;
+    font-weight: 600;
+}
+#teachers
+{
+    width:100%;
+    height:100%;
+    padding-top:50px;
+}
+#teachers .teachers-title
+{
+    text-align: center;
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    line-height: 51px;
+    color: #000000;
+}
+#teachers .owl-carousel .owl-nav
+{
+    position: absolute;
+    top:0;
+    padding-left:15%;
+    margin-top:47px;
+    display: flex;
+}
+.owl-carousel .owl-nav button.owl-prev
+{
+    width:40px;
+    height:40px;
+    background:#D0BF93;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+    outline: none;
+}
+.owl-carousel .owl-nav button svg
+{
+    width:8px;
+    height:12px;
+}
+.owl-carousel .owl-nav button svg path
+{
+    fill:#fff;
+}
+.owl-carousel .owl-nav button.owl-next
+{
+    background:transparent;
+    border: 1px solid #D0BF93;
+    width:40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+    outline: none;
+}
+.owl-carousel .owl-nav button.owl-next svg path
+{
+    fill:#D0BF93;
+}
+.owl-carousel .owl-nav button.owl-prev:hover
+{
+    box-shadow: inset 0 0 6px #fff;
+    opacity:0.95;
+}
+.owl-carousel .owl-nav button.owl-next:hover
+{
+    box-shadow: inset 0 0 4px #D0BF93;
+}
+#teachers .slider-items-wrapper
+{    
+    width:100%;
+    padding:192px 0 200px 0;
+}
+#teachers .slider-item 
+{
+    max-width:360px;
+}
+#teachers .slider-item .slider-title
+{
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+    margin-top:14px;
+}
+#teachers .slider-text-wrapper
+{
+    padding-right:20px;
+    opacity: 0;
+    display: none;    
+    transition:1s;
+}
+#teachers .slider-item .slider-pretitle
+{
+    margin-top:2px;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    font-size: 14px;
+    color: #6F6F6F;
+}
+#teachers .slider-item .slider-text
+{
+    margin-top:10px;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    font-size: 13px;  
+    color: #000000;
+}
+#teachers .slider-item .img-wrapper
+{
+    width:360px;
+    height:420px;
+    position: relative;
+}
+#teachers .slider-item .img-wrapper img
+{
+    width:100%;
+    height:100%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.owl-carousel .owl-stage-outer
+{
+    overflow: visible;
+}
+#teachers .owl-item.center
+{
+    animation:itemToUp 0.5s ease-in-out;
+    top:-140px;
+}
+#teachers .owl-item.center .slider-text-wrapper
+{
+    display: block;
+    animation:0.6s itemOpacity ease-in-out;
+    opacity:1;
+}
+#teachers .owl-item.center .img-wrapper img
+{
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+}
+@keyframes itemToUp
+{
+    0%
+    {
+        top:0;
+    }
+    100%
+    {
+        top:-140px;
+    }
+}
+@keyframes itemOpacity
+{
+    0%
+    {
+        opacity:0;
+    }
+    100%
+    {
+        opacity:1;
+    }
+}
+#reviews
+{
+    width:100%;
+    background: #1E2433;
+    padding:120px 15% 180px 15%;
+}
+#reviews .reviews-title
+{
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    line-height: 51px;
+    text-align: center;
+    color: #F0DFB4;
+}
+#reviews .reviews-pretitle
+{
+    margin-top:35px;
+    font-family: 'Hind Guntur';
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;    
+    color: #FFFFFF;
+}
+#reviews .reviews-wrapper 
+{
+    margin-top:90px;
+}
+#reviews .reviews-wrapper .review-item
+{
+    width:530px;
+    height:323px;
+    background:url(../img/reviews/review1.png) no-repeat;
+    background-size:cover;
+    background-position: center;
+    padding:58px 45px;
+    position: relative;
+}
+#reviews .reviews-wrapper .review-item .item-title
+{
+    font-family: 'Hind Guntur';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+#reviews .reviews-wrapper .review-item .item-pretitle
+{
+    font-family: 'Hind Guntur', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+#reviews .reviews-wrapper .review-item .play-wrapper
+{
+    position: absolute;
+    bottom:45px;
+    right:45px;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+#reviews .reviews-wrapper .review-item .play-wrapper .play-text
+{
+    margin-right:50px;
+}
+#reviews .reviews-wrapper .review-item .play-wrapper .play-button
+{
+    width:55px;
+    height:55px;
+    border:1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:4px;
+    font-size: 17px;
+    cursor:pointer;
+    transition: 0.2s;
+}
+#reviews .reviews-wrapper .review-item .play-wrapper .play-button svg path
+{
+    fill:#fff;
+}
+#reviews .reviews-wrapper .review-item .play-wrapper .play-button:hover
+{
+    box-shadow: inset 0 0 4px rgba(255,255,255,0.8);
+    border:1px solid rgba(255,255,255,0.8);
+}
+#reviews .reviews-wrapper .review-item .play-wrapper .play-button:hover svg path
+{
+    fill:rgba(255,255,255,0.8);
+}
+#reviews .owl-carousel .owl-nav
+{
+    position: absolute;
+    bottom:-80px;
+    margin-top:47px;
+    display: flex;
+}
+#free-consult
+{
+    padding:250px 200px 120px 200px;
+}
+#free-consult .wrapper 
+{    
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#free-consult .wrapper .left-wrapper
+{
+    width: 600px;
+    height: 550px;
+    background: #D0BF93;
+    position: relative;
+}
+#free-consult .text-wrapper
+{
+    position: relative;
+    top:-50px;
+    left:-50px;
+    width: 600px;
+    height: 550px;
+    background: #D0BF93;
+    padding:51px 0 0 120px;
+}
+#free-consult .text-title
+{
+    font-family: 'Playfair Display';
+    font-size: 36px;
+    line-height: 48px;
+    color: #FFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#free-consult .text-pretitle 
+{
+    margin-top:30px;
+    font-family: 'Hind Guntur';
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#free-consult .free-consult-form
+{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#free-consult .free-consult-form .main-form-title
+{
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+}
+#free-consult .free-consult-form .input-wrapper
+{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#free-consult .free-consult-form input
+{    
+    margin-top:43px;
+    font-family: 'Hind Guntur', sans-serif;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid #fff;
+    padding-left:10px;
+    padding-bottom:3px;
+    font-size:12px;
+    color: #fff;
+    caret-color:rgba(255,255,255,0.6);
+    outline:none;
+    min-width:310px;
+}
+#free-consult .free-consult-form input[type="tel"]
+{
+    padding-left:90px;
+    letter-spacing: 0.1em;
+}
+#free-consult .free-consult-form .tel-wrapper
+{
+    position: relative;
+    cursor: pointer;
+    font-family: 'Hind Guntur', sans-serif;
+    font-size:12px;
+    letter-spacing: 0.1em;
+}
+#free-consult .free-consult-form .tel-code-wrapper
+{
+    position: absolute;
+    top:42px;
+    left:10px;
+    color:#fff;
+}
+#free-consult .free-consult-form .current-code svg
+{
+    margin-top:-3px;
+    margin-left:5px;
+}
+#free-consult .free-consult-form input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#free-consult .free-consult-form input::-moz-placeholder { 
+    color: rgba(255,255,255,0.6);
+}
+#free-consult .free-consult-form input:-ms-input-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#free-consult .free-consult-form input:-moz-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#free-consult .button
+{
+    margin-top:45px;
+    background: #CF313B;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transition: 0.2s;
+    color:#fff;
+    padding:19px 63px 17px 63px;
+}
+#free-consult .free-consult-form .checkbox-wrapper
+{
+    margin-top:14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19px;
+    color:#fff;
+}
+#free-consult .free-consult-form .checkbox-wrapper input
+{
+    min-width:fit-content;
+    margin-right: 8px;
+    background:transparent;
+}
+#free-consult .free-consult-form .checkbox-wrapper input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+}
+#free-consult .free-consult-form .checkbox-wrapper input[type="checkbox"] + label {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border:1px solid #fff;
+    border-radius:2px;
+    margin-right:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#free-consult .free-consult-form .checkbox-wrapper input[type="checkbox"] + label svg
+{
+    display: none;
+}
+#free-consult .free-consult-form .checkbox-wrapper input[type="checkbox"]:checked + label svg {
+    display: block;
+}
+#free-consult .free-consult-form .checkbox-wrapper span
+{
+    margin-top:4px;
+}
+#results2
+{
+    padding-top: 85px;
+    width:100%;
+    margin-bottom:10px;
+}
+#results2 .wrapper
+{    
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width:100%;    
+    height: 680px;
+    background: #1E2433;
+}
+#results2 .photo-wrapper
+{
+    position: relative;
+    top:-147px;
+    width: 880px;
+    height: 827px;
+}
+#results2 .photo-wrapper img
+{
+    width:100%;
+    height:100%;
+}
+#results2 .text-wrapper
+{
+    margin-left:-100px;
+    width: fit-content;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#results2 .text-wrapper .text-title
+{
+    margin-top:70px;
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    color: #F0DFB4;
+}
+#results2 .text-wrapper .text-pretitle
+{
+    margin-top:30px;
+    font-family: 'Hind Guntur';
+    font-size: 16px;
+    line-height: 30px;
+    color:#fff;
+}
+#results2 .text-wrapper .text-lead-title
+{
+    margin-top:50px;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFF;
+}
+#results2 .text-wrapper .text-lead-inner
+{
+    margin-top:17px;
+    font-family: 'Hind Guntur';
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFF;
+}
+#results2 .text-wrapper .inlineNormal
+{
+    display: inline-block;
+    font-weight: normal;
+}
+#results2 .text-wrapper .inlineBold
+{
+    display: inline-block;
+    font-weight: 600;
+}
+#results2 .text-wrapper .text-lead-inner .wrapper
+{
+    display: flex;
+    justify-content: flex-start;
+}
+#results2 .button
+{
+    margin-top:50px;
+    padding:18px 45px 14px 45px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:13px;
+    background: #CF313B;
+    cursor: pointer;
+    transition:0.3s;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+}
+#why-study
+{
+    width:100%;
+    padding:262px 0 200px 20%;
+}
+#why-study .text-lead-inner .button
+{
+    margin-top:50px;
+    padding:18px 42px 14px 42px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:13px;
+    background: #CF313B;
+    cursor: pointer;
+    transition:0.3s;
+    font-family: 'Hind Guntur';
+    font-weight: 500;
+}
+#why-study .text-lead-inner .inlineNormal
+{
+    display: inline-block;
+    font-weight: normal;
+}
+#why-study .text-lead-inner .inlineBold
+{
+    display: inline-block;
+    font-weight: 600;
+}
+#why-study .text-lead-inner
+{
+    margin-top:10px;
+    font-family: 'Hind Guntur';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+}
+#why-study .text-lead-inner .wrapper
+{
+    display: flex;
+    justify-content: flex-start;
+}
+#why-study .wrapper
+{
+    display: flex;
+    justify-content: space-between;
+}
+#why-study .why-title
+{
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    line-height: 51px;
+    color: #CF313B;
+    margin-bottom:10px;
+}
+#why-study .button
+{
+    margin-top:58px;
+    padding:19px 45px 17px 45px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:14px;
+    background: #CF313B;
+    cursor: pointer;
+    transition:0.3s;
+    width:fit-content;
+}
+#why-study .left-block
+{
+    position: relative;
+}
+#why-study .left-block:before
+{
+    content:'S';
+    position: absolute;
+    top:-350px;
+    left:-130px;
+    font-size:1050px;
+    color: rgba(208, 191, 147,0.2);
+    z-index:-1;
+}
+#why-study .right-block .img-wrapper
+{
+    min-width: 752px;
+    min-height: 602px;
+}
+#why-study .right-block .img-wrapper img
+{
+    width:100%;
+    height:100%;
+}
+#pdf-share
+{
+    width:100%;
+    display: flex;
+    background: #D0BF93;
+    padding:70px 0 70px 15%;
+    position: relative;
+}
+#pdf-share .pdf-title
+{
+    font-family: 'Playfair Display';
+    font-size: 38px;
+    line-height: 51px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#pdf-share .pdf-pretitle
+{
+    margin-top:20px;
+    font-family: 'Hind Guntur';
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 40px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#pdf-share .pdf-text
+{
+    margin-top:40px;
+    font-family: 'Hind Guntur';
+    font-size: 21px;
+    line-height: 40px;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#pdf-share .right-wrap
+{
+    margin-left:5%;
+    padding-top:45px;
+    color:#fff;
+    position: relative;
+    z-index: 99;
+}
+/* #pdf-share .right-wrap:after
+{
+    content:'';
+    position: absolute;
+    width: 740.65px;
+    height: 642.43px;
+    top:0;
+    right:0;
+    background:url(../img/magazine.png) no-repeat;
+} */
+#pdf-share .right-wrap input
+{    
+    margin-top:43px;
+    font-family: 'Hind Guntur', sans-serif;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid #fff;
+    padding-left:10px;
+    padding-bottom:3px;
+    font-size:12px;
+    color: #fff;
+    caret-color:rgba(255,255,255,0.6);
+    outline:none;
+    min-width:275px;
+}
+#pdf-share .right-wrap input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#pdf-share .right-wrap input::-moz-placeholder { 
+    color: rgba(255,255,255,0.6);
+}
+#pdf-share .right-wrap input:-ms-input-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#pdf-share .right-wrap input:-moz-placeholder {
+    color: rgba(255,255,255,0.6);
+}
+#pdf-share .right-wrap .button
+{
+    margin-top:40px;
+    padding:19px 90px 17px 90px;
+    color:#fff;
+    text-transform: uppercase;
+    font-size:14px;
+    background: #CF313B;
+    cursor: pointer;
+    transition:0.3s;
+    width:fit-content;
+}
+#pdf-share .img-wrap
+{
+    position: absolute;
+    top:-260px;
+    right:75px;
+    z-index:1;
+}
+#pdf-share .img-wrap img
+{
+    transform:scale(1.1);
+}
+footer
+{
+    z-index: 99;
+    width:100%;
+    height:100%;
+    background: #1E2433;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:33px 0 20px 0;
+}
+footer .logo-wrapper
+{
+    width: 97px;
+    height: 54px;
+}
+footer .logo-wrapper img
+{
+    width:100%;
+    height:100%;
+}
+footer .menu-wrapper
+{
+    margin-top:19px;
+    display: flex;
+    color:#fff;
+    font-family: 'Hind Guntur', sans-serif;
+}
+.menu-wrapper ul li a
+{
+    color:#fff;
+    text-decoration: none;
+}
+footer .menu-wrapper ul
+{
+    margin-top:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+footer .menu-wrapper ul li
+{
+    list-style: none;
+    margin:0 10px 0 5px;
+    position: relative;
+    cursor: pointer;    
+    font-size: 17px;
+    transition:0.2s;
+}
+footer .menu-wrapper ul li::after
+{
+    content:'|';
+    padding-left:15px;
+    color:#fff;
+}
+footer .menu-wrapper ul li:last-child::after
+{
+    display: none;
+}
+footer .adress-wrapper > div
+{
+    display: flex;
+    align-items: center;
+}
+footer .adress-wrapper svg
+{
+    margin:-4px 5px 0 0;
+}
+footer .adress-wrapper
+{
+    font-family: 'Hind Guntur';
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .adress-wrapper .adress-title
+{
+    margin-top:18px;
+    font-weight: 600;
+}
+footer .copyright
+{
+    margin-top:27px;
+    font-family: 'Hind Guntur';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 23px;
+    color: rgba(255,255,255,0.5);
+}
+.up-handler
+{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    background:#1E2433;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:20px;
+    color:rgba(208, 191, 147, 0.8);
+    cursor: pointer;
+    transition:0.2s;
+    box-shadow:0 0 5px rgba(208, 191, 147, 0.8);
+    z-index: 9999999999;
+}
+.up-handler:hover
+{
+    opacity:0.99;
+    color:rgba(255,255,255,0.8);
+    transform:scale(0.95);
 }
