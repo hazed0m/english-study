@@ -1474,7 +1474,7 @@ img
 #teachers .slider-item .img-wrapper
 {
     width:360px;
-    height:420px;
+    /* height:420px; */
     position: relative;
 }
 #teachers .slider-item .img-wrapper img
@@ -1558,11 +1558,12 @@ img
 {
     width:530px;
     height:323px;
-    background:url(../img/reviews/review1.png) no-repeat;
+    background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     padding:58px 45px;
     position: relative;
+    text-shadow: 0 0 5px #000;
 }
 #reviews .reviews-wrapper .review-item .item-title
 {
@@ -1582,7 +1583,7 @@ img
 #reviews .reviews-wrapper .review-item .play-wrapper
 {
     position: absolute;
-    bottom:45px;
+    bottom:53px;
     right:45px;
     font-family: 'Hind Guntur';
     font-weight: 500;
@@ -1609,6 +1610,7 @@ img
     font-size: 17px;
     cursor:pointer;
     transition: 0.2s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.50);
 }
 #reviews .reviews-wrapper .review-item .play-wrapper .play-button svg path
 {

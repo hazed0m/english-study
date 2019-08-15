@@ -1,8 +1,8 @@
 $(document).ready(function() {
     $(`#main .main-form input[type='tel'], 
         #skype-consult .skype-form input[type='tel'], 
-        #free-consult .free-consult-form input[type='tel']`)
-    .mask("+380 99 - 99 - 99 - 999");
+        #free-consult .free-consult-form input[type='tel']`
+     ).mask("+380 99 - 99 - 99 - 999");
     $('img[src$=".svg"]').each(function() {
         var $img = jQuery(this);
         var imgURL = $img.attr('src');
@@ -24,17 +24,17 @@ $(document).ready(function() {
             $img.replaceWith($svg);
         }, 'xml');
     });
-    $(".menu-wrapper").on("click", 'a', function (event) {
+    $(".menu-wrapper").on("click", 'a.anchor', function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 			top = $(id).offset().top;
-		$('body,html').animate({scrollTop: top}, 1500);
+		$('body,html').animate({scrollTop: top}, 1000);
     });
     $('#main .arrow').on('click',function(){
-        $('body,html').animate({scrollTop: $('#about').offset().top}, 1500);
+        $('body,html').animate({scrollTop: $('#about').offset().top}, 1000);
     });
     $('.up-handler').on('click',function(){
-        $('body,html').animate({scrollTop: 0}, 1500);
+        $('body,html').animate({scrollTop: 0}, 1000);
     });
     $('.tel-code-wrapper').on('click',function(){
         if($(this).find('.code-list').is(':visible'))
