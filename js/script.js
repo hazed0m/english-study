@@ -28,13 +28,13 @@ $(document).ready(function() {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 			top = $(id).offset().top;
-		$('body,html').animate({scrollTop: top}, 1000);
+		$('body,html').animate({scrollTop: top}, 900);
     });
     $('#main .arrow').on('click',function(){
-        $('body,html').animate({scrollTop: $('#about').offset().top}, 1000);
+        $('body,html').animate({scrollTop: $('#about').offset().top}, 900);
     });
     $('.up-handler').on('click',function(){
-        $('body,html').animate({scrollTop: 0}, 1000);
+        $('body,html').animate({scrollTop: 0}, 900);
     });
     $('.tel-code-wrapper').on('click',function(){
         if($(this).find('.code-list').is(':visible'))

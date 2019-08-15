@@ -87,7 +87,7 @@ img
 {
     display: flex;
     color:#fff;
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 #main .menu-wrapper ul
 {
@@ -122,8 +122,9 @@ img
 #main .menu-wrapper .button
 {
     margin-left:60px;
-    padding:15px 45px 10px 45px;
+    padding:15px 45px 15px 45px;
     color:#fff;
+    font-weight: 500;
     text-transform: uppercase;
     font-size:14px;
     background: #CF313B;
@@ -189,12 +190,11 @@ img
 }
 #main .main-form-wrapper .main-form input
 {    
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background:transparent;
     border:none;
     border-bottom:1px solid #fff;
-    padding-left:10px;
-    padding-bottom:3px;
+    padding:10px 0 10px 10px;
     font-size:12px;
     color: #fff;
     caret-color:rgba(255,255,255,0.6);
@@ -209,7 +209,7 @@ img
 {
     position: relative;
     cursor: pointer;
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
     letter-spacing: 0.1em;
 }
@@ -224,27 +224,39 @@ img
     margin-top:-3px;
     margin-left:5px;
 }
+#main .main-form-wrapper .main-form input[type="tel"]::-webkit-input-placeholder {
+    letter-spacing: 0.1em;
+}
+#main .main-form-wrapper .main-form input[type="tel"]::-moz-placeholder { 
+    letter-spacing: 0.1em;
+}
+#main .main-form-wrapper .main-form input[type="tel"]:-ms-input-placeholder {
+    letter-spacing: 0.1em;
+}
+#main .main-form-wrapper .main-form input[type="tel"]:-moz-placeholder {
+    letter-spacing: 0.1em;
+}
 #main .main-form-wrapper .main-form input::-webkit-input-placeholder {
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
     letter-spacing: 0.1em;
 }
 #main .main-form-wrapper .main-form input::-moz-placeholder { 
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
     letter-spacing: 0.1em;
 }
 #main .main-form-wrapper .main-form input:-ms-input-placeholder {
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
     letter-spacing: 0.1em;
 }
 #main .main-form-wrapper .main-form input:-moz-placeholder {
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
     letter-spacing: 0.1em;
 }
@@ -300,11 +312,68 @@ img
 }
 #about
 {
-    padding-top:150px;
     width:100%;
+    position: relative;
+}
+#about .title-wrapper
+{
+    width:100%;
+    position: relative;
+    max-width:1920px;
+    margin:0 auto;
+}
+#about .decorate.top-left 
+{
+    position: absolute;
+    left:-40px;
+    top:100px;
+}
+#about .decorate.top-right 
+{
+    position: absolute;
+    right:75px;
+    top:-15px;
+    transform:rotate(90deg);
+}
+#about .decorate.bottom-left 
+{
+    position: absolute;
+    transform:rotate(-90deg);
+    left:80px;
+    bottom:-215px;
+}
+#about .decorate.bottom-right 
+{
+    position: absolute;
+    transform:rotate(-180deg);
+    right:-40px;
+    bottom:-100px;
+}
+#about .decorate .decorate-short
+{
+    position: absolute;
+    width: 119px;
+    height: 1px;
+    left: 90px;
+    background: #D0BF93;
+    opacity: 0.5;
+    box-shadow: 0 0 3px #D0BF93;
+}
+#about .decorate .decorate-long
+{
+    position: absolute;
+    left:0px;
+    bottom:-90px;
+    width: 230px;
+    height: 1px;
+    background: #D0BF93;
+    opacity: 0.5;
+    transform:rotate(90deg);
+    box-shadow: 0 0 3px #D0BF93;
 }
 #about .about-title
-{
+{    
+    padding-top:200px;
     font-family: 'Playfair Display';
     color: #CF313B;
     font-size: 38px;
@@ -314,7 +383,7 @@ img
 #about .about-pretitle
 {
     margin-top:30px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     color: #000;
     font-size: 24px;
     line-height: 36px;
@@ -325,6 +394,7 @@ img
     margin-top:100px;
     display: flex;
     justify-content: space-around;
+    padding: 0 11%;
 }
 #about .about-advantages .advantage-item
 {
@@ -333,7 +403,7 @@ img
 #about .about-advantages .advantage-item .advantage-text
 {
     margin-top:20px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 16px;
     line-height: 30px;
 }
@@ -360,7 +430,7 @@ img
 }
 #about .students-wrapper .student-item .text-wrapper
 {
-    font-family:'Hind Guntur';
+    font-family:'Roboto';
     font-size: 21px;
     line-height: 36px;
 }
@@ -401,14 +471,14 @@ img
 #about .students-wrapper .button
 {
     margin:90px auto 190px auto;
-    padding:18px 67px 14px 67px;
+    padding:18px 67px 18px 67px;
     color:#fff;
     text-transform: uppercase;
     font-size:14px;
     background: #CF313B;
     cursor: pointer;
     transition:0.3s;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
 }
 #why-study .button:hover, #pdf-share .right-wrap .button:hover, #free-consult .button:hover, #about .students-wrapper .button:hover, #advantages .button:hover, #stages .button:hover 
@@ -504,7 +574,7 @@ img
 #results .text-wrapper .text-pretitle
 {
     margin-top:30px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 16px;
     line-height: 30px;
     color:#fff;
@@ -521,7 +591,7 @@ img
 #results .text-wrapper .text-lead-inner
 {
     margin-top:15px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 600;
     font-size: 16px;
     line-height: 30px;
@@ -530,14 +600,14 @@ img
 #results .text-wrapper .button
 {
     margin-top:50px;
-    padding:18px 42px 14px 42px;
+    padding:18px 42px 18px 42px;
     color:#fff;
     text-transform: uppercase;
     font-size:13px;
     background: #CF313B;
     cursor: pointer;
     transition:0.3s;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
 }
 #curator
@@ -697,7 +767,7 @@ img
 #skype-consult .text-pretitle
 {
     margin-top:30px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 300;
     font-size: 24px;
     line-height: 36px;
@@ -718,7 +788,7 @@ img
     background: #D0BF93;
     border-radius: 20px 0px;
     color:#fff;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 16px;
     line-height: 25px;    
     padding:44px 30px;
@@ -771,12 +841,11 @@ img
 }
 #skype-consult .skype-form input
 {    
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background:transparent;
     border:none;
     border-bottom:1px solid #fff;
-    padding-left:10px;
-    padding-bottom:3px;
+    padding:10px 0 10px 10px;
     font-size:12px;
     color: #fff;
     caret-color:rgba(255,255,255,0.6);
@@ -787,11 +856,23 @@ img
 {
     letter-spacing: 0.1em;
 }
+#skype-consult .skype-form input[type="tel"]::-webkit-input-placeholder {
+    letter-spacing: 0.1em;
+}
+#skype-consult .skype-form input[type="tel"]::-moz-placeholder { 
+    letter-spacing: 0.1em;
+}
+#skype-consult .skype-form input[type="tel"]:-ms-input-placeholder {
+    letter-spacing: 0.1em;
+}
+#skype-consult .skype-form input[type="tel"]:-moz-placeholder {
+    letter-spacing: 0.1em;
+}
 #skype-consult .skype-form .tel-wrapper
 {
     position: relative;
     cursor: pointer;
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
     letter-spacing: 0.1em;
 }
@@ -799,8 +880,8 @@ img
 {
     content:'*в случае если скайп будет недоступен мы позвоним вам на мобильный';
     position: absolute;
-    bottom:-36px;
-    font-family: 'Hind Guntur';
+    bottom:-55px;
+    font-family: 'Roboto';
     font-size: 12px;
     line-height: 16px;
     color: #8E8E8E;
@@ -826,27 +907,23 @@ img
 }
 #skype-consult .skype-form input::-webkit-input-placeholder {
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
-    letter-spacing: 0.1em;
 }
 #skype-consult .skype-form input::-moz-placeholder { 
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
-    letter-spacing: 0.1em;
 }
 #skype-consult .skype-form input:-ms-input-placeholder {
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
-    letter-spacing: 0.1em;
 }
 #skype-consult .skype-form input:-moz-placeholder {
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
-    letter-spacing: 0.1em;
 }
 #skype-consult .skype-form .form-title
 {
@@ -860,7 +937,7 @@ img
 #skype-consult .skype-form .form-pretitle
 {
     margin-top:30px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 20px;
     line-height: 38px;
     text-align: center;
@@ -871,7 +948,7 @@ img
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 12px;
     line-height: 19px;
@@ -911,14 +988,14 @@ img
 }
 #skype-consult .skype-form .button
 {
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 13px;
     line-height: 25px;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding:18px 28px 15px 28px;
+    padding:18px 28px 18px 28px;
     background: #CF313B;
     width:fit-content;
     margin:0 auto;    
@@ -998,7 +1075,7 @@ img
 }
 #advantages .toogle-wrapper .toogle-item .toogle-title
 {
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 600;
     font-size: 16px;
     line-height: 30px;
@@ -1021,7 +1098,7 @@ img
 {
     margin-top:10px;
     display: none;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 16px;
     line-height: 30px;
     color: #FFFFFF;
@@ -1056,7 +1133,7 @@ img
     width: fit-content;
     margin:70px auto 0 auto;
     background: #CF313B;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 13px;
     line-height: 25px;
@@ -1064,7 +1141,7 @@ img
     color: #FFFFFF;
     cursor: pointer;
     transition: 0.3s;
-    padding:18px 27px 15px 27px;
+    padding:18px 27px 18px 27px;
 }
 #isc-program
 {
@@ -1115,7 +1192,7 @@ img
 #isc-program .text-wrapper .text-pretitleadd
 {
     margin-top:20px;
-    font-family:'Hind Guntur';
+    font-family:'Roboto';
     font-weight: 300;
     font-size: 12px;
     line-height: 19px;
@@ -1124,7 +1201,7 @@ img
 #isc-program .text-wrapper .text-lead
 {
     margin-top:40px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 17px;
     line-height: 30px;
     color: #FFF;
@@ -1132,14 +1209,14 @@ img
 #isc-program .text-wrapper .button
 {
     margin-top:40px;
-    padding:15px 38px 13px 38px;
+    padding:15px 38px 15px 38px;
     color:#fff;
     text-transform: uppercase;
     font-size:13px;
     background: #CF313B;
     cursor: pointer;
     transition:0.3s;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
     max-width:278px;
     text-align:center;
@@ -1202,9 +1279,8 @@ img
     height: 75px;
     border: 1px solid #D0BF93;
     color:#D0BF93;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: bold;
-    padding-top:10px;
     font-size: 24px;
     line-height: 45px;
     text-transform: uppercase;
@@ -1252,7 +1328,7 @@ img
 }
 #stages .info-wrapper .info-inner, #stages .info-wrapper .info-inner ul li
 {
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 16px;
     line-height: 28px;
     color: #000000;
@@ -1291,7 +1367,7 @@ img
 }
 #stages .info-wrapper .info-inner .info-title
 {
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 600;
     font-size: 16px;
     line-height: 26px;
@@ -1320,7 +1396,7 @@ img
 {
     margin-top:20px;
     padding-left:20px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 12px;
     line-height: 23px;
     color: #6C6C6C;
@@ -1336,14 +1412,14 @@ img
 #stages .button
 {
     margin:40px 0 0 0;
-    padding:20px 27px 16px 27px;
+    padding:18px 27px 18px 27px;
     color:#fff;
     text-transform: uppercase;
     font-size:14px;
     background: #CF313B;
     cursor: pointer;
     transition:0.3s;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
     width:fit-content;
 }
@@ -1433,7 +1509,7 @@ img
 #teachers .slider-items-wrapper
 {    
     width:100%;
-    padding:192px 0 200px 0;
+    padding:192px 0 150px 0;
 }
 #teachers .slider-item 
 {
@@ -1442,7 +1518,7 @@ img
 }
 #teachers .slider-item .slider-title
 {
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 24px;
     color: #000000;
@@ -1457,8 +1533,8 @@ img
 }
 #teachers .slider-item .slider-pretitle
 {
-    margin-top:2px;
-    font-family: 'Hind Guntur';
+    margin-top:3px;
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 14px;
     color: #6F6F6F;
@@ -1466,7 +1542,7 @@ img
 #teachers .slider-item .slider-text
 {
     margin-top:10px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 13px;  
     color: #000000;
@@ -1543,7 +1619,7 @@ img
 #reviews .reviews-pretitle
 {
     margin-top:35px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 300;
     font-size: 24px;
     line-height: 36px;
@@ -1567,7 +1643,7 @@ img
 }
 #reviews .reviews-wrapper .review-item .item-title
 {
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 600;
     font-size: 18px;
     line-height: 30px;
@@ -1575,7 +1651,7 @@ img
 }
 #reviews .reviews-wrapper .review-item .item-pretitle
 {
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 30px;
     color: #FFFFFF;
@@ -1585,7 +1661,7 @@ img
     position: absolute;
     bottom:53px;
     right:45px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 10px;
     line-height: 19px;
@@ -1609,7 +1685,8 @@ img
     padding-left:4px;
     font-size: 17px;
     cursor:pointer;
-    transition: 0.2s;
+    transition: 0.5s;
+    border-radius:5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.50);
 }
 #reviews .reviews-wrapper .review-item .play-wrapper .play-button svg path
@@ -1618,7 +1695,8 @@ img
 }
 #reviews .reviews-wrapper .review-item .play-wrapper .play-button:hover
 {
-    box-shadow: inset 0 0 4px rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.8);
+    border-radius: 5px;
     border:1px solid rgba(255,255,255,0.8);
 }
 #reviews .reviews-wrapper .review-item .play-wrapper .play-button:hover svg path
@@ -1670,7 +1748,7 @@ img
 #free-consult .text-pretitle 
 {
     margin-top:30px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 20px;
     line-height: 30px;
     color: #FFFFFF;
@@ -1701,12 +1779,11 @@ img
 #free-consult .free-consult-form input
 {    
     margin-top:43px;
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background:transparent;
     border:none;
     border-bottom:1px solid #fff;
-    padding-left:10px;
-    padding-bottom:3px;
+    padding:10px 0 10px 10px;
     font-size:12px;
     color: #fff;
     caret-color:rgba(255,255,255,0.6);
@@ -1717,11 +1794,23 @@ img
 {
     letter-spacing: 0.1em;
 }
+#free-consult .free-consult-form input[type="tel"]::-webkit-input-placeholder {
+    letter-spacing: 0.1em;
+}
+#free-consult .free-consult-form input[type="tel"]::-moz-placeholder { 
+    letter-spacing: 0.1em;
+}
+#free-consult .free-consult-form input[type="tel"]:-ms-input-placeholder {
+    letter-spacing: 0.1em;
+}
+#free-consult .free-consult-form input[type="tel"]:-moz-placeholder {
+    letter-spacing: 0.1em;
+}
 #free-consult .free-consult-form .tel-wrapper
 {
     position: relative;
     cursor: pointer;
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
     letter-spacing: 0.1em;
 }
@@ -1739,27 +1828,23 @@ img
 }
 #free-consult .free-consult-form input::-webkit-input-placeholder {
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
-    letter-spacing: 0.1em;
 }
 #free-consult .free-consult-form input::-moz-placeholder { 
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
-    letter-spacing: 0.1em;
 }
 #free-consult .free-consult-form input:-ms-input-placeholder {
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
-    letter-spacing: 0.1em;
 }
 #free-consult .free-consult-form input:-moz-placeholder {
     color: rgba(255,255,255,0.6);
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:12px;
-    letter-spacing: 0.1em;
 }
 #free-consult .button
 {
@@ -1784,7 +1869,7 @@ img
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 12px;
     line-height: 19px;
@@ -1825,8 +1910,10 @@ img
 }
 #free-consult .photo-wrapper
 {
-    max-width: 600px;
-    max-height: 600px;
+    width: 600px;
+    height: 600px;
+    min-width: 600px;
+    min-height: 600px;
 }
 #free-consult .photo-wrapper img
 {
@@ -1880,7 +1967,7 @@ img
 #results2 .text-wrapper .text-pretitle
 {
     margin-top:30px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 16px;
     line-height: 30px;
     color:#fff;
@@ -1897,7 +1984,7 @@ img
 #results2 .text-wrapper .text-lead-inner
 {
     margin-top:17px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 16px;
     line-height: 26px;
     color: #FFF;
@@ -1920,14 +2007,14 @@ img
 #results2 .button
 {
     margin-top:50px;
-    padding:18px 45px 14px 45px;
+    padding:18px 45px 18px 45px;
     color:#fff;
     text-transform: uppercase;
     font-size:13px;
     background: #CF313B;
     cursor: pointer;
     transition:0.3s;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
 }
 #why-study
@@ -1938,14 +2025,14 @@ img
 #why-study .text-lead-inner .button
 {
     margin-top:50px;
-    padding:18px 42px 14px 42px;
+    padding:18px 42px 18px 42px;
     color:#fff;
     text-transform: uppercase;
     font-size:13px;
     background: #CF313B;
     cursor: pointer;
     transition:0.3s;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 500;
 }
 #why-study .text-lead-inner .inlineNormal
@@ -1961,7 +2048,7 @@ img
 #why-study .text-lead-inner
 {
     margin-top:10px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 600;
     font-size: 16px;
     line-height: 26px;
@@ -2039,7 +2126,7 @@ img
 #pdf-share .pdf-pretitle
 {
     margin-top:20px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-weight: 600;
     font-size: 21px;
     line-height: 40px;
@@ -2049,7 +2136,7 @@ img
 #pdf-share .pdf-text
 {
     margin-top:40px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 21px;
     line-height: 40px;
     color: #FFFFFF;
@@ -2076,12 +2163,11 @@ img
 #pdf-share .right-wrap input
 {    
     margin-top:43px;
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background:transparent;
     border:none;
     border-bottom:1px solid #fff;
-    padding-left:10px;
-    padding-bottom:3px;
+    padding:10px 0 10px 10px;
     font-size:12px;
     color: #fff;
     caret-color:rgba(255,255,255,0.6);
@@ -2150,7 +2236,7 @@ footer .menu-wrapper
     margin-top:19px;
     display: flex;
     color:#fff;
-    font-family: 'Hind Guntur', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .menu-wrapper ul li a
 {
@@ -2195,7 +2281,7 @@ footer .adress-wrapper svg
 }
 footer .adress-wrapper
 {
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-size: 14px;
     line-height: 26px;
     text-align: center;
@@ -2213,7 +2299,7 @@ footer .adress-wrapper .adress-title
 footer .copyright
 {
     margin-top:27px;
-    font-family: 'Hind Guntur';
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -2245,6 +2331,12 @@ footer .copyright
     transform:scale(0.95);
     box-shadow: inset 0 0 3px rgba(208, 191, 147, 0.8);
     font-size:18px;
+}
+@media (max-width:1800px)
+{
+    #about .students-wrapper {
+        padding: 0 18%;
+    }
 }
 @media (max-width:1680px)
 {
@@ -2337,6 +2429,17 @@ footer .copyright
     }
     #advantages {
         padding: 100px 6% 170px 6%;
+    }    
+    #about .about-advantages
+    {
+        flex-wrap:wrap;
+        margin-top: 50px;
+    }
+    #about .about-advantages .advantage-item
+    {
+        margin-top:50px;
+        min-width: 170px;
+        padding:0 15px;
     }
 }
 @media (max-width:1280px)
@@ -2425,5 +2528,9 @@ footer .copyright
     #pdf-share .img-wrap {
         right: -70px;
         top: -233px;
+    }
+    #about .decorate.bottom-right 
+    {
+        right:-4%;
     }
 }
