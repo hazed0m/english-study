@@ -414,7 +414,7 @@ img
     display: flex;
     flex-direction: column;
     margin-top:97px;
-    padding:0 22%;
+    padding:0 18%;
 }
 #about .students-wrapper .student-item
 {
@@ -1634,7 +1634,6 @@ img
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
-    padding:58px 45px;
     position: relative;
     text-shadow: 0 0 3px #000;    
     cursor:pointer;
@@ -1690,10 +1689,18 @@ img
 {
     fill:#fff;
 }
-/* #reviews .reviews-wrapper .review-item:hover
+#reviews .reviews-wrapper a
 {
-    background-size:115%;
-} */
+    text-decoration: none;
+    color:#fff;
+}
+#reviews .reviews-wrapper .review-item .wrapper
+{    
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);    
+    padding:58px 45px;
+}
 #reviews .reviews-wrapper .review-item:hover .play-wrapper .play-button
 {
     box-shadow: inset 0 0 3px rgba(0,0,0,0.8);
@@ -2336,7 +2343,7 @@ footer .copyright
 @media (max-width:1800px)
 {
     #about .students-wrapper {
-        padding: 0 18%;
+        padding: 0 15%;
     }
 }
 @media (max-width:1680px)
@@ -2428,6 +2435,9 @@ footer .copyright
     #isc-program .text-wrapper .text-title {
         margin-top: 40px;
     }
+    #about .students-wrapper {
+        padding: 0 10%;
+    }
     #advantages {
         padding: 100px 6% 170px 6%;
     }    
@@ -2449,7 +2459,17 @@ footer .copyright
         padding: 250px 0 50px 0;
     }
     #about .students-wrapper {
-        padding: 0px 10%;
+        padding: 0px 8%;
+    }
+    #about .students-wrapper .student-item .photo-wrapper img {
+        width: 400px;
+        height: 270px;
+    }
+    #about .students-wrapper .student-item:nth-child(1) .photo-wrapper .back::after, 
+    #about .students-wrapper .student-item:nth-child(2) .photo-wrapper .back::after,
+    #about .students-wrapper .student-item:nth-child(3) .photo-wrapper .back::after{
+        width: 360px;
+        height: 250px;
     }
     #isc-program .photo-wrapper {
         top: -10px;
