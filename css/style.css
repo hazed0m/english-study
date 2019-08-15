@@ -1636,7 +1636,8 @@ img
     background-position: center;
     padding:58px 45px;
     position: relative;
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 3px #000;    
+    cursor:pointer;
 }
 #reviews .reviews-wrapper .review-item .item-title
 {
@@ -1681,7 +1682,6 @@ img
     align-items: center;
     padding-left:4px;
     font-size: 17px;
-    cursor:pointer;
     transition: 0.5s;
     border-radius:5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.50);
@@ -1690,7 +1690,11 @@ img
 {
     fill:#fff;
 }
-#reviews .reviews-wrapper .review-item .play-wrapper .play-button:hover
+/* #reviews .reviews-wrapper .review-item:hover
+{
+    background-size:115%;
+} */
+#reviews .reviews-wrapper .review-item:hover .play-wrapper .play-button
 {
     box-shadow: inset 0 0 3px rgba(0,0,0,0.8);
     border-radius: 5px;
