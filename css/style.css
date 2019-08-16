@@ -3523,6 +3523,11 @@ footer .copyright
     {
         align-items: center;
     }
+    #free-consult .button
+    {
+        
+        margin:20px auto 0 auto;
+    }
     #pdf-share .pdf-title br,
     #results .text-wrapper .text-lead-inner br
     {
@@ -3787,6 +3792,13 @@ footer .copyright
     #pdf-share .right-wrap .button
     {
         padding: 18px 90px 18px 90px;
+    }
+    footer .menu-wrapper ul {
+        padding: 0 5%;
+    }
+    footer .menu-wrapper ul li {
+        margin: 40px 15px 0 10px;
+        text-align: center;
     }
 }
 @media (max-width:365px)
