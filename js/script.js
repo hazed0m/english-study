@@ -1,8 +1,7 @@
 $(document).ready(function() {
     $(`#main .main-form input[type='tel'], 
         #skype-consult .skype-form input[type='tel'], 
-        #free-consult .free-consult-form input[type='tel'],
-        .popap-wrapper input[type='tel']`
+        #free-consult .free-consult-form input[type='tel']`
      ).mask("+38  999 - 99 - 99 - 999");
     $('img[src$=".svg"]').each(function() {
         var $img = jQuery(this);
@@ -281,5 +280,6 @@ $(document).ready(function() {
             $('.mask, .popap-wrapper').fadeOut();
             $('body').css({'overflow':'visible','max-height':'100%','height':'100%'});
         });
+        $(`.popap-wrapper input[type='tel']`).mask("+38  999 - 99 - 99 - 999");
     }    
 });
