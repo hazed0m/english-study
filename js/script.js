@@ -189,15 +189,97 @@ $(document).ready(function() {
         $('body').css({'overflow':'visible','max-height':'100%','height':'100%'});
       }
     }
+    //На нажатие закрыть вкладку
+    
+    // $(window).on('beforeunload',function(){
+    //     $('.mask, .popap-wrapper').fadeIn();
+    //     $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
+    //     return "Handler for .unload() called.";
+    // }); 
 
+    //На подъем мыши к закрытию
+    $(document).bind("mouseleave", function(e) {
+        if (e.pageY - $(window).scrollTop() <= 1) {    
+            let popapItem = `
+                <div class="close-but"><i class="fas fa-times"></i></div>
+                <div class="popap-title">Не уходите! Мы хотим подарить вам $50!</div>
+                <div class="popap-pretitle">
+                    Оставьте ваши контактные данные и мы расскажем, как забрать подарок.                         
+                </div>
+                <div class="popap-form-wrapper">
+                    <div class="popap-form">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Введите ваше имя">
+                            <input type="email" placeholder="Введите ваш E-mail">
+                            <div class="tel-wrapper">
+                                <input type="tel" placeholder="+38 ___ - __ - __ - ___">
+                            </div>
+                        </div>
+                        <div class="button" id="popapExit">
+                            Получить $50
+                        </div>                    
+                    </div>
+                    <div class="numbers-wrapper">
+                        <div class="numbers-title">Или звоните по телефонам:</div>
+                        <a href="tel:(097) 500 03 20"><div class="numbers-item">(097) 500 03 20</div></a>
+                        <a href="tel:(099) 500 03 20"><div class="numbers-item">(099) 500 03 20</div></a>
+                    </div>
+                </div>`;
+            $('.popap-wrapper').empty().append(popapItem);
+            popapRefresh();
+            $('.mask, .popap-wrapper').fadeIn();
+            $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
+        }
+    });
     /*Buttons*/
     $('#call').on('click',function(){
+        let popapItem = `
+                <div class="close-but"><i class="fas fa-times"></i></div>
+                <div class="popap-title">Нужна консультация?</div>
+                <div class="popap-pretitle">
+                    Оставьте ваши контакты и менеджер вам перезвонит.                         
+                </div>
+                <div class="popap-form-wrapper">
+                    <div class="popap-form">
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Введите ваше имя">
+                            <input type="email" placeholder="Введите ваш E-mail">
+                            <div class="tel-wrapper">
+                                <input type="tel" placeholder="+38 ___ - __ - __ - ___">
+                            </div>
+                        </div>
+                        <div class="button" id="popapSend">
+                            Отправить
+                        </div>                    
+                    </div>
+                    <div class="numbers-wrapper">
+                        <div class="numbers-title">Или звоните по телефонам:</div>
+                        <a href="tel:(097) 500 03 20"><div class="numbers-item">(097) 500 03 20</div></a>
+                        <a href="tel:(099) 500 03 20"><div class="numbers-item">(099) 500 03 20</div></a>
+                    </div>
+                </div>`;
+        $('.popap-wrapper').empty().append(popapItem);
+        popapRefresh();
         $('.mask, .popap-wrapper').fadeIn();
         $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
     });
-    $('.popap-wrapper .close-but, .mask').on('click',function(){
-        $('.mask, .popap-wrapper').fadeOut();
-        $('body').css({'overflow':'visible','max-height':'100%','height':'100%'});
+    $('#sign').on('click',function(){
+        let popapItem = `
+                <div class="close-but"><i class="fas fa-times"></i></div>
+                <div class="popap-title">Спасибо за подписку!</div>
+                <div class="popap-pretitle">
+                    Пожалуйста, зайдите в вашу почту и перейдите по ссылке в письме, чтобы подтвердить подписку на рассылку и получать от нас полезные материалы без перебоев.                         
+                </div>`;
+        $('.popap-wrapper').empty().append(popapItem);
+        popapRefresh();
+        $('.mask, .popap-wrapper').fadeIn();
+        $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
     });
-
+    function popapRefresh()
+    {
+        $('.popap-wrapper .close-but, .mask').on('click',function(){
+            $('.mask, .popap-wrapper').fadeOut();
+            $('body').css({'overflow':'visible','max-height':'100%','height':'100%'});
+        });
+    }    
 });

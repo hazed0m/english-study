@@ -2381,7 +2381,7 @@ a.anchor
 /*POPAP*/
 .mask
 {
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
     background:rgba(0,0,0,0.9);
@@ -2392,6 +2392,7 @@ a.anchor
 }
 .popap-wrapper
 {
+    max-width: 550px;
     display: none;
     position: fixed;
     top:50%;
@@ -3328,6 +3329,23 @@ a.anchor
     #curator .text-title br
     {
          display: none;
+    }      
+    .popap-wrapper{
+        width:96%;
+        max-height: 90vh;
+    } 
+    .popap-wrapper .popap-title {
+        font-size: 22px;
+    }
+    .popap-wrapper .popap-pretitle {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .popap-wrapper .popap-form input {
+        margin-top: 15px;
+    }
+    .popap-wrapper .button {
+        margin-top: 25px;
     }
 }
 @media (max-width:860px)
@@ -3408,7 +3426,7 @@ a.anchor
     }
     #main .button {
         margin:0;
-    }     
+    }  
 }
 @media (max-width:800px)
 {
