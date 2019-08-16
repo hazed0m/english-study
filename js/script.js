@@ -145,6 +145,7 @@ $(document).ready(function() {
             items:3,
             autoWidth:true,
             nav: true,
+            loop:true,
             navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`],
             navSpeed:800,
             margin:50,

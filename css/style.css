@@ -610,7 +610,7 @@ img
 {
     margin-top:15px;
     font-family: 'Roboto';
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 30px;
     color: #FFF;
@@ -771,7 +771,7 @@ img
 {
     width:100%;
     height:100%;    
-    padding:100px 15%;
+    padding:60px 15%;
     background: rgba(30, 36, 51,0.9);
 }
 #skype-consult .text-title
@@ -795,7 +795,7 @@ img
 .results-wrapper
 {
     width:100%;
-    margin-top:100px;
+    margin-top:60px;
     display: flex;
     justify-content: space-between;
 }
@@ -834,7 +834,7 @@ img
 }
 .results-wrapper .result-item .text-inner span:nth-child(1)
 {
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom:15px;
 }
 .results-wrapper .result-item:nth-child(2)
@@ -1299,7 +1299,7 @@ img
     border: 1px solid #D0BF93;
     color:#D0BF93;
     font-family: 'Roboto';
-    font-weight: bold;
+    font-weight: 500;
     font-size: 24px;
     line-height: 45px;
     text-transform: uppercase;
@@ -1458,7 +1458,7 @@ img
 #stages .info-title .inlineBold
 {
     display: inline-block;
-    font-weight: 600;
+    font-weight: 500;
 }
 #teachers
 {
@@ -2031,7 +2031,7 @@ img
 #results2 .text-wrapper .inlineBold
 {
     display: inline-block;
-    font-weight: 600;
+    font-weight: 500;
 }
 #results2 .text-wrapper .text-lead-inner .wrapper
 {
@@ -2077,7 +2077,7 @@ img
 #why-study .text-lead-inner .inlineBold
 {
     display: inline-block;
-    font-weight: 600;
+    font-weight: 500;
 }
 #why-study .text-lead-inner
 {
@@ -2376,7 +2376,7 @@ footer .copyright
 {
     #skype-consult .wrapper
     {
-        padding: 100px 13%;
+        padding: 60px 13%;
     }
     #advantages
     {
@@ -2409,7 +2409,7 @@ footer .copyright
         height:auto;
     }
     #skype-consult .wrapper {
-        padding: 100px 10%;
+        padding: 60px 10%;
     }
     #advantages {
         padding: 200px 8% 270px 8%;
@@ -2454,7 +2454,7 @@ footer .copyright
         left: -150px;
     }
     #skype-consult .wrapper {
-        padding: 100px 5%;
+        padding: 60px 5%;
     }
     #skype-consult .skype-form {
         padding: 0 18%;
@@ -3618,6 +3618,11 @@ footer .copyright
     #free-consult .photo-wrapper, #free-consult .wrapper .left-wrapper, #free-consult .text-wrapper
     {
         min-width:100%;
+    }
+    #about .about-title.second
+    {
+        padding-left:10px;
+        padding-right:10px;
     }
 }
 @media (max-width:400px)
