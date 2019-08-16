@@ -77,6 +77,7 @@ img
 {
     width: 120px;
     height: 60px;
+    z-index:99999;
 }
 #main .logo-wrapper img
 {
@@ -88,6 +89,11 @@ img
     display: flex;
     color:#fff;
     font-family: 'Roboto', sans-serif;
+}
+#main .menu-button
+{
+    display: none;
+    cursor: pointer;
 }
 #main .menu-wrapper ul
 {
@@ -119,7 +125,7 @@ img
 {
     display: none;
 }
-#main .menu-wrapper .button
+#main .button
 {
     margin-left:60px;
     padding:15px 45px 15px 45px;
@@ -139,10 +145,28 @@ img
 {
     color:#fff;
 }
-#results2 .button:hover, #isc-program .text-wrapper .button:hover, #skype-consult .skype-form .button:hover, #results .text-wrapper .button:hover, #main .menu-wrapper .button:hover, #main .main-form-wrapper .button:hover, #about .students-wrapper .button:hover
+#results2 .button:hover, #isc-program .text-wrapper .button:hover, #skype-consult .skype-form .button:hover, #results .text-wrapper .button:hover, #main .button:hover, #main .main-form-wrapper .button:hover, #about .students-wrapper .button:hover
 {
     color:#CF313B;
     background:#fff;
+}
+#main #hamburger
+{
+    display: none;
+}
+#main header .button svg
+{
+    display: none;
+}
+#main .main-form-wrapper .button
+{
+    width:auto;
+    height:auto;
+}
+#main .main-form-wrapper #downloadFile
+{
+    font-size: 13px;
+    width: 212px;
 }
 #main .main-form-wrapper
 {
@@ -353,7 +377,6 @@ img
     left: 90px;
     background: #D0BF93;
     opacity: 0.5;
-    box-shadow: 0 0 3px #D0BF93;
 }
 #about .decorate .decorate-long
 {
@@ -365,7 +388,6 @@ img
     background: #D0BF93;
     opacity: 0.5;
     transform:rotate(90deg);
-    box-shadow: 0 0 3px #D0BF93;
 }
 #about .about-title
 {    
@@ -582,7 +604,7 @@ img
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
-    color: #FFF;
+    color: #F0DFB4;
 }
 #results .text-wrapper .text-lead-inner
 {
@@ -1223,7 +1245,7 @@ img
 #isc-program .text-wrapper .button svg
 {
     margin-left:5px;
-    margin-bottom:9px;
+    margin-bottom:2px;
 }
 #stages
 {
@@ -1336,7 +1358,7 @@ img
     content:"·";
     font-size:35px;
     position: absolute;
-    top:2.5px;
+    top:-0.5px;
     left:-10px;
 }
 #stages .info-wrapper .info-inner
@@ -1423,6 +1445,10 @@ img
 #stages .info-wrapper#s-year
 {
     display: none;
+}
+#stages .info-wrapper .lessons-wrapper .lesson-block .lesson svg
+{
+    margin-right: 5px;
 }
 #stages .info-title .inlineNormal
 {
@@ -2129,17 +2155,17 @@ img
     font-size: 38px;
     line-height: 51px;
     color: #FFFFFF;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    /* text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); */
 }
 #pdf-share .pdf-pretitle
 {
     margin-top:20px;
     font-family: 'Roboto';
-    font-weight: 600;
+    font-weight: 500;
     font-size: 21px;
     line-height: 40px;
     color: #FFFFFF;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    /* text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); */
 }
 #pdf-share .pdf-text
 {
@@ -2148,7 +2174,7 @@ img
     font-size: 21px;
     line-height: 40px;
     color: #FFFFFF;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    /* text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); */
 }
 #pdf-share .right-wrap
 {
@@ -2302,7 +2328,7 @@ footer .adress-wrapper
 footer .adress-wrapper .adress-title
 {
     margin-top:18px;
-    font-weight: 600;
+    font-weight: 500;
 }
 footer .copyright
 {
@@ -2331,7 +2357,7 @@ footer .copyright
     cursor: pointer;
     transition:0.2s;
     box-shadow:0 0 5px rgba(208, 191, 147, 0.8);
-    z-index: 9999;
+    z-index: 999;
 }
 .up-handler:hover
 {
@@ -2417,6 +2443,16 @@ footer .copyright
 }
 @media (max-width:1366px)
 {
+    #about .students-wrapper .student-item:nth-child(1) .photo-wrapper:before
+    {
+        left:-60px;
+    }
+    #about .students-wrapper .student-item:nth-child(2) .photo-wrapper:before {
+        right: -150px;
+    }
+    #about .students-wrapper .student-item:nth-child(3) .photo-wrapper:before {
+        left: -150px;
+    }
     #skype-consult .wrapper {
         padding: 100px 5%;
     }
@@ -2452,6 +2488,9 @@ footer .copyright
         min-width: 170px;
         padding:0 15px;
     }
+    #stages .info-wrapper .photo-block {
+        min-width: 450px;
+    }
 }
 @media (max-width:1280px)
 {
@@ -2459,7 +2498,10 @@ footer .copyright
         padding: 250px 0 50px 0;
     }
     #about .students-wrapper {
-        padding: 0px 8%;
+        padding: 0px 5%;
+    }
+    #about .students-wrapper .student-item .photo-wrapper, #about .students-wrapper .student-item .text-wrapper {
+        margin: 0 10px 0 10px;
     }
     #about .students-wrapper .student-item .photo-wrapper img {
         width: 400px;
@@ -2486,7 +2528,7 @@ footer .copyright
         min-width: 480px;
     }
     #stages {
-        margin-top: 100px;
+        margin-top: 0px;
         padding: 150px 0 50px 0;
     }
     #teachers .slider-items-wrapper {
@@ -2554,4 +2596,1219 @@ footer .copyright
     {
         right:-4%;
     }
+    .results-wrapper .result-item
+    {
+        margin:30px 10px;
+    }
+    .results-wrapper
+    {
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top: 80px;
+    }
+    #skype-consult .skype-form {
+        padding: 0 10%;
+    }
+    #advantages .toogle-wrapper
+    {
+        justify-content: space-between;
+    }
+    #stages .info-wrapper .photo-block {
+        min-width: 350px;
+    }    
+    #about .about-title {
+        padding-top: 50px;
+    }
+    #curator .text-wrapper, #curator .wrapper .left-wrapper, #curator .wrapper .photo-wrapper {
+        width: 450px;
+        height: 400px;
+        min-width: 450px;
+        min-height: 400px;
+    }
+    #curator .text-wrapper {
+        top: -50px;
+        left: -50px;
+        padding: 20px 0 0 60px;
+    }
+    #curator .play-button {
+        width: 80px;
+        height: 80px;
+    }
+    #curator .play-button .inner {
+        width: 64px;
+        height: 64px;
+    }
+    #curator .play-button .inner svg {
+        font-size: 16px;
+        margin-right: -4px;
+    }
+    #curator .text-quote {
+        margin-top: 20px;
+    }
+    #curator .text-sign {
+        margin-top: 25px;
+    }
 }
+@media (max-width:1150px)
+{
+    #main header
+    {
+        justify-content: space-between;
+        padding:20px 40px;
+        position: relative;
+        top:0;
+    }
+    #main .menu-wrapper
+    {
+        display: none;
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0, 0, 0, 0.90); 
+        z-index: 9999;  
+        justify-content: center;
+        align-items: center;   
+    }   
+    #main .menu-wrapper ul
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:100%;
+    }
+    #main .menu-wrapper ul li
+    {
+        margin:20px 0;
+    }
+    #main .menu-wrapper ul li:after
+    {
+        display: none;
+    }
+    #main #hamburger
+    {
+        display: flex;
+    } 
+    #main .menu-button svg
+    {
+        width:20px;
+        height:18px;
+    }     
+    #main header .button
+    {
+        display: flex;
+        margin-left: 0px;
+        content:'';
+        width: 35px;
+        height: 35px;
+        padding:0;
+        background:none;
+        transition: 0;
+    }
+    #main header .button{
+        width: 35px;
+        display: flex;
+        height: 35px;
+        background:#CF313B;
+        border-radius:50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #stages .wrapper .toogle-wrapper .toogle-but {
+        width: 200px;
+        height: 55px;
+        font-size: 16px;
+    }
+    #main header .button svg
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:30px;
+        width:15px;
+        height:15px;
+    }
+    #reviews {
+        padding: 40px 15% 160px 15%;
+    }
+    #main .button span
+    {
+        display: none;
+    }
+    #main #hamburger
+    {
+        cursor: pointer;
+    }
+    #skype-consult .skype-form {
+        padding: 0 5%;
+    }
+    #advantages .toogle-wrapper .toogle-item
+    {
+        margin:22px 30px 0 30px;
+    }
+    #advantages .toogle-wrapper
+    {
+        justify-content:center;
+    }
+    #isc-program
+    {
+        padding:0;
+    }
+    #isc-program .photo-wrapper
+    {
+        display: none;
+    }    
+    #advantages
+    {
+        padding: 200px 11% 50px 11%;
+        max-height: 100%;
+    }
+    #stages .info-wrapper .photo-block
+    {
+        display: none;
+    }
+    #stages .wrapper .stages-title {
+        font-size: 33px;
+    }
+    #stages .button
+    {
+        margin:40px auto 0 auto;
+    }
+    #free-consult .photo-wrapper
+    {
+        display: none;
+    }
+    #free-consult .text-wrapper {
+        padding: 30px 0 0 115px;
+    }
+    #results2 .photo-wrapper {
+        bottom:0px;
+        top:auto;
+        left: -70px;
+        width: 700px;
+        height: 647px;
+    }
+    #results2 {
+        padding-top: 15px;
+    }
+    #results2 .text-wrapper {
+        margin-left: -128px;
+    }
+    #results2 .wrapper
+    {
+        height: auto;
+    }
+    #why-study .right-block
+    {
+        display: none;
+    }
+    #why-study .wrapper {
+        justify-content: center;
+    }
+    #why-study {
+        padding: 162px 0 200px 8%;
+    }
+    #pdf-share .img-wrap
+    {
+        display: none;
+    }
+    #curator {
+        padding: 150px 0 100px 0;
+    }
+    #isc-program .text-wrapper .button {
+        margin: 40px auto 0 auto;
+    }
+    #about .about-title.second {
+        margin-top: 50px;
+    }
+    #about .about-pretitle {
+        max-width: 80%;
+        margin: 30px auto 0 auto;
+    }
+    #about .about-pretitle br
+    {
+        display: none;
+    }
+    #pdf-share {
+        padding: 70px 50px 70px 50px;
+    }
+    .up-handler {
+        width: 40px;
+        height: 40px;
+        font-size:15px;
+    } 
+    #isc-program .text-wrapper
+    {
+        text-align: center;
+    }    
+    #isc-program .text-wrapper .text-pretitle
+    {
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #about .students-wrapper .student-item:nth-child(1) .photo-wrapper:before
+    {
+        left:-20px;
+    }
+    #about .students-wrapper .student-item:nth-child(2) .photo-wrapper:before {
+        right: -100px;
+    }
+    #about .students-wrapper .student-item:nth-child(3) .photo-wrapper:before {
+        left: -100px;
+    }
+}
+@media (max-width:1000px)
+{
+    #curator .text-wrapper, #curator .wrapper .left-wrapper, #curator .wrapper .photo-wrapper {
+        width: 400px;
+        height: 350px;
+        min-width: 400px;
+        min-height: 350px;
+    }
+    #curator .text-wrapper {
+        top: -50px;
+        left: -50px;
+        padding: 20px 0 0 60px;
+    }
+    #about .students-wrapper .student-item:nth-child(1) .photo-wrapper:before,
+    #about .students-wrapper .student-item:nth-child(2) .photo-wrapper:before,
+    #about .students-wrapper .student-item:nth-child(3) .photo-wrapper:before {
+        font-size:450px;
+        top:-230px;
+        right:-20px;
+    }
+    #curator .play-button {
+        width: 80px;
+        height: 80px;
+    }
+    #curator .play-button .inner {
+        width: 64px;
+        height: 64px;
+    }
+    #curator .play-button .inner svg {
+        font-size: 16px;
+        margin-right: -4px;
+    }
+    #curator .text-quote {
+        margin-top: 10px;
+    }
+    #curator .text-sign {
+        margin-top: 15px;
+    }
+    #curator .text-title {
+        font-family: 'Playfair Display';
+        font-size: 27px;
+        line-height: 30px;
+    }
+    #curator .text-quote::before
+    {
+        top:0;
+        height: 150px;
+    }
+    #pdf-share .pdf-title, 
+    #about .about-title, 
+    #advantages .program-title,
+    #results .text-wrapper .text-title,
+    #results2 .text-wrapper .text-title,
+    #why-study .why-title,
+    #isc-program .text-wrapper .text-title,
+    #skype-consult .text-title,
+    #teachers .teachers-title,
+    #reviews .reviews-title,
+    #free-consult .text-title
+    {
+        font-size: 30px;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #isc-program .text-wrapper .text-pretitle,
+    #results .text-wrapper .text-pretitle,
+    #pdf-share .pdf-pretitle,
+    #pdf-share .pdf-text,
+    #isc-program .text-wrapper .text-pretitleadd,
+    #results .text-wrapper .text-lead-title,
+    #results .text-wrapper .text-lead-inner
+    {
+        margin-left:auto;
+        margin-right:auto;
+        text-align: center;
+    }   
+    #results2 .text-wrapper .text-title br
+    {
+        display: none;
+    }
+    #pdf-share .pdf-pretitle {
+        font-size: 19px;
+    }
+    #pdf-share .pdf-text {
+        margin-top: 20px;
+        font-size: 17px;
+    }
+    #pdf-share .pdf-pretitle {
+        margin-top: 10px;
+    }
+    #pdf-share {
+        padding: 50px;
+    }
+    #main .main-form-wrapper
+    {
+        width:auto;
+        height:auto;
+    }
+    #main .wrapper
+    {        
+        padding:0 50px;
+    }
+    #about .about-title {
+        padding-top: 150px;
+    }
+    #about .title-wrapper {
+        padding: 0 10%;
+    }
+    #about .students-wrapper .student-item .photo-wrapper img {
+        width: 350px;
+        height: 220px;
+    }
+    #about .students-wrapper .student-item:nth-child(1) .photo-wrapper .back::after, #about .students-wrapper .student-item:nth-child(2) .photo-wrapper .back::after, #about .students-wrapper .student-item:nth-child(3) .photo-wrapper .back::after {
+        width: 300px;
+        height: 210px;
+    }
+    #about .students-wrapper .student-item .text-wrapper {
+        font-family: 'Roboto';
+        font-size: 18px;
+    }
+    #about .students-wrapper .student-item .text-wrapper br
+    {
+        display: none;
+    }
+    #results .photo-wrapper
+    {
+        display: none;
+    }
+    #results .text-wrapper .button, #results2 .button
+    {
+        margin:50px auto 0 auto;
+    }
+    #results2 .photo-wrapper
+    {
+        display: none;
+    }
+    #results2 .text-wrapper {
+        margin-left: 0;
+    }
+    #results2 .text-wrapper
+    {
+        padding-bottom:30px;
+    }
+    #results2 .text-wrapper .text-title {
+        margin-top: 30px;
+    }
+    #pdf-share .right-wrap input
+    {
+        min-width: 240px;
+    }
+    #pdf-share .right-wrap .button {
+        margin-top: 40px;
+        padding: 19px 70px 17px 70px;
+    }
+    #about .about-pretitle {
+        font-size: 20px;
+    }
+    #main .button {
+        margin:0;
+    }
+    #about .students-wrapper .button {
+        margin: 90px auto;
+    }
+    #skype-consult .skype-form .checkbox-wrapper span {
+        margin-top: 15px;
+    }
+}
+@media (max-width:920px)
+{    
+    #about .students-wrapper .student-item .photo-wrapper img {
+        width: 300px;
+        height: 190px;
+    }
+    #about .students-wrapper .student-item:nth-child(1) .photo-wrapper .back::after, #about .students-wrapper .student-item:nth-child(2) .photo-wrapper .back::after, #about .students-wrapper .student-item:nth-child(3) .photo-wrapper .back::after {
+        width: 290px;
+        height: 180px;
+    }
+    #about .students-wrapper .student-item .text-wrapper {
+        font-size: 16px;
+    }
+    #curator .wrapper
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    #curator .play-button
+    {
+        left:68%;
+        top: 48%;
+    }
+    #curator .text-wrapper
+    {
+        background: none;
+    }
+    #curator .wrapper .left-wrapper
+    {
+        padding:20px 0 50px 0;
+    }
+    #curator .text-wrapper, #curator .wrapper .left-wrapper
+    {
+        width:500px;
+        height:auto;
+        box-sizing: border-box;
+        top:0;
+        left:0;
+    }
+    #curator .text-quote br
+    {   
+        display: none;
+    }
+    #curator .wrapper .photo-wrapper {
+        width: 500px;
+        height: 450px;
+        min-width: 500px;
+        min-height: 450px;
+    }
+    #curator .text-quote {
+        margin-top: 30px;
+    }
+    #curator .text-quote::before {
+        height: 205px;
+        top: -13px;
+    }
+    .results-wrapper .result-item{
+        height: auto;
+    }
+    #stages .wrapper {
+        padding: 70px 30px 0 30px;
+    }
+    #pdf-share
+    {
+        flex-wrap:wrap;
+        justify-content: center;
+    }    
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 24%;
+    }
+    #teachers .slider-item {
+        margin: 0;
+    }
+    #teachers .owl-carousel .owl-nav {
+        padding-left: 0%;
+    }
+    #curator .text-title br
+    {
+         display: none;
+    }
+}
+@media (max-width:860px)
+{    
+    #pdf-share .pdf-text br
+    {
+        display: none;
+    }
+    #about .decorate.top-left {
+        position: absolute;
+        left:-65px;
+        top:100px;
+    }
+    #about .decorate.top-right 
+    {
+        position: absolute;
+        right:45px;
+        top:-15px;
+        transform:rotate(90deg);
+    }
+    #about .decorate.bottom-left 
+    {
+        position: absolute;
+        transform:rotate(-90deg);
+        left:55px;
+        bottom:-215px;
+    }
+    #about .decorate.bottom-right 
+    {
+        position: absolute;
+        transform:rotate(-180deg);
+        right:-70px;
+        bottom:-100px;
+    }
+    #pdf-share .right-wrap {
+        margin: 0 3%;
+    }
+    #advantages {
+        padding: 100px 5% 50px 5%;
+    }
+    #main .main-form-wrapper .main-title br
+    {
+        display: none;
+    }
+    #main .main-form-wrapper .main-title
+    {
+        font-size:25px;
+    }
+    #main .main-form-wrapper
+    {
+        padding: 25px 35px 35px 35px;
+    }
+    #main .main-form-wrapper .main-form {
+        margin-top: 25px;
+    }
+    #main .main-form-wrapper .main-form .input-wrapper > *,
+    #skype-consult .skype-form .input-wrapper > *
+    {
+        margin:20px;
+    }
+    #main .main-form-wrapper .main-form .input-wrapper, #skype-consult .skype-form .input-wrapper
+    {
+        flex-wrap:wrap;
+        justify-content: space-around;
+    }
+    #main .button {
+        margin:0;
+    }     
+    #pdf-share .right-wrap
+    {
+        padding-top:0;
+    }
+}
+@media (max-width:800px)
+{
+    #about .about-pretitle {
+        font-size: 18px;
+    }
+    #pdf-share .pdf-title, #about .about-title, #advantages .program-title, #results .text-wrapper .text-title, #results2 .text-wrapper .text-title, #why-study .why-title {
+        font-size: 28px;
+    }
+    #why-study {
+        padding: 62px 0 100px 0;
+    }
+    #why-study .button
+    {
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #why-study .left-block:before {
+        font-size: 700px;
+        top: -150px;
+        left: -80px;
+    }
+    #advantages .toogle-wrapper
+    {
+        display: block;
+        width:fit-content;
+    }
+    #advantages .toogle-wrapper .toogle-item {
+        margin: 0 auto;
+    }
+    #advantages .toogle-wrapper .owl-nav
+    {
+        margin-top:30px;
+        display: flex;
+    }
+    #advantages:before,
+    #advantages:after
+    {
+        display: none;
+    }
+    #advantages {
+        padding: 100px 20% 50px 20%;
+    }
+    #reviews .reviews-pretitle br
+    {
+        display: none;
+    }
+    #reviews .reviews-pretitle
+    {
+        font-size:22px;
+    }
+    footer .menu-wrapper ul {
+        flex-wrap: wrap;
+    }
+    footer .menu-wrapper ul li
+    {
+        margin: 20px 10px 0 5px;
+    }    
+    #curator .wrapper {
+        margin-left: 0px;
+    }    
+    footer .menu-wrapper ul
+    {
+        padding:0 10%;
+    }
+    footer .menu-wrapper ul li {
+        margin: 40px 15px 0 10px;
+    }
+    footer .menu-wrapper {
+        margin-top: 0px;
+    }
+}
+@media (max-width:700px)
+{
+    #about .students-wrapper .student-item
+    {
+        flex-direction: column!important;
+    }
+    #about .students-wrapper .student-item .photo-wrapper img {
+        width: 400px;
+        height: 270px;
+    }
+    #about .students-wrapper .student-item .text-wrapper
+    {
+        margin-top:20px;
+        width: 400px;
+    }
+    #about .students-wrapper .student-item:nth-child(1) .photo-wrapper .back::after, 
+    #about .students-wrapper .student-item:nth-child(2) .photo-wrapper .back::after, 
+    #about .students-wrapper .student-item:nth-child(3) .photo-wrapper .back::after
+    {
+        display: none;
+    }
+    #about .students-wrapper .student-item:nth-child(1) .photo-wrapper:before,
+    #about .students-wrapper .student-item:nth-child(2) .photo-wrapper:before,
+    #about .students-wrapper .student-item:nth-child(3) .photo-wrapper:before {
+        font-size:470px;
+        top:-210px;
+        right:-120px;
+    }
+    #about .students-wrapper .student-item
+    {
+        margin-bottom:50px;
+    }
+    #about .students-wrapper .button {
+        margin: 0 auto 50px auto;
+    }
+    #curator {
+        padding: 90px 0 90px 0;
+    }
+    #teachers .slider-item .img-wrapper {
+        width: auto;
+    }
+    #reviews .reviews-wrapper .review-item {
+        width: 450px;
+        height: 280px;
+    }
+    #stages .wrapper .toogle-wrapper .toogle-but
+    {
+        width: 160px;
+        height: 46px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .results-wrapper .result-item
+    {
+        min-height:230px;
+    }
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 22%;
+    }
+    #about .about-title {
+        padding-top: 100px;
+    }
+    footer .menu-wrapper ul li::after
+    {
+        display: none;
+    }
+}
+@media (max-width:600px)
+{
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 20%;
+    }
+    #main .wrapper {
+        padding: 0 20px;
+    }
+    #main header {
+        padding: 20px 0;
+    }
+    #main #hamburger {
+        margin-left: -17px;
+    }
+    #about .decorate.top-left,
+    #about .decorate.top-right,
+    #about .decorate.bottom-left,
+    #about .decorate.bottom-right 
+    {        
+        display: none;
+    }
+    #main .main-form-wrapper .main-title {
+        font-size: 18px;
+        line-height:24px;
+    }
+    #curator {
+        padding:0;
+    }
+    #about .about-title.second {
+        margin-top: 0px;
+    }
+    #about .about-advantages {
+        margin-top: 0px;
+    }
+    #about .about-pretitle {
+        max-width: 100%;
+    }
+    #main .main-form-wrapper .main-form .main-form-title br
+    {
+        display: none;
+    }
+    #curator .wrapper .left-wrapper {
+        padding: 20px 0 0 0;
+    }
+    #curator .play-button {
+        left: 75%;
+        top: 45%;
+    }
+    .results-wrapper {
+        margin-top: 60px;
+    }
+    #free-consult .text-title, #pdf-share .pdf-title, #about .about-title, #advantages .program-title, #results .text-wrapper .text-title, #results2 .text-wrapper .text-title, #why-study .why-title, #isc-program .text-wrapper .text-title, #skype-consult .text-title, #teachers .teachers-title, #reviews .reviews-title {
+        font-size: 28px;
+    }
+    #skype-consult .wrapper {
+        padding: 50px 5%;
+    }
+    #skype-consult .skype-form .input-wrapper {
+        margin-top: 25px;
+    }
+    #advantages {
+        padding: 50px 0 50px 0;
+    }
+    #advantages .toogle-wrapper
+    {
+        padding-left:25%;
+    }
+    #stages .wrapper {
+        padding: 50px 20px 0 20px;
+    }
+    #stages .wrapper .toogle-wrapper {
+        margin-top: 30px;
+    }
+    #teachers {
+        padding-top: 0px;
+    }
+    #stages .info-wrapper {
+        margin-top: 35px;
+    }
+    #advantages .toogle-wrapper .toogle-item
+    {
+        margin:0;
+    }
+    #isc-program {
+        height: auto;
+        padding-bottom:40px;
+    }
+    #stages {
+        margin-top: 0px;
+        padding: 100px 0 50px 0;
+    }
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 17%;
+    }
+    #reviews .reviews-wrapper .review-item {
+        width: 350px;
+        height: 220px;
+    }
+    #reviews {
+        padding: 40px 20px 120px 20px;
+    }
+    #reviews .reviews-wrapper
+    {
+        padding-left:15%;
+    }
+    #free-consult .text-wrapper
+    {
+        background:none;
+        padding:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top:0;
+        left:0;
+    }
+    #free-consult .photo-wrapper, #free-consult .wrapper .left-wrapper, #free-consult .text-wrapper
+    {
+        width:100%;
+        height: auto;
+    }
+    #free-consult .wrapper {
+        margin-left: 0px;
+    }
+    #free-consult {
+        padding: 0;
+    }
+    #free-consult .left-wrapper
+    {
+        padding-bottom:20px;
+    }
+    #results2 {
+        padding-top: 0;
+    }
+    #why-study {
+        padding: 32px 30px 50px 30px;
+    }
+    #reviews .reviews-pretitle {
+        font-size: 16px;
+    }
+    #reviews .reviews-wrapper {
+        margin-top: 50px;
+    }
+    #free-consult .text-pretitle, #skype-consult .skype-form .form-pretitle
+    {
+        font-size:16px;
+    }
+    #free-consult .button{
+        font-size:13px;
+    }
+    #free-consult .free-consult-form input
+    {
+        min-width:250px;
+    }
+    #free-consult .free-consult-form .input-wrapper
+    {
+        align-items: center;
+    }
+    #pdf-share .pdf-title br,
+    #results .text-wrapper .text-lead-inner br
+    {
+        display: none;
+    }
+    #curator .text-wrapper, #curator .wrapper .left-wrapper
+    {
+        width:100%;
+    }  
+    #curator .text-wrapper {
+        padding:30px 20px 60px 20px;
+    }   
+    #curator .text-wrapper, #curator .wrapper .left-wrapper, #curator .wrapper .photo-wrapper
+    {
+        min-width:100%;
+    } 
+}
+@media (max-width:500px)
+{  
+    #results2 .wrapper
+    {
+        padding:0 30px;
+    }  
+    footer .menu-wrapper ul {
+       justify-content: space-between;
+    }
+    footer .menu-wrapper ul li {
+        margin: 40px 0 0 0;
+    }
+    footer .adress-wrapper > div {
+        flex-direction: column;
+        max-width: 54%;
+    }
+    #about .about-title {
+        padding-top:50px;
+    }
+    #curator {
+        padding:0;
+    }
+    #skype-consult .skype-form .form-title {
+        margin-top: 40px;
+    }
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 22%;
+    }
+    #reviews
+    {
+        margin-top:-30px;
+    }
+    #teachers .slider-item {
+        max-width: 300px;
+    }    
+    #about .students-wrapper {
+        padding: 0px;
+    }    
+    /* #about .students-wrapper .student-item .text-wrapper
+    {
+        padding:0 20px;
+    } */
+    #results
+    {
+        height: auto;
+        padding:0 10px 50px 10px;
+    }
+    #results .text-wrapper .text-title {
+        margin-top: 25px;
+    }
+    #curator .wrapper .photo-wrapper {
+        width: 500px;
+        height: 450px;
+        min-width: 500px;
+        min-height: 450px;
+    }
+    #isc-program .text-wrapper .text-lead br
+    {
+        display: none;
+    }
+    #isc-program {
+        padding: 0 20px 40px 20px;
+    }
+    #free-consult .text-pretitle
+    {
+        text-align: center;
+    }
+    #free-consult .text-pretitle br,
+    #results .text-wrapper .text-pretitle br{
+        display: none;
+    }
+    #free-consult .button
+    {
+        padding: 19px 43px 17px 43px;
+    }
+    #why-study br
+    {
+        display: none;
+    }
+    #skype-consult .skype-form {
+        padding: 0;
+    }
+    .results-wrapper .result-item {
+        margin: 30px 0;
+    }
+}
+@media (max-width:450px)
+{
+    #about .students-wrapper .student-item .photo-wrapper img {
+        width: 100%;
+        height:auto;
+    }
+    #about .students-wrapper .student-item .photo-wrapper, #about .students-wrapper .student-item .text-wrapper {
+        margin: 0;
+    }    
+    #curator .play-button {
+        right: 0%;
+        left:auto;
+        top: 53%;
+    }    
+    #skype-consult .results-wrapper .result-item {
+        width: 100%;
+    }
+    #stages .wrapper {
+        width: 100%;
+        padding:50px 20px 0 20px;
+        margin:0;
+        border-radius: 30px 30px 0px 0px;
+    }
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 17%;
+    }
+    #advantages .toogle-wrapper {
+        padding-left: 21%;
+    }
+    #reviews .reviews-wrapper {
+        padding-left: 7%;
+    }
+    #free-consult .text-wrapper
+    {
+        padding:20px;
+    }
+    #free-consult .photo-wrapper, #free-consult .wrapper .left-wrapper, #free-consult .text-wrapper
+    {
+        min-width:100%;
+    }
+}
+@media (max-width:400px)
+{    
+    #about .students-wrapper .student-item .text-wrapper
+    {
+        padding:20px 40px 0 40px;
+    }
+    #stages .wrapper .stages-title {
+        font-size: 26px;
+    }
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 10%;
+    }
+    #reviews {
+        margin-top: -90px;
+    }
+}
+@media (max-width:380px)
+{
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 8%;
+    }
+    #advantages .toogle-wrapper {
+        padding-left: 15%;
+    }
+    #reviews .reviews-wrapper {
+        padding-left: 0%;
+    }
+    #reviews {
+        padding: 40px 15px 120px 15px;
+    }
+}
+@media (max-width:350px)
+{
+    #stages .info-wrapper .lessons-wrapper .lesson-block:nth-child(2) {
+
+        margin-left: -42px;
+    }
+    #stages .info-wrapper .lessons-wrapper .lesson-block:nth-child(1)
+    {
+        padding-left: 0px;
+    }
+    #stages .info-wrapper .lessons-wrapper
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #stages .info-wrapper .outer-info {
+        padding-left: 0px;
+    }
+    #stages .info-wrapper .info-inner ul {
+        padding-left: 20px;
+    }
+    #stages .button
+    {
+        padding: 18px 20px 18px 20px;
+        font-size: 12px;
+    }
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 9%;
+    }
+    #reviews .reviews-wrapper .review-item {
+        width: 281.45px;
+        height: 172px;
+    }
+    #reviews .reviews-wrapper .review-item .play-wrapper .play-button {
+        width: 35px;
+        height: 35px;
+        padding-left: 1px;
+    }
+    #reviews .reviews-wrapper .review-item .play-wrapper .play-button svg
+    {
+        font-size:10px;
+    }
+    #reviews .reviews-wrapper .review-item .play-wrapper {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+    #reviews .reviews-wrapper .review-item .wrapper {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        padding: 18px 25px;
+    }
+    #about .students-wrapper .student-item .text-wrapper
+    {
+        padding:20px 70px 0 70px;
+    }
+}
+@media (max-width:320px)
+{
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 4%;
+    }
+    #advantages .toogle-wrapper {
+        padding-left: 9%;
+    }
+    #reviews .reviews-wrapper {
+        padding-left: 0%;
+    }
+}
+@media (max-height:700px)
+{
+    #main .container
+    {
+        height:auto;
+    }
+    #main header
+    {
+        position: relative;
+        padding: 20px 0;
+    }
+    #main .wrapper {
+        padding: 0 20px;
+    }
+    #main .main-form-wrapper
+    {
+        position: relative;
+        top:0;
+        left:0;
+        transform: none;
+        margin:50px auto 100px auto;
+    }
+    #main .arrow
+    {
+        display: none;
+    }
+    #why-study .text-lead-inner {
+        font-size: 15px;
+    }
+}
+/* hamburger*/
+.hamburglar {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    position: relative;
+    display: block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 99999;
+}
+#top, #bottom {
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 36px;
+    border-radius: 2px;
+    background: #fff;
+}
+#top {
+    top: 19px;
+    left: 14px;
+}
+#bottom {
+    top: 41px;
+    left: 14px;
+}
+
+#hamburger path, line {
+    stroke: #fff;
+    stroke-linecap: round;
+}
+#top, #bottom {
+    -webkit-transform-origin: 34px 2px;
+    transform-origin: 34px 2px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all 500ms cubic-bezier(0.8, -1.1, 0.5, 1.9);
+}
+
+#circle {
+    stroke-dasharray: 1 100 32 300;
+    stroke-dashoffset: 101;
+    transition: all 750ms ease;
+}
+
+.hamburglar.is-closed #circle {
+    stroke-dasharray: 1 100 190 300;
+    stroke-dashoffset: 1;
+}
+.hamburglar.is-closed #top {
+    -webkit-transform: translateX(-4.5px) rotate(-45deg);
+    transform: translateX(-4.5px) rotate(-45deg);
+}
+.hamburglar.is-closed #bottom {
+    -webkit-transform: translateX(-4.5px) rotate(45deg);
+    transform: translateX(-4.5px) rotate(45deg);
+}
+    

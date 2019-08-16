@@ -25,10 +25,19 @@ $(document).ready(function() {
         }, 'xml');
     });
     $(".menu-wrapper").on("click", 'a.anchor', function (event) {
-		event.preventDefault();
-		var id  = $(this).attr('href'),
-			top = $(id).offset().top;
-		$('body,html').animate({scrollTop: top}, 900);
+        if(isClosed == false)
+        {
+            trigger.removeClass('is-closed');
+            trigger.addClass('is-open');
+            $('#main .menu-wrapper').removeClass('animated fadeInDown').addClass('animated fadeOutUp');
+            isClosed = true;
+            $('path, line').css('stroke','#fff');
+            $('body').css({'overflow':'visible','max-height':'100%','height':'100%'});
+        }
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 900);
     });
     $('#main .arrow').on('click',function(){
         $('body,html').animate({scrollTop: $('#about').offset().top}, 900);
@@ -84,7 +93,28 @@ $(document).ready(function() {
             $(`.info-wrapper#${currentId}`).css('display','flex');
         },400);
     });
+    $(window).resize(function(){
+        if(!$('#advantages .toogle-wrapper').hasClass('owl-carousel') && $(window).innerWidth() <= 768)
+        {
+            $('#advantages .toogle-wrapper').addClass('owl-carousel').owlCarousel({
+                items:1,
+                nav: true,
+                margin:20,
+                navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`]
+            });
+        }
+    });
     $(window).on('load',function() {
+        console.log($(window).innerWidth());
+        if($(window).innerWidth() <= 768)
+        {
+            $('#advantages .toogle-wrapper').addClass('owl-carousel').owlCarousel({
+                items:1,
+                nav: true,
+                margin:20,
+                navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`]
+            });
+        }
         $("#teachers .owl-carousel").owlCarousel({
             center: true,
             items:5,
@@ -93,11 +123,12 @@ $(document).ready(function() {
             navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`],
             navSpeed:800,
             responsive: {
-                678:{
-                    items:1
+                0:{
+                    items:1,
+                    margin:30
                 },                
                 960:{
-                    items:2             
+                    items:2
                 },                
                 1165:{
                     items:3
@@ -126,4 +157,29 @@ $(document).ready(function() {
             }
         });
     });
+    var trigger = $('#hamburger'),
+        isClosed = true;
+
+    trigger.on('click',function () {
+      burgerTime();
+    });
+    function burgerTime() {
+      if (isClosed == true) {
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        $('#main .menu-wrapper').removeClass('animated fadeOutUp').addClass('animated fadeInDown').css('display','flex');
+        isClosed = false;
+        // $('#top,#bottom').css('background','#B9FFF4');
+        $('path, line').css('stroke','transparent');
+        $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
+      } else {
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        $('#main .menu-wrapper').removeClass('animated fadeInDown').addClass('animated fadeOutUp');
+        isClosed = true;
+        // $('#top,#bottom').css('background','#fff');
+        $('path, line').css('stroke','#fff');
+        $('body').css({'overflow':'visible','max-height':'100%','height':'100%'});
+      }
+    }
 });
