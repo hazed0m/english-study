@@ -1002,10 +1002,6 @@ img
 #skype-consult .skype-form .checkbox-wrapper input[type="checkbox"]:checked + label svg {
     display: block;
 }
-#skype-consult .skype-form .checkbox-wrapper span
-{
-    margin-top:4px;
-}
 #skype-consult .skype-form .button
 {
     font-family: 'Roboto';
@@ -1940,10 +1936,6 @@ img
 }
 #free-consult .free-consult-form .checkbox-wrapper input[type="checkbox"]:checked + label svg {
     display: block;
-}
-#free-consult .free-consult-form .checkbox-wrapper span
-{
-    margin-top:4px;
 }
 #free-consult .photo-wrapper
 {
@@ -3048,9 +3040,6 @@ footer .copyright
     }
     #about .students-wrapper .button {
         margin: 90px auto;
-    }
-    #skype-consult .skype-form .checkbox-wrapper span {
-        margin-top: 15px;
     }
 }
 @media (max-width:920px)
