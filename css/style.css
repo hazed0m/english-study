@@ -2698,6 +2698,19 @@ a.anchor
 }
 @media (max-width:1280px)
 {
+    
+    #isc-program
+    {
+        padding:0;
+    }
+    #isc-program .photo-wrapper
+    {
+        display: none;
+    }    
+    #isc-program .text-wrapper a.anchor
+    {
+        margin:0 auto;
+    }
     #teachers .slider-items-wrapper {
         padding: 250px 0 50px 0;
     }
@@ -2970,14 +2983,6 @@ a.anchor
     {
         justify-content:center;
     }
-    #isc-program
-    {
-        padding:0;
-    }
-    #isc-program .photo-wrapper
-    {
-        display: none;
-    }    
     #advantages
     {
         padding: 70px 11% 50px 11%;
@@ -3587,7 +3592,7 @@ a.anchor
         padding: 0 20px;
     }
     #main header {
-        padding: 20px 0;
+        padding: 10px 0;
     }
     #main #hamburger {
         margin-left: -17px;
@@ -3780,11 +3785,16 @@ a.anchor
     }
     #main .main-form-wrapper
     {
-        margin-top:15px!important; 
+        margin-top:0; 
     }
 }
 @media (max-width:500px)
 {  
+    #main .main-form-wrapper .main-form .input-wrapper > *,
+    #skype-consult .skype-form .input-wrapper > *
+    {
+        margin:10px;
+    }
     #main .logo-wrapper .mobile
     {
         transform:scale(1);
@@ -3877,6 +3887,9 @@ a.anchor
     .results-wrapper .result-item {
         margin: 30px 0;
     }
+    #main .main-form-wrapper .main-form .input-wrapper {
+        margin-top: 15px;
+    }
 }
 @media (max-width:450px)
 {
@@ -3955,9 +3968,6 @@ a.anchor
 {    
     #main .wrapper {
         padding: 0 10px;
-    }
-    #main .main-form-wrapper .main-form .input-wrapper {
-        margin-top: 15px;
     }
     #main .main-form-wrapper .button {
         margin-top: 20px;
@@ -4097,7 +4107,7 @@ a.anchor
     #main header
     {
         position: relative;
-        padding: 20px 0;
+        padding: 10px 0;
     }
     #main .wrapper {
         padding: 0 20px;
@@ -4108,7 +4118,7 @@ a.anchor
         top:0;
         left:0;
         transform: none;
-        margin:50px auto 100px auto;
+        margin:0px auto 100px auto;
     }
     #main .arrow
     {
