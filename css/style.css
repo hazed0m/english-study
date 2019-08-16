@@ -127,6 +127,7 @@ img
 }
 #main .button
 {
+    font-family: 'Roboto', sans-serif;
     margin-left:60px;
     padding:15px 45px 15px 45px;
     color:#fff;
@@ -391,7 +392,7 @@ img
 }
 #about .about-title
 {    
-    padding-top:200px;
+    padding-top:50px;
     font-family: 'Playfair Display';
     color: #CF313B;
     font-size: 38px;
@@ -427,7 +428,7 @@ img
 }
 #about .about-title.second
 {
-    margin-top:200px;
+    margin-top:50px;
 }
 #about .students-wrapper 
 {
@@ -631,7 +632,7 @@ img
 #curator
 {
     width:100%;
-    padding:250px 200px 200px 200px;
+    padding:150px 200px 100px 200px;
     position: relative;
 }
 #curator .wrapper 
@@ -645,7 +646,7 @@ img
 #curator .wrapper .left-wrapper
 {
     width: 600px;
-    height: 550px;
+    height: 554px;
     background: #D0BF93;
     position: relative;
 }
@@ -1022,7 +1023,7 @@ img
 #advantages
 {
     width:100%;
-    padding:200px 16% 270px 16%;
+    padding:70px 16% 90px 16%;
     position: relative;
     text-align: center;
     max-height:1080px;
@@ -1249,8 +1250,8 @@ img
 }
 #stages
 {
-    margin-top:200px;
-    padding:274px 0 150px 0;
+    margin-top:100px;
+    padding:274px 0 50px 0;
     width:100%;
     position: relative;
     display: flex;
@@ -1627,6 +1628,7 @@ img
 }
 #reviews
 {
+    margin-top:-100px;
     width:100%;
     background: #1E2433;
     padding:120px 15% 180px 15%;
@@ -1746,7 +1748,7 @@ img
 }
 #free-consult
 {
-    padding:250px 200px 120px 200px;
+    padding:150px 200px 60px 200px;
 }
 #free-consult .wrapper 
 {    
@@ -2054,7 +2056,7 @@ img
 #why-study
 {
     width:100%;
-    padding:262px 0 200px 20%;
+    padding:162px 0 100px 20%;
 }
 #why-study .text-lead-inner .button
 {
@@ -2380,11 +2382,11 @@ footer .copyright
     }
     #advantages
     {
-        padding: 200px 13% 270px 13%;
+        padding: 70px 13% 90px 13%;
     }
     #why-study {
         width: 100%;
-        padding: 262px 0 200px 16%;
+        padding: 162px 0 100px 16%;
     }
     #pdf-share
     {
@@ -2412,13 +2414,13 @@ footer .copyright
         padding: 60px 10%;
     }
     #advantages {
-        padding: 200px 8% 270px 8%;
+        padding: 70px 8% 90px 8%;
     }
     #teachers .slider-items-wrapper {
         padding: 200px 0 100px 0;
     }
     #why-study {
-        padding: 262px 0 200px 8%;
+        padding: 162px 0 100px 8%;
     }
     #pdf-share {
         padding: 70px 0 70px 5%;
@@ -2460,7 +2462,7 @@ footer .copyright
         padding: 0 18%;
     }
     #advantages {
-        padding: 200px 6% 270px 6%;
+        padding: 70px 6% 90px 6%;
     }    
     #why-study .right-block .img-wrapper {
         min-width: 652px;
@@ -2475,7 +2477,7 @@ footer .copyright
         padding: 0 10%;
     }
     #advantages {
-        padding: 100px 6% 170px 6%;
+        padding: 50px 6% 90px 6%;
     }    
     #about .about-advantages
     {
@@ -2535,7 +2537,7 @@ footer .copyright
         padding: 250px 0 0 0;
     }
     #free-consult {
-        padding: 150px 100px 120px 100px;
+        padding: 120px 100px 60px 100px;
     }
     #free-consult .photo-wrapper, 
     #free-consult .wrapper .left-wrapper, 
@@ -2617,7 +2619,7 @@ footer .copyright
         min-width: 350px;
     }    
     #about .about-title {
-        padding-top: 50px;
+        padding-top: 150px;
     }
     #curator .text-wrapper, #curator .wrapper .left-wrapper, #curator .wrapper .photo-wrapper {
         width: 450px;
@@ -2763,7 +2765,7 @@ footer .copyright
     }    
     #advantages
     {
-        padding: 200px 11% 50px 11%;
+        padding: 70px 11% 50px 11%;
         max-height: 100%;
     }
     #stages .info-wrapper .photo-block
@@ -2822,7 +2824,7 @@ footer .copyright
         margin: 40px auto 0 auto;
     }
     #about .about-title.second {
-        margin-top: 50px;
+        margin-top: 100px;
     }
     #about .about-pretitle {
         max-width: 80%;
@@ -2860,7 +2862,7 @@ footer .copyright
         left: -100px;
     }
 }
-@media (max-width:1000px)
+@media (max-width:1100px)
 {
     #curator .text-wrapper, #curator .wrapper .left-wrapper, #curator .wrapper .photo-wrapper {
         width: 400px;
@@ -3145,7 +3147,7 @@ footer .copyright
         margin: 0 3%;
     }
     #advantages {
-        padding: 100px 5% 50px 5%;
+        padding: 70px 5% 50px 5%;
     }
     #main .main-form-wrapper .main-title br
     {
@@ -3220,7 +3222,7 @@ footer .copyright
         display: none;
     }
     #advantages {
-        padding: 100px 20% 50px 20%;
+        padding: 70px 20% 50px 20%;
     }
     #reviews .reviews-pretitle br
     {
@@ -3311,7 +3313,7 @@ footer .copyright
         padding: 250px 0 0 22%;
     }
     #about .about-title {
-        padding-top: 100px;
+        padding-top: 50px;
     }
     footer .menu-wrapper ul li::after
     {
@@ -3568,7 +3570,7 @@ footer .copyright
     {
         padding: 19px 43px 17px 43px;
     }
-    #why-study br
+    #why-study br, #skype-consult br
     {
         display: none;
     }
@@ -3623,6 +3625,21 @@ footer .copyright
     {
         padding-left:10px;
         padding-right:10px;
+    }
+    #stages .info-wrapper .info-inner ul {
+        padding-left: 25px;
+    }
+}
+@media (max-width:425px)
+{
+    #advantages .toogle-wrapper {
+        padding-left: 19%;
+    }
+    #reviews .reviews-wrapper {
+        padding-left: 5%;
+    }
+    #teachers .slider-items-wrapper {
+        padding: 250px 0 0 15%;
     }
 }
 @media (max-width:400px)
