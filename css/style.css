@@ -78,11 +78,12 @@ img
     width: 120px;
     height: 60px;
     z-index:99999;
+    
 }
-#main .logo-wrapper img
+#main .logo-wrapper .mobile
 {
-    width:100%;
-    height:100%;
+    display: none;
+    transform:scale(1.2);
 }
 #main .menu-wrapper
 {
@@ -1225,6 +1226,7 @@ img
     font-size: 17px;
     line-height: 30px;
     color: #FFF;
+    text-align: left;
 }
 #isc-program .text-wrapper .button
 {
@@ -1465,7 +1467,6 @@ img
 {
     width:100%;
     height:100%;
-    padding-top:50px;
 }
 #teachers .teachers-title
 {
@@ -1631,7 +1632,7 @@ img
     margin-top:-100px;
     width:100%;
     background: #1E2433;
-    padding:120px 15% 180px 15%;
+    padding:60px 15% 180px 15%;
 }
 #reviews .reviews-title
 {
@@ -2225,7 +2226,7 @@ img
 #pdf-share .right-wrap .button
 {
     margin-top:40px;
-    padding:19px 90px 17px 90px;
+    padding:18px 90px 18px 90px;
     color:#fff;
     text-transform: uppercase;
     font-size:14px;
@@ -2681,6 +2682,19 @@ footer .copyright
         width:100%;
         height:100%;
     }
+    #main .logo-wrapper
+    {
+        width:auto;
+        height:auto;
+    }
+    #main .logo-wrapper .desktop
+    {
+        display: none;
+    }
+    #main .logo-wrapper .mobile
+    {
+        display: block;
+    }
     #main .menu-wrapper ul li
     {
         margin:20px 0;
@@ -2815,7 +2829,13 @@ footer .copyright
     }
     #pdf-share .img-wrap
     {
-        display: none;
+        /* display: none; */
+        top:-275px;
+        bottom:0;
+        right:-250px;
+    }
+    #pdf-share .img-wrap img {
+        transform: scale(0.7);
     }
     #curator {
         padding: 150px 0 100px 0;
@@ -3015,7 +3035,7 @@ footer .copyright
     }
     #pdf-share .right-wrap .button {
         margin-top: 40px;
-        padding: 19px 70px 17px 70px;
+        padding: 18px 70px 18px 70px;
     }
     #about .about-pretitle {
         font-size: 20px;
@@ -3113,6 +3133,19 @@ footer .copyright
 }
 @media (max-width:860px)
 {    
+    #pdf-share .right-wrap
+    {
+        padding-top:60px;
+    }
+    #pdf-share .img-wrap
+    {
+        top:auto;
+        bottom: -348px;
+        right:-220px;
+    }
+    #pdf-share .img-wrap img {
+        transform: scale(0.5);
+    }
     #pdf-share .pdf-text br
     {
         display: none;
@@ -3177,10 +3210,6 @@ footer .copyright
     #main .button {
         margin:0;
     }     
-    #pdf-share .right-wrap
-    {
-        padding-top:0;
-    }
 }
 @media (max-width:800px)
 {
@@ -3234,11 +3263,7 @@ footer .copyright
     }
     footer .menu-wrapper ul {
         flex-wrap: wrap;
-    }
-    footer .menu-wrapper ul li
-    {
-        margin: 20px 10px 0 5px;
-    }    
+    }  
     #curator .wrapper {
         margin-left: 0px;
     }    
@@ -3246,8 +3271,12 @@ footer .copyright
     {
         padding:0 10%;
     }
+    footer .menu-wrapper ul li:after
+    {
+        display: none;
+    }
     footer .menu-wrapper ul li {
-        margin: 40px 15px 0 10px;
+        margin: 40px 25px 0 20px;
     }
     footer .menu-wrapper {
         margin-top: 0px;
@@ -3320,6 +3349,18 @@ footer .copyright
         display: none;
     }
 }
+@media (max-width:660px)
+{
+    #about .about-advantages .advantage-item:nth-child(4),
+    #about .about-advantages .advantage-item:nth-child(5)
+    {
+        display: none;
+    }
+    
+    #about .about-title.second, #about .about-title {
+        margin-top: 20px;
+    }
+}
 @media (max-width:600px)
 {
     #teachers .slider-items-wrapper {
@@ -3348,9 +3389,6 @@ footer .copyright
     #curator {
         padding:0;
     }
-    #about .about-title.second {
-        margin-top: 0px;
-    }
     #about .about-advantages {
         margin-top: 0px;
     }
@@ -3366,13 +3404,14 @@ footer .copyright
     }
     #curator .play-button {
         left: 75%;
-        top: 45%;
+        top: 43%;
     }
     .results-wrapper {
         margin-top: 60px;
     }
     #free-consult .text-title, #pdf-share .pdf-title, #about .about-title, #advantages .program-title, #results .text-wrapper .text-title, #results2 .text-wrapper .text-title, #why-study .why-title, #isc-program .text-wrapper .text-title, #skype-consult .text-title, #teachers .teachers-title, #reviews .reviews-title {
         font-size: 28px;
+        padding:0 10px;
     }
     #skype-consult .wrapper {
         padding: 50px 5%;
@@ -3494,18 +3533,43 @@ footer .copyright
     {
         min-width:100%;
     } 
+    #curator .wrapper .photo-wrapper
+    {
+        min-height:500px;
+    } 
+    #pdf-share .right-wrap {
+        padding-top:5px;
+    }
+    #pdf-share .img-wrap
+    {
+        top:auto;
+        bottom: -368px;
+        right:-300px;
+    }
+    #pdf-share .img-wrap img {
+        transform: scale(0.4);
+    }
+    #pdf-share .right-wrap
+    {
+        margin-left:-10%;
+    }
 }
 @media (max-width:500px)
 {  
+    #main .logo-wrapper .mobile
+    {
+        transform:scale(1);
+    }
     #results2 .wrapper
     {
         padding:0 30px;
     }  
     footer .menu-wrapper ul {
        justify-content: space-between;
-    }
+    }    
     footer .menu-wrapper ul li {
-        margin: 40px 0 0 0;
+        margin: 40px 25px 0 20px;
+        text-align: center;
     }
     footer .adress-wrapper > div {
         flex-direction: column;
@@ -3551,6 +3615,10 @@ footer .copyright
         min-width: 500px;
         min-height: 450px;
     }
+    #curator .play-button {
+        left: 80%;
+        top: 46%;
+    }
     #isc-program .text-wrapper .text-lead br
     {
         display: none;
@@ -3593,7 +3661,6 @@ footer .copyright
     #curator .play-button {
         right: 0%;
         left:auto;
-        top: 53%;
     }    
     #skype-consult .results-wrapper .result-item {
         width: 100%;
@@ -3641,9 +3708,21 @@ footer .copyright
     #teachers .slider-items-wrapper {
         padding: 250px 0 0 15%;
     }
+    #curator .play-button {
+        top: 47%;
+    }
+}
+@media (max-width:418px)
+{
+    #curator .play-button {
+        top: 49%;
+    }
 }
 @media (max-width:400px)
 {    
+    #curator .play-button {
+        top: 50%;
+    }
     #about .students-wrapper .student-item .text-wrapper
     {
         padding:20px 40px 0 40px;
@@ -3660,6 +3739,9 @@ footer .copyright
 }
 @media (max-width:380px)
 {
+    #curator .play-button {
+        top: 50%;
+    }
     #teachers .slider-items-wrapper {
         padding: 250px 0 0 8%;
     }
@@ -3671,6 +3753,20 @@ footer .copyright
     }
     #reviews {
         padding: 40px 15px 120px 15px;
+    }
+    #pdf-share .right-wrap
+    {
+        margin-left:-5%;
+    }
+    #pdf-share .right-wrap .button
+    {
+        padding: 18px 90px 18px 90px;
+    }
+}
+@media (max-width:365px)
+{
+    #curator .play-button {
+        top: 52%;
     }
 }
 @media (max-width:350px)

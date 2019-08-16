@@ -93,22 +93,27 @@ $(document).ready(function() {
             $(`.info-wrapper#${currentId}`).css('display','flex');
         },400);
     });
+    let advantages = null;
     $(window).resize(function(){
-        if(!$('#advantages .toogle-wrapper').hasClass('owl-carousel') && $(window).innerWidth() <= 768)
+        if(advantages != null && $(window).innerWidth() <= 768)
         {
-            $('#advantages .toogle-wrapper').addClass('owl-carousel').owlCarousel({
+            advantages = $('#advantages .toogle-wrapper').addClass('owl-carousel').owlCarousel({
                 items:1,
                 nav: true,
                 margin:20,
                 navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`]
             });
         }
+        else
+        {
+            console.log('null');
+            $(advantages).trigger('destroy.owl.carousel');
+        }
     });
     $(window).on('load',function() {
-        console.log($(window).innerWidth());
         if($(window).innerWidth() <= 768)
         {
-            $('#advantages .toogle-wrapper').addClass('owl-carousel').owlCarousel({
+            advantages = $('#advantages .toogle-wrapper').addClass('owl-carousel').owlCarousel({
                 items:1,
                 nav: true,
                 margin:20,
