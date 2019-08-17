@@ -19,6 +19,116 @@ img
     -webkit-user-select: none; 
     user-select: none; 
 }
+#main .thanks-title
+{
+    font-family: 'Playfair Display';
+    color:#fff;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    color:#fff;
+}
+#main .thanks-button, #main .button.thanks
+{
+    text-decoration: none;
+    width:fit-content;
+    margin:30px auto;
+}
+#main .thanks-pretitle, #main .thanks-next, #main .thanks-link, #main .quote-wrapper
+{
+    font-family: 'Playfair Display';
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color:#fff;
+}
+#main .quote-wrapper
+{
+    display: flex;
+    text-align: left;
+    position: relative;
+}
+#main .quote-wrapper .thanks-quote .quote-sign
+{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+#main .quote-wrapper::before
+{
+    content:'';
+    width:1px;
+    height:215px;
+    background-color:#fff;
+    position: absolute;
+    top:-5px;
+    left:25px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+#main .quote-wrapper .thanks-quote
+{    
+    padding:0 40px;
+}
+#main .quote-wrapper .thanks-quote p
+{
+    margin-bottom:20px;
+}
+#main .quote-wrapper .img-wrapper
+{
+    min-width:200px;
+    width:200px;
+    height:auto;
+}
+#main .thanks-img
+{
+    min-width:320px;
+    min-height:200px;
+    width:320px;
+    height:200px;
+    margin:0 auto 25px auto;
+}
+#main .quote-wrapper .img-wrapper img, #main .thanks-img img
+{
+    width:100%;
+    height:100%;
+}
+#main .thanks-link
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+    text-shadow:0 0 5px #000;
+    cursor: pointer;
+    transition:0.2s;
+}
+#main .thanks-link a
+{
+    text-decoration: none;
+    color:#fff;
+}
+#main .thanks-link:hover svg path
+{
+    transition:0.2s;
+}
+#main .thanks-link:hover svg path
+{
+    fill:#CF313B;
+}
+#main .thanks-link svg
+{
+    margin:5px 30px 0 30px;
+}
+#main .thanks-next
+{
+    margin:20px 0;
+    text-transform: uppercase;
+    color:rgb(220,220,220);
+    text-shadow:0 0 5px #000;
+}
 #main .container
 {
     width:100%;
@@ -3445,6 +3555,10 @@ a.anchor
 }
 @media (max-width:800px)
 {
+    #main .quote-wrapper .img-wrapper
+    {
+        display: none;
+    }
     #about .about-pretitle {
         font-size: 18px;
     }
@@ -3800,6 +3914,25 @@ a.anchor
 }
 @media (max-width:500px)
 {  
+    #main .quote-wrapper::before, #main .thanks-img
+    {
+        display: none;
+    }
+    #main .quote-wrapper .thanks-quote
+    {
+        padding:20px;
+        background:rgba(120,120,120,0.8);
+        border-radius:10px;
+    }
+    #main.thanks .wrapper
+    {
+        padding:0 10px;
+    }
+    #main.thanks .main-form-wrapper
+    {
+        padding:10px!important;
+        margin-bottom: 0px!important;
+    }
     #main .main-form-wrapper .main-form .input-wrapper > *,
     #skype-consult .skype-form .input-wrapper > *
     {
@@ -4040,6 +4173,11 @@ a.anchor
 }
 @media (max-width:350px)
 {
+    #main .thanks-img
+    {
+        min-width:100%;
+        width:100%;
+    }
     #stages .info-wrapper .lessons-wrapper .lesson-block:nth-child(2) {
 
         margin-left: -42px;
