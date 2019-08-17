@@ -199,6 +199,7 @@ $(document).ready(function() {
     // }); 
 
     //На подъем мыши к закрытию
+    let currentStatus = false;
     $(document).bind("mouseleave", function(e) {
         if (e.pageY - $(window).scrollTop() <= 1) {    
             let popapItem = `
@@ -226,10 +227,14 @@ $(document).ready(function() {
                         <a href="tel:(099) 500 03 20"><div class="numbers-item">(099) 500 03 20</div></a>
                     </div>
                 </div>`;
-            $('.popap-wrapper').empty().append(popapItem);
-            popapRefresh();
-            $('.mask, .popap-wrapper').fadeIn();
-            $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
+            if(!currentStatus && typeof $('#main')[0].classList[0] == 'undefined')
+            {
+                $('.popap-wrapper').empty().append(popapItem);
+                popapRefresh();
+                $('.mask, .popap-wrapper').fadeIn();
+                $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
+                currentStatus = true;
+            }
         }
     });
     /*Buttons*/
