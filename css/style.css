@@ -89,7 +89,7 @@ img
     margin: 0 auto;
     /* background:rgba(120,120,120,0.8);
     border:3px solid rgba(160,160,160,0.95); */
-    padding:20px;
+    padding:20px 20px 0 20px;
 }
 #main .quote-wrapper .quote-sign
 {
@@ -188,6 +188,10 @@ img
     margin:20px 0;
     text-transform: uppercase;
     /* text-shadow:0 0 5px #000; */
+}
+#main .thanks-next .bold
+{
+    font-weight: 500;
 }
 #main .container
 {
