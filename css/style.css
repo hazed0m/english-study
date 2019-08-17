@@ -101,7 +101,6 @@ img
 }
 #main .quote-wrapper .sign-wrapper
 {
-    margin-top:-50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,7 +144,10 @@ img
     margin:20px auto;
     width:100%;
     max-height:150px;
-    height:150px;
+    height:150px;    
+    background:url(../img/stages-back.png) no-repeat;
+    background-position: 0% 15%;
+    background-size:cover;
 }
 #main .quote-wrapper .img-wrapper img, #main .thanks-img img
 {
@@ -158,6 +160,7 @@ img
     justify-content: center;
     align-items: center;
     font-size:30px;
+    line-height: 40px;
     /* text-shadow:0 0 5px #000; */
     cursor: pointer;
     transition:0.2s;
@@ -3619,6 +3622,7 @@ a.anchor
 }
 @media (max-width:800px)
 {
+    
     #main .quote-wrapper::before {
         height: 100%;
     }
@@ -3771,10 +3775,6 @@ a.anchor
     
     #about .about-title.second, #about .about-title {
         margin-top: 20px;
-    }
-    #main .quote-wrapper .sign-wrapper
-    {
-        margin-top:0px;
     }
     #main .button.thanks
     {
