@@ -2287,6 +2287,16 @@ footer .menu-wrapper ul
     align-items: center;
     z-index: 99999;
 }
+footer a 
+{
+    text-decoration: none;
+    color:#fff;
+    transition:0.2s;
+}
+a:hover
+{
+    opacity:0.85;
+}
 footer .menu-wrapper ul li
 {
     list-style: none;
