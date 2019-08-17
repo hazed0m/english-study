@@ -101,6 +101,7 @@ $(document).ready(function() {
                 items:1,
                 nav: true,
                 margin:20,
+                navSpeed:500,
                 navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`]
             });
         }
@@ -117,6 +118,7 @@ $(document).ready(function() {
                 items:1,
                 nav: true,
                 margin:20,
+                navSpeed:500,
                 navText: [`<i class="fas fa-chevron-left"></i>`,`<i class="fas fa-chevron-right"></i>`]
             });
         }
