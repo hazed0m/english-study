@@ -21,27 +21,47 @@ img
 }
 #main .thanks-title
 {
-    font-family: 'Playfair Display';
-    color:#fff;
     font-weight: 600;
     font-size: 30px;
     line-height: 40px;
     text-align: center;
-    color:#fff;
+}
+#main.thanks .main-form-wrapper
+{
+    background:none;
+    border:none;
+    color:#000;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: none;
+}
+#main .thanks-wrapper
+{
+    color:#000;
+    /* background:rgba(120,120,120,0.8); */
+    padding:20px;
+    width:fit-content;
+    margin:0 auto;
+    border-radius: 10px;
+    max-width:768px;
+    font-family: 'Roboto', sans-serif;
 }
 #main .thanks-button
 {
     text-decoration: none;
 }
-#main.thanks .wrapper
+#main.thanks .container
 {
-    padding-top:20px;
+    background:none;
+}
+#main.thanks .container .wrapper
+{
+    background:none;
 }
 #main .button.thanks
 {
     text-decoration: none;
     width:fit-content;
-    margin:30px auto;
+    margin:20px auto 0 auto;
     font-family: 'Roboto', sans-serif;
     padding:15px 45px 15px 45px;
     color:#fff;
@@ -54,11 +74,9 @@ img
 }
 #main .thanks-pretitle, #main .thanks-next, #main .thanks-link, #main .quote-wrapper
 {
-    font-family: 'Playfair Display';
     font-size: 14px;
     line-height: 21px;
     text-align: center;
-    color:#fff;
 }
 #main .quote-wrapper
 {
@@ -69,6 +87,9 @@ img
     position: relative;
     max-width: 1024px;
     margin: 0 auto;
+    /* background:rgba(120,120,120,0.8);
+    border:3px solid rgba(160,160,160,0.95); */
+    padding:20px;
 }
 #main .quote-wrapper .quote-sign
 {
@@ -80,10 +101,16 @@ img
 }
 #main .quote-wrapper .sign-wrapper
 {
+    margin-top:-50px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-#main .quote-wrapper::before
+#main .thanks-pretitle
+{
+    text-align: left;
+}
+/* #main .quote-wrapper::before
 {
     content:'';
     width:1px;
@@ -93,20 +120,21 @@ img
     top:-5px;
     left:25px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-}
-#main .quote-wrapper .thanks-quote
-{    
-    padding:0 40px;
-}
+} */
 #main .quote-wrapper .thanks-quote p
 {
     margin-bottom:20px;
 }
 #main .quote-wrapper .img-wrapper
 {
-    min-width:200px;
-    width:200px;
+    min-width:120px;
+    width:120px;
     height:auto;
+    margin-left:20px;
+}
+#main .thanks-link a:hover
+{
+    opacity:1;
 }
 #main.thanks .container, #main.thanks .wrapper
 {
@@ -114,12 +142,10 @@ img
 }
 #main .thanks-img
 {
-    min-width:320px;
-    min-height:200px;
-    width:320px;
-    height:200px;
-    margin:0 auto;
-    padding:25px 0;
+    margin:20px auto;
+    width:100%;
+    max-height:150px;
+    height:150px;
 }
 #main .quote-wrapper .img-wrapper img, #main .thanks-img img
 {
@@ -132,14 +158,14 @@ img
     justify-content: center;
     align-items: center;
     font-size:30px;
-    text-shadow:0 0 5px #000;
+    /* text-shadow:0 0 5px #000; */
     cursor: pointer;
     transition:0.2s;
 }
 #main .thanks-link a
 {
     text-decoration: none;
-    color:#fff;
+    color:#CF313B;
 }
 #main .thanks-link:hover svg path
 {
@@ -153,12 +179,15 @@ img
 {
     margin:5px 30px 0 30px;
 }
+#main.thanks .main-form-wrapper
+{
+    width:auto;
+}
 #main .thanks-next
 {
     margin:20px 0;
     text-transform: uppercase;
-    color:rgb(220,220,220);
-    text-shadow:0 0 5px #000;
+    /* text-shadow:0 0 5px #000; */
 }
 #main .container
 {
@@ -648,7 +677,7 @@ img
     font-family: 'Roboto';
     font-weight: 500;
 }
-.popap-wrapper .button:hover ,#why-study .button:hover, #pdf-share .right-wrap .button:hover, #free-consult .button:hover, #about .students-wrapper .button:hover, #advantages .button:hover, #stages .button:hover 
+#main.thanks .button:hover,.popap-wrapper .button:hover ,#why-study .button:hover, #pdf-share .right-wrap .button:hover, #free-consult .button:hover, #about .students-wrapper .button:hover, #advantages .button:hover, #stages .button:hover 
 {
     color:#fff;
     background: rgba(0, 0, 0, 0.90);
@@ -3592,10 +3621,6 @@ a.anchor
     #main .quote-wrapper .quote-sign {
         margin-top: 0px;
     }
-    #main .quote-wrapper .img-wrapper
-    {
-        display: none;
-    }
     #about .about-pretitle {
         font-size: 18px;
     }
@@ -3742,6 +3767,14 @@ a.anchor
     
     #about .about-title.second, #about .about-title {
         margin-top: 20px;
+    }
+    #main .quote-wrapper .sign-wrapper
+    {
+        margin-top:0px;
+    }
+    #main .button.thanks
+    {
+        margin:20px auto;
     }
 }
 @media (max-width:600px)
@@ -3951,19 +3984,19 @@ a.anchor
 }
 @media (max-width:500px)
 {  
+    #main .quote-wrapper .img-wrapper {
+        min-width: 110px;
+        width: 110px;
+    }
     #main .quote-wrapper::before
     {
         display: none;
     }
     #main .quote-wrapper .thanks-quote
     {
-        padding:20px;
-        background:rgba(120,120,120,0.8);
-        border-radius:10px;
-    }
-    #main.thanks .wrapper
-    {
-        padding:0 10px;
+        padding:0;
+        /* background:rgba(120,120,120,0.8);
+        border-radius:10px; */
     }
     #main.thanks .main-form-wrapper
     {
@@ -4073,6 +4106,23 @@ a.anchor
 }
 @media (max-width:450px)
 {
+    #main.thanks .main-form-wrapper{
+        margin-top:0!important;
+    }
+    #main .thanks-next {
+        margin: 15px 0;
+    }
+    #main .thanks-title {
+        font-size: 27px;
+    }    
+    #main .thanks-img
+    {
+        margin-top:0px;
+    }
+    #main.thanks .wrapper
+    {
+        padding:10px;
+    }
     #about .students-wrapper .student-item .photo-wrapper img {
         width: 100%;
         height:auto;
@@ -4122,6 +4172,10 @@ a.anchor
     {
         margin-bottom:50px!important;
     }
+    #main .thanks-wrapper
+    {
+        padding:0;
+    }
 }
 @media (max-width:425px)
 {
@@ -4146,6 +4200,9 @@ a.anchor
 }
 @media (max-width:400px)
 {    
+    #main .thanks-wrapper {
+        width: auto;
+    }
     #main .wrapper {
         padding: 0 10px;
     }
@@ -4200,6 +4257,10 @@ a.anchor
     footer .menu-wrapper ul li {
         margin: 40px 15px 0 10px;
         text-align: center;
+    }
+    #main .quote-wrapper .img-wrapper {
+        min-width: 100px;
+        width: 100px;
     }
 }
 @media (max-width:365px)

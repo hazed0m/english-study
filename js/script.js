@@ -107,7 +107,6 @@ $(document).ready(function() {
         }
         else
         {
-            console.log('null');
             $(advantages).trigger('destroy.owl.carousel');
         }
     });
