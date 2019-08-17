@@ -33,6 +33,10 @@ img
 {
     text-decoration: none;
 }
+#main.thanks .wrapper
+{
+    padding-top:20px;
+}
 #main .button.thanks
 {
     text-decoration: none;
@@ -58,25 +62,32 @@ img
 }
 #main .quote-wrapper
 {
+    font-family: 'Roboto', sans-serif;
     display: flex;
+    flex-direction: column;
     text-align: left;
     position: relative;
     max-width: 1024px;
     margin: 0 auto;
 }
-#main .quote-wrapper .thanks-quote .quote-sign
+#main .quote-wrapper .quote-sign
 {
     margin-top:50px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+    align-items: flex-start;
+    text-align: left;
+}
+#main .quote-wrapper .sign-wrapper
+{
+    display: flex;
+    justify-content: space-between;
 }
 #main .quote-wrapper::before
 {
     content:'';
     width:1px;
-    height:215px;
+    height:70%;
     background-color:#fff;
     position: absolute;
     top:-5px;
@@ -3575,6 +3586,12 @@ a.anchor
 }
 @media (max-width:800px)
 {
+    #main .quote-wrapper::before {
+        height: 100%;
+    }
+    #main .quote-wrapper .quote-sign {
+        margin-top: 0px;
+    }
     #main .quote-wrapper .img-wrapper
     {
         display: none;
