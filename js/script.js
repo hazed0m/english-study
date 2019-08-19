@@ -1,8 +1,10 @@
 $(document).ready(function() {
+    //Маска для телефона
     $(`#main .main-form input[type='tel'], 
         #skype-consult .skype-form input[type='tel'], 
         #free-consult .free-consult-form input[type='tel']`
      ).mask("+38  999 - 99 - 99 - 999");
+    //Превращение тега img с svg файлом в тег svg
     $('img[src$=".svg"]').each(function() {
         var $img = jQuery(this);
         var imgURL = $img.attr('src');
@@ -39,26 +41,32 @@ $(document).ready(function() {
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 900);
     });
+    //Стрелка вниз на главном экране
     $('#main .arrow').on('click',function(){
         $('body,html').animate({scrollTop: $('#about').offset().top}, 900);
     });
+    //Стрелка вверх приклеенная к дну страницы
     $('.up-handler').on('click',function(){
         $('body,html').animate({scrollTop: 0}, 900);
     });
-    $('.tel-code-wrapper').on('click',function(){
-        if($(this).find('.code-list').is(':visible'))
-        {
-            $(this).find('.code-list').fadeOut();
-        }
-        else
-        {
-            $(this).find('.code-list').fadeIn();
-        }
-    });
-    $('.code-list .code-item').on('click',function(){
-        $('.tel-code-wrapper .current-code #code').text($(this).text());
-        $('.tel-code-wrapper').find('.code-list').fadeOut();    
-    });
+
+    //Поле с кодами телефонов
+    // $('.tel-code-wrapper').on('click',function(){
+    //     if($(this).find('.code-list').is(':visible'))
+    //     {
+    //         $(this).find('.code-list').fadeOut();
+    //     }
+    //     else
+    //     {
+    //         $(this).find('.code-list').fadeIn();
+    //     }
+    // });
+    // $('.code-list .code-item').on('click',function(){
+    //     $('.tel-code-wrapper .current-code #code').text($(this).text());
+    //     $('.tel-code-wrapper').find('.code-list').fadeOut();    
+    // });
+
+    //Переключение интерактива в блоках с преимуществами
     $('#advantages .toogle-wrapper .toogle-item').on('click',function(){
         if($(this).find('.toogle-text').is(':visible'))
         {
@@ -83,6 +91,7 @@ $(document).ready(function() {
             }
         }
     });
+    //Переключение годов 
     $('#stages .toogle-but').on('click',function(){
         let currentId = this.id;
         $('#stages .toogle-but.active').removeClass('active');
@@ -236,7 +245,7 @@ $(document).ready(function() {
             }
         }
     });
-    /*Buttons*/
+    //Перезвонить
     $('#call').on('click',function(){
         let popapItem = `
                 <div class="close-but"><i class="fas fa-times"></i></div>
@@ -268,6 +277,7 @@ $(document).ready(function() {
         $('.mask, .popap-wrapper').fadeIn();
         $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
     });
+    //Подписка
     $('#sign').on('click',function(){
         if(!$(this).hasClass('blocked'))
         {
@@ -293,9 +303,12 @@ $(document).ready(function() {
         formFocus();
     }    
     formFocus();
-    //Проверка Email
+    //Проверка инпутов на заполненность
     function formFocus()
     {
+        $('input[type="checkbox"]').on('change',function(){
+            formChecker();
+        });
         $(`input[type="text"]`).on('keyup',function(){
             if($(this).val().length > 0)
             {
@@ -365,7 +378,7 @@ $(document).ready(function() {
         {
             $('#downloadFile').addClass('blocked');
         }
-        if($('#skypeForm input.validated').length == 3 && $('#checkbox-skype').attr("checked") == 'checked')
+        if($('#skypeForm input.validated').length == 3 && $('#checkbox-skype:checked').length != 0)
         {
             $('#consult').removeClass('blocked');
         }
@@ -373,7 +386,7 @@ $(document).ready(function() {
         {
             $('#consult').addClass('blocked');
         }
-        if($('#consultForm input.validated').length == 3 && $('#checkbox-free-consult').attr("checked") == 'checked')
+        if($('#consultForm input.validated').length == 3 && $('#checkbox-free-consult:checked').length != 0)
         {
             $('#freeConsult').removeClass('blocked');
         }
