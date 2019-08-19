@@ -306,6 +306,11 @@ $(document).ready(function() {
     //Проверка инпутов на заполненность
     function formFocus()
     {
+        let downloadFormColor = '#fff',
+            skypeForm = '#fff',
+            consultForm = '#fff',
+            popapForm = 'rgb(158, 158, 158)',
+            popapExitForm = 'rgb(158, 158, 158)';
         $('input[type="checkbox"]').on('change',function(){
             formChecker();
         });
@@ -317,7 +322,7 @@ $(document).ready(function() {
             }
             else if($(this).val().length == 0)
             {
-                $(this).css('border-bottom','1px solid #fff');
+                $(this).css('border-bottom',`1px solid ${eval($(this).parent()[0].id)}`);
                 $(this).addClass('validated');
             }
             else
@@ -340,7 +345,7 @@ $(document).ready(function() {
             }
             else if(str.length == 3)
             {
-                $(this).css('border-bottom','1px solid #fff');
+                $(this).css('border-bottom',`1px solid ${eval($(this).parent().parent()[0].id)}`);
                 $(this).addClass('validated');
             }
             else
@@ -359,7 +364,7 @@ $(document).ready(function() {
             }
             else if($(this).val().length == 0)
             {
-                $(this).css('border-bottom','1px solid #fff');
+                $(this).css('border-bottom',`1px solid ${eval($(this).parent()[0].id)}`);
                 $(this).addClass('validated');
             }
             else
