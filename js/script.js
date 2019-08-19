@@ -332,8 +332,9 @@ $(document).ready(function() {
             }
             formChecker();
         });
-        $(`input[type="tel"]`).focus();
-        $(`input[type="tel"]`).get(0).setSelectionRange(0,0);
+        $(`input[type="tel"]`).on('focus',function(){
+            $(this).get(0).setSelectionRange(0,0);
+        });
         $(`input[type="tel"]`).on('keyup',function(){
             let str = $(this).val();
             str = str.replace(/[^\d\+]/g, '');
