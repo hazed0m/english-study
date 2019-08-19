@@ -339,6 +339,22 @@ $(document).ready(function() {
             formChecker();
         });
     }
+    //Кнопки на формах изначально имеют класс blocked, если все поля заполнены, 
+    //то кнопка разблокируется и будет доступная для действия
+
+    //Для этого нужно в обработчик формы добавить проверку при нажатии кнопки, на наличие класса.
+    //Пример обработки формы
+    $('#downloadFile').on('click',function(){
+        if(!$(this).hasClass('blocked'))
+        {
+            let name = $('#downloadForm input:eq(0)').val();
+            let email = $('#downloadForm input:eq(1)').val();
+            let phone = $('#downloadForm input:eq(2)').val();
+            //Регулярное выражение для обрезания номера телефона до кода+номер
+            phone = phone.replace(/[^\d\+]/g, '');
+            console.log(name,email,phone);
+        }
+    });
     function formChecker()
     {
         if($('#downloadForm input.validated').length == 3)
