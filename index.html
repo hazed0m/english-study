@@ -68,14 +68,14 @@
                                 Оставьте заявку и получите PDF-файл <br>
                                 с перечнем 275 ВУЗов-партнеров программы ISC                                
                             </div>
-                            <div class="input-wrapper">
+                            <div class="input-wrapper" id="downloadForm">
                                 <input type="text" placeholder="Введите ваше имя">
                                 <input type="email" placeholder="Введите ваш E-mail">
                                 <div class="tel-wrapper">
                                     <input type="tel" placeholder="+38 ___ - __ - __ - ___">
                                 </div>
                             </div>
-                            <div class="button" id="downloadFile">
+                            <div class="button blocked" id="downloadFile">
                                 Оставить заявку
                             </div>                         
                         </div>
@@ -364,7 +364,7 @@
                     <div class="form-pretitle">
                         Планы по поступлению за границу в формате Skype-консультации
                     </div>
-                    <div class="input-wrapper">
+                    <div class="input-wrapper" id="skypeForm">
                         <input type="text" placeholder="Введите ваше имя">
                         <input type="text" placeholder="Введите ваш логин Skype">
                         <div class="tel-wrapper">
@@ -372,11 +372,11 @@
                         </div>
                     </div>
                     <div class="checkbox-wrapper">
-                        <input type="checkbox" id="checkbox-skype" checked>
+                        <input type="checkbox" id="checkbox-skype" checked="checked">
                         <label for="checkbox-skype"><img src="img/check.svg" alt="check"></label>
                         <span>Даю согласие на обработку персональных данных</span>
                     </div>
-                    <div class="button" id="consult">Skype - интервью</div>
+                    <div class="button blocked" id="consult">Skype - интервью</div>
                 </div>
             </div>    
         </section>
@@ -506,7 +506,8 @@
             <div class="background">            
             </div>
             <div class="wrapper">
-                <div class="stages-title">Как проходит учеба? <br> Этапы программы</div>
+                <div class="stages-title">Как проходит учеба?</div>
+                <div class="stages-pretitle">Этапы программы</div>
                 <div class="toogle-wrapper">
                     <div class="toogle-but active" id="f-year">1-й учебный год</div>
                     <div class="toogle-but" id="s-year">2-й учебный год</div>
@@ -819,7 +820,7 @@
                             И получите бесплатную консультацию<br> специалиста по академическим программам
                         </div>
                         <div class="free-consult-form" id="form3">
-                            <div class="input-wrapper">
+                            <div class="input-wrapper" id="consultForm">
                                 <input type="text" placeholder="Введите ваше имя">
                                 <input type="email" placeholder="Введите ваш E-mail">
                                 <div class="tel-wrapper">
@@ -827,11 +828,11 @@
                                 </div>
                             </div>                        
                             <div class="checkbox-wrapper">
-                                <input type="checkbox" id="checkbox-free-consult" checked>
+                                <input type="checkbox" id="checkbox-free-consult" checked="checked">
                                 <label for="checkbox-free-consult"><img src="img/check.svg" alt="check"></label>
                                 <span>Даю согласие на обработку персональных данных</span>
                             </div>
-                            <div class="button" id="freeConsult">
+                            <div class="button blocked" id="freeConsult">
                                 Получить консультацию
                             </div>                         
                         </div>
@@ -915,9 +916,9 @@
                     и специальные бонусы для подписчиков STUDY.UA
                 </div>
             </div>
-            <div class="right-wrap">
+            <div class="right-wrap" id="signForm">
                 <input type="email" placeholder="Введите ваш E-mail">
-                <div class="button" id="sign">Подписаться</div>
+                <div class="button blocked" id="sign">Подписаться</div>
             </div>
             <div class="img-wrap">
                 <img src="img/magazine.png" alt="">
@@ -960,7 +961,7 @@
             </div>
             <div class="popap-form-wrapper">
                 <div class="popap-form">
-                    <div class="input-wrapper">
+                    <div class="input-wrapper" id="popapForm">
                         <input type="text" placeholder="Введите ваше имя">
                         <input type="email" placeholder="Введите ваш E-mail">
                         <div class="tel-wrapper">
@@ -968,7 +969,7 @@
                         </div>
                     </div>
                     <a href="#free-consult" class="anchor">
-                        <div class="button" id="popapSend">
+                        <div class="button blocked" id="popapSend">
                             Отправить
                         </div>  
                     </a>                       

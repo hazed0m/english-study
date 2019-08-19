@@ -209,14 +209,14 @@ $(document).ready(function() {
                 </div>
                 <div class="popap-form-wrapper">
                     <div class="popap-form">
-                        <div class="input-wrapper">
+                        <div class="input-wrapper" id="popapExitForm">
                             <input type="text" placeholder="Введите ваше имя">
                             <input type="email" placeholder="Введите ваш E-mail">
                             <div class="tel-wrapper">
                                 <input type="tel" placeholder="+38 ___ - __ - __ - ___">
                             </div>
                         </div>
-                        <div class="button" id="popapExit">
+                        <div class="button blocked" id="popapExit">
                             Получить $50
                         </div>                    
                     </div>
@@ -246,14 +246,14 @@ $(document).ready(function() {
                 </div>
                 <div class="popap-form-wrapper">
                     <div class="popap-form">
-                        <div class="input-wrapper">
+                        <div class="input-wrapper" id="popapForm">
                             <input type="text" placeholder="Введите ваше имя">
                             <input type="email" placeholder="Введите ваш E-mail">
                             <div class="tel-wrapper">
                                 <input type="tel" placeholder="+38 ___ - __ - __ - ___">
                             </div>
                         </div>
-                        <div class="button" id="popapSend">
+                        <div class="button blocked" id="popapSend">
                             Отправить
                         </div>                    
                     </div>
@@ -269,16 +269,19 @@ $(document).ready(function() {
         $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
     });
     $('#sign').on('click',function(){
-        let popapItem = `
-                <div class="close-but"><i class="fas fa-times"></i></div>
-                <div class="popap-title">Спасибо за подписку!</div>
-                <div class="popap-pretitle">
-                    Пожалуйста, зайдите в вашу почту и перейдите по ссылке в письме, чтобы подтвердить подписку на рассылку и получать от нас полезные материалы без перебоев.                         
-                </div>`;
-        $('.popap-wrapper').empty().append(popapItem);
-        popapRefresh();
-        $('.mask, .popap-wrapper').fadeIn();
-        $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
+        if(!$(this).hasClass('blocked'))
+        {
+            let popapItem = `
+                    <div class="close-but"><i class="fas fa-times"></i></div>
+                    <div class="popap-title">Спасибо за подписку!</div>
+                    <div class="popap-pretitle">
+                        Пожалуйста, зайдите в вашу почту и перейдите по ссылке в письме, чтобы подтвердить подписку на рассылку и получать от нас полезные материалы без перебоев.                         
+                    </div>`;
+            $('.popap-wrapper').empty().append(popapItem);
+            popapRefresh();
+            $('.mask, .popap-wrapper').fadeIn();
+            $('body').css({'overflow':'hidden','max-height':'100vh','height':'100vh'});
+        }
     });
     function popapRefresh()
     {
@@ -286,6 +289,105 @@ $(document).ready(function() {
             $('.mask, .popap-wrapper').fadeOut();
             $('body').css({'overflow':'visible','max-height':'100%','height':'100%'});
         });
-        $(`.popap-wrapper input[type='tel']`).mask("+38  999 - 99 - 99 - 999");
+        $(`.popap-wrapper input[type='tel']`).mask("+38  999 - 99 - 99 - 999");        
+        formFocus();
     }    
+    formFocus();
+    //Проверка Email
+    function formFocus()
+    {
+        $(`input[type="text"]`).on('keyup',function(){
+            if($(this).val().length > 0)
+            {
+                $(this).css('border-bottom','1px solid rgba(0,128,0,0.5)');
+                $(this).addClass('validated');
+            }
+            else
+            {
+                $(this).css('border-bottom','1px solid rgba(255,0,0,0.5)');
+                $(this).removeClass('validated');
+            }
+            formChecker();
+        });
+        $(`input[type="tel"]`).on('keyup',function(){
+            let str = $(this).val();
+            str = str.replace(/[^\d\+]/g, '');
+            if(str.length == 13)
+            {
+                $(this).css('border-bottom','1px solid rgba(0,128,0,0.5)');
+                $(this).addClass('validated');
+            }
+            else
+            {
+                $(this).css('border-bottom','1px solid rgba(255,0,0,0.5)');
+                $(this).removeClass('validated');
+            }
+            formChecker();
+        });
+        $(`input[type="email"]`).on('keyup',function(){
+            const emailRegex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i;
+            if(this.value.match(emailRegex))
+            {
+                $(this).css('border-bottom','1px solid rgba(0,128,0,0.5)');
+                $(this).addClass('validated');
+            }
+            else
+            {
+                $(this).css('border-bottom','1px solid rgba(255,0,0,0.5)');
+                $(this).removeClass('validated');
+            }
+            formChecker();
+        });
+    }
+    function formChecker()
+    {
+        if($('#downloadForm input.validated').length == 3)
+        {
+            $('#downloadFile').removeClass('blocked');
+        }
+        else
+        {
+            $('#downloadFile').addClass('blocked');
+        }
+        if($('#skypeForm input.validated').length == 3 && $('#checkbox-skype').attr("checked") == 'checked')
+        {
+            $('#consult').removeClass('blocked');
+        }
+        else
+        {
+            $('#consult').addClass('blocked');
+        }
+        if($('#consultForm input.validated').length == 3 && $('#checkbox-free-consult').attr("checked") == 'checked')
+        {
+            $('#freeConsult').removeClass('blocked');
+        }
+        else
+        {
+            $('#freeConsult').addClass('blocked');
+        }
+        if($('#signForm input.validated').length == 1)
+        {
+            $('#signForm #sign').removeClass('blocked');
+        }
+        else
+        {
+            $('#signForm #sign').addClass('blocked');
+        }
+        if($('#popapForm input.validated').length == 3)
+        {
+            $('#popapSend').removeClass('blocked');
+        }
+        else
+        {
+            $('#popapSend').addClass('blocked');
+        }
+        if($('#popapExitForm input.validated').length == 3)
+        {
+            $('#popapExit').removeClass('blocked');
+        }
+        else
+        {
+            $('#popapExit').addClass('blocked');
+        }
+    }
 });

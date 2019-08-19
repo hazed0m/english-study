@@ -1433,7 +1433,7 @@ img
 }
 #stages
 {
-    margin-top:100px;
+    margin-top:0px;
     padding:274px 0 50px 0;
     width:100%;
     position: relative;
@@ -1453,7 +1453,7 @@ img
 }
 #stages .wrapper
 {    
-    padding:100px 50px 0 50px;
+    padding:50px 50px 0 50px;
     width:80%;
     margin:0 auto;
     background:#fff;
@@ -1462,11 +1462,19 @@ img
 }
 #stages .wrapper .stages-title
 {
-
     font-family: 'Playfair Display';
     font-size: 38px;
     line-height: 51px;
     color: #CF313B;
+    text-align: center;
+}
+#stages .wrapper .stages-pretitle
+{
+
+    font-family: 'Playfair Display';
+    font-size: 34px;
+    line-height: 51px;
+    color: #000;
     text-align: center;
 }
 #stages .wrapper .toogle-wrapper
@@ -1478,15 +1486,14 @@ img
 }
 #stages .wrapper .toogle-wrapper .toogle-but
 {    
-    width: 260px;
-    height: 75px;
+    width: 220px;
+    height: 55px;
     border: 1px solid #D0BF93;
     color:#D0BF93;
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 45px;
-    text-transform: uppercase;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1646,6 +1653,7 @@ img
 }
 #teachers
 {
+    padding-top:30px;
     width:100%;
     height:100%;
 }
@@ -2637,13 +2645,18 @@ a.anchor
 {
     color:#CF313B;
 }
+.blocked
+{
+    opacity:0.7;
+    cursor: default;
+}
 .popap-wrapper .popap-form input
 {    
     margin-top:25px;
     font-family: 'Roboto', sans-serif;
     background:transparent;
     border:none;
-    border-bottom:2px solid rgb(158, 158, 158);
+    border-bottom:1px solid rgb(158, 158, 158);
     padding:10px 0 10px 10px;
     font-size:15px;
     color: rgb(58, 58, 58);
@@ -2960,6 +2973,10 @@ a.anchor
         min-width: 550px;
         min-height: 500px;
     }
+    #free-consult .text-wrapper
+    {
+        padding: 31px 0 0 120px;
+    }
     #free-consult .photo-wrapper img
     {
         width:100%;
@@ -3136,8 +3153,8 @@ a.anchor
         align-items: center;
     }
     #stages .wrapper .toogle-wrapper .toogle-but {
-        width: 200px;
-        height: 55px;
+        width: 180px;
+        height: 45px;
         font-size: 16px;
     }
     #main header .button svg
@@ -3182,6 +3199,9 @@ a.anchor
     }
     #stages .wrapper .stages-title {
         font-size: 33px;
+    }
+    #stages .wrapper .stages-pretitle {
+        font-size: 28px;
     }
     #stages .button
     {
@@ -4223,6 +4243,9 @@ a.anchor
     }
     #stages .wrapper .stages-title {
         font-size: 26px;
+    }
+    #stages .wrapper .stages-pretitle {
+        font-size: 22px;
     }
     #teachers .slider-items-wrapper {
         padding: 250px 0 0 10%;
