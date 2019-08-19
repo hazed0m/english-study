@@ -315,6 +315,11 @@ $(document).ready(function() {
                 $(this).css('border-bottom','1px solid rgba(0,128,0,0.5)');
                 $(this).addClass('validated');
             }
+            else if($(this).val().length == 0)
+            {
+                $(this).css('border-bottom','1px solid #fff');
+                $(this).addClass('validated');
+            }
             else
             {
                 $(this).css('border-bottom','1px solid rgba(255,0,0,0.5)');
@@ -322,12 +327,20 @@ $(document).ready(function() {
             }
             formChecker();
         });
+        $(`input[type="tel"]`).focus();
+        $(`input[type="tel"]`).get(0).setSelectionRange(0,0);
         $(`input[type="tel"]`).on('keyup',function(){
             let str = $(this).val();
             str = str.replace(/[^\d\+]/g, '');
+            console.log(str);
             if(str.length == 13)
             {
                 $(this).css('border-bottom','1px solid rgba(0,128,0,0.5)');
+                $(this).addClass('validated');
+            }
+            else if(str.length == 3)
+            {
+                $(this).css('border-bottom','1px solid #fff');
                 $(this).addClass('validated');
             }
             else
@@ -342,6 +355,11 @@ $(document).ready(function() {
             if(this.value.match(emailRegex))
             {
                 $(this).css('border-bottom','1px solid rgba(0,128,0,0.5)');
+                $(this).addClass('validated');
+            }
+            else if($(this).val().length == 0)
+            {
+                $(this).css('border-bottom','1px solid #fff');
                 $(this).addClass('validated');
             }
             else
