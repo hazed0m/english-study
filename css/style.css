@@ -1083,7 +1083,8 @@ img
 #skype-consult .skype-form .tel-wrapper:after
 {
     content:'*в случае если скайп будет недоступен мы позвоним вам на мобильный';
-    position: absolute;
+    position: absolute;    
+    left:0;
     bottom:-55px;
     font-family: 'Roboto';
     font-size: 12px;
